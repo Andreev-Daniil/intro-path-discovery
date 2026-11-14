@@ -60,6 +60,102 @@ def test_mine_dataset_waits_for_upload():
     assert any("Загрузите ZIP" in i.value for i in at.info)
 
 
+def _mine_flow(kind_label, name, *, ticker=None):
+    """Режим «Мои данные»: демо-ZIP, цель по имени, офлайн-снимки, кнопка «Найти пути»."""
+    at = run_app()
+    at.sidebar.selectbox[0].select("Мои данные (ZIP экспорта LinkedIn)").run()
+    assert not at.exception, [e.value for e in at.exception]
+    next(c for c in at.sidebar.checkbox if c.label.startswith("Использовать встроенный")).check()
+    next(c for c in at.sidebar.checkbox if c.label.startswith("Офлайн-снимки")).check()
+    at.sidebar.radio[0].set_value(kind_label)
+    at.run()
+    at.sidebar.text_input[0].set_value(name)
+    if ticker:
+        at.sidebar.text_input[1].set_value(ticker)
+    at.run()
+    go = next(b for b in at.sidebar.button if b.label == "Найти пути")
+    assert not go.disabled
+    go.click().run()
+    assert not at.exception, [e.value for e in at.exception]
+    return at
+
+
+def test_upload_flow_company_target_ranks_paths_with_signals():
+    at = _mine_flow("Компания", "Apple Inc")
+    labels = [e.label for e in at.expander]
+    assert labels[0].startswith("1. John Ternus") and "сила 0.96" in labels[0]
+    assert [l.split(". ", 1)[1].split(" — ")[0] for l in labels[:3]] == ["John Ternus", "Kevan Parekh", "Deirdre O'Brien"]
+    assert any("СИНТЕТИЧЕСКИЕ" in w.value for w in at.warning)
+    text = " ".join(m.value for m in at.markdown)
+    assert "директор целевой компании (SEC)" in text and "общий работодатель" in text  # перечень сигналов
+    assert "noisy-OR" in text  # разбор формулы
+
+
+def test_upload_flow_person_target_shows_coauthors_and_through_whom():
+    at = _mine_flow("Человек", "Geoffrey Hinton")
+    labels = [e.label for e in at.expander]
+    assert any("Ilya Sutskever" in l for l in labels)
+    text = " ".join(m.value for m in at.markdown)
+    assert "совместные публикации с целью" in text
+    assert any("Через знакомого знакомого" in str(s.value) for s in at.subheader)
+
+
+def test_real_file_upload_through_the_uploader_widgets():
+    """Пользовательский путь без встроенного демо: файлы идут через file_uploader."""
+    at = run_app()
+    at.sidebar.selectbox[0].select("Мои данные (ZIP экспорта LinkedIn)").run()
+    zip_uploader = next(u for u in at.sidebar.file_uploader if u.label.startswith("ZIP экспорта"))
+    csv_uploader = next(u for u in at.sidebar.file_uploader if u.label.startswith("enrichment.csv"))
+    zip_uploader.set_value(("my_linkedin_export.zip", app.DEMO_ZIP.read_bytes(), "application/zip")).run()
+    csv_uploader.set_value(("enrichment.csv", app.DEMO_ENRICHMENT.read_bytes(), "text/csv")).run()
+    next(c for c in at.sidebar.checkbox if c.label.startswith("Офлайн-снимки")).check()
+    at.sidebar.text_input[0].set_value("Apple Inc")
+    at.run()
+    go = next(b for b in at.sidebar.button if b.label == "Найти пути")
+    assert not go.disabled
+    go.click().run()
+    assert not at.exception, [e.value for e in at.exception]
+    labels = [e.label for e in at.expander]
+    assert labels[0].startswith("1. John Ternus") and "сила 0.96" in labels[0]
+    assert not any("СИНТЕТИЧЕСКИЕ" in w.value for w in at.warning)  # это «пользовательская» загрузка
+
+
+def test_button_is_disabled_until_contacts_and_target_are_given():
+    at = run_app()
+    at.sidebar.selectbox[0].select("Мои данные (ZIP экспорта LinkedIn)").run()
+    go = lambda: next(b for b in at.sidebar.button if b.label == "Найти пути")  # noqa: E731
+    assert go().disabled  # ни файла, ни цели
+    at.sidebar.text_input[0].set_value("Apple Inc").run()
+    assert go().disabled  # цель есть, контактов нет
+    next(u for u in at.sidebar.file_uploader if u.label.startswith("ZIP экспорта")).set_value(
+        ("x.zip", app.DEMO_ZIP.read_bytes(), "application/zip")).run()
+    assert not go().disabled
+
+
+def test_broken_zip_shows_an_error_instead_of_crashing():
+    at = run_app()
+    at.sidebar.selectbox[0].select("Мои данные (ZIP экспорта LinkedIn)").run()
+    next(u for u in at.sidebar.file_uploader if u.label.startswith("ZIP экспорта")).set_value(
+        ("broken.zip", b"this is not a zip", "application/zip")).run()
+    at.sidebar.text_input[0].set_value("Apple Inc").run()
+    next(b for b in at.sidebar.button if b.label == "Найти пути").click().run()
+    assert not at.exception and any("Ошибка" in e.value for e in at.error)
+
+
+def test_upload_flow_unknown_target_explains_missing_snapshot():
+    at = _mine_flow("Компания", "Несуществующая Компания")
+    assert any("Снимка для цели нет" in str(c.value) for c in at.caption)
+    assert not at.exception
+
+
+def test_demo_zip_goes_through_the_same_loader_as_a_real_upload(tmp_path):
+    data = app.DEMO_ZIP.read_bytes()
+    net = app.load_network_from_zip(data, app.DEMO_ENRICHMENT.read_bytes(), tmp_path)
+    assert len(net.contacts) == 68 and net.owner.full_name == "Alex Demo"
+    assert any(c.interactions for c in net.contacts.values())  # сообщения и приглашения прочитаны
+    assert any(c.affiliations for c in net.contacts.values())
+
+
 def test_graph_html_is_self_contained_and_labelled():
     from datetime import date
     from intro_paths.paths import find_intro_paths

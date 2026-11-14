@@ -14,6 +14,7 @@ import csv
 import json
 import random
 import re
+import zipfile
 from dataclasses import dataclass, field
 from datetime import date
 from pathlib import Path
@@ -198,6 +199,19 @@ def _write_csv(path: Path, header: list[str], rows: list[list], preamble: str = 
         w.writerows(rows)
 
 
+def _write_export_zip(export: Path, zip_path: Path) -> None:
+    """ZIP в том виде, в каком его отдаёт LinkedIn: файлы лежат во вложенной папке.
+
+    Без сжатия и с фиксированной датой: архив побайтово воспроизводим на любой ОС.
+    """
+    with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_STORED) as zf:
+        for path in sorted(export.glob("*.csv")):
+            info = zipfile.ZipInfo(f"Basic_LinkedInDataExport/{path.name}", date_time=(2026, 11, 15, 0, 0, 0))
+            info.compress_type = zipfile.ZIP_STORED
+            info.external_attr = 0o644 << 16
+            zf.writestr(info, path.read_bytes())
+
+
 def generate(out_dir: Path, *, seed: int = 7, snapshots_dir: Path | None = None) -> dict:
     out = Path(out_dir)
     snaps = Path(snapshots_dir) if snapshots_dir else out / "snapshots"
@@ -262,6 +276,8 @@ def generate(out_dir: Path, *, seed: int = 7, snapshots_dir: Path | None = None)
             "position", name, normalize_org(name),
             Period(date(start, 1, 1), date(end, 12, 31) if end else None), ""))
     save_target(hinton, out / "targets" / "hinton.json")
+
+    _write_export_zip(export, out / "linkedin_export_demo.zip")
 
     network = build_network(export, out / "enrichment.csv")
     by_slug = {s.slug: s for s in specs}

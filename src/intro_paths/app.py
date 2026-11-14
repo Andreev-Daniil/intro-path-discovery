@@ -39,6 +39,9 @@ ROOT = Path(__file__).resolve().parents[2]
 SAMPLE = ROOT / "data" / "sample"
 DEMO = ROOT / "data" / "demo"
 DEMO_TODAY = date(2026, 11, 15)
+DEMO_ZIP = DEMO / "linkedin_export_demo.zip"
+DEMO_ENRICHMENT = DEMO / "enrichment.csv"
+DEMO_TARGETS = DEMO / "targets"
 
 DS_APPLE = "Синтетика: Apple (SEC EDGAR)"
 DS_HINTON = "Синтетика: Geoffrey Hinton (OpenAlex)"
@@ -81,11 +84,21 @@ def load_network_from_zip(data: bytes, enrichment: bytes | None, workdir: Path) 
 def run_search(
     network: Network, *, kind: str, name: str, ticker: str, use_edgar: bool, use_openalex: bool,
     use_crossref: bool, deep: bool, top: int, limit: int, progress=lambda m: None,
+    snapshot_dir: Path | None = None, today: date | None = None,
 ) -> Result:
     notes: list[str] = []
     target = Target(name=name, kind=kind)
     if kind == "company":
         target.affiliations.append(Affiliation("position", name, normalize_org(name), Period(), ""))
+    if snapshot_dir is not None:  # офлайн: готовые снимки SEC EDGAR / OpenAlex, без сети
+        from intro_paths.agent.tools import SnapshotEnrichment, ToolError
+
+        try:
+            target = SnapshotEnrichment(snapshot_dir).enrich(name, kind, ticker or None)
+            notes.append(f"Офлайн-снимок цели: инсайдеров SEC — {len(target.insiders)}, работ — {len(target.works)}")
+        except ToolError as exc:
+            notes.append(f"Снимка для цели нет, ищу только по месту работы и вузу: {exc}")
+        use_edgar = use_openalex = use_crossref = False
     external = use_edgar or use_openalex or use_crossref
     services = build_services(
         use_edgar=use_edgar and kind == "company",
@@ -101,7 +114,7 @@ def run_search(
     if services and deep and services.publications:
         n = confirm_candidates(network, target, services.publications, top=top, progress=progress)
         notes.append(f"Проверено контактов во внешних источниках: {n}")
-    return Result(network, target, find_intro_paths(network, target, limit=limit), notes)
+    return Result(network, target, find_intro_paths(network, target, today=today, limit=limit), notes)
 
 
 def paths_to_rows(paths: list[IntroPath]) -> list[dict]:
@@ -395,24 +408,36 @@ def sidebar():
     limit = st.number_input("Сколько путей показать", 1, 100, 10)
     mine = None
     if dataset == DS_MINE:
-        upload = st.file_uploader("ZIP экспорта LinkedIn", type="zip")
+        st.caption("Нет своего экспорта? Скачайте синтетические файлы и загрузите их ниже — "
+                   "или поставьте галочку «встроенный демо-ZIP».")
+        if DEMO_ZIP.exists():
+            c1, c2 = st.columns(2)
+            c1.download_button("Демо-ZIP", DEMO_ZIP.read_bytes(), DEMO_ZIP.name, "application/zip", key="dl_zip")
+            if DEMO_ENRICHMENT.exists():
+                c2.download_button("enrichment.csv", DEMO_ENRICHMENT.read_bytes(), "enrichment_demo.csv",
+                                   "text/csv", key="dl_enr")
+        use_demo = st.checkbox("Использовать встроенный демо-ZIP (синтетика)", disabled=not DEMO_ZIP.exists())
+        upload = st.file_uploader("ZIP экспорта LinkedIn", type="zip", disabled=use_demo)
         enrichment = st.file_uploader("enrichment.csv (необязательно)", type="csv")
         st.header("2. Цель")
         kind_label = st.radio("Тип цели", ["Компания", "Человек"], horizontal=True)
         kind = "company" if kind_label == "Компания" else "person"
-        name = st.text_input("Название компании" if kind == "company" else "Имя человека")
+        name = st.text_input("Название компании" if kind == "company" else "Имя человека",
+                             help="Для демо: Apple Inc (компания) или Geoffrey Hinton (человек)")
         ticker = st.text_input("Тикер (необязательно)") if kind == "company" else ""
         st.header("3. Источники")
+        offline = st.checkbox("Офлайн-снимки SEC/OpenAlex (демо: Apple Inc, Geoffrey Hinton)",
+                              disabled=not DEMO_TARGETS.exists())
         st.caption("Имя цели уходит во внешние сервисы. Контакты — только в глубоком режиме.")
-        use_edgar = st.checkbox("SEC EDGAR", disabled=kind != "company")
-        use_openalex = st.checkbox("OpenAlex", disabled=kind != "person")
-        use_crossref = st.checkbox("Crossref", disabled=kind != "person")
-        deep = st.checkbox("Глубокий режим: проверить топ-N контактов")
+        use_edgar = st.checkbox("SEC EDGAR", disabled=kind != "company" or offline)
+        use_openalex = st.checkbox("OpenAlex", disabled=kind != "person" or offline)
+        use_crossref = st.checkbox("Crossref", disabled=kind != "person" or offline)
+        deep = st.checkbox("Глубокий режим: проверить топ-N контактов", disabled=offline)
         top = st.number_input("N", 1, 100, 20, disabled=not deep)
-        go = st.button("Найти пути", type="primary", disabled=not (name.strip() and upload))
+        go = st.button("Найти пути", type="primary", disabled=not (name.strip() and (upload or use_demo)))
         mine = dict(upload=upload, enrichment=enrichment, kind=kind, name=name.strip(), ticker=ticker.strip(),
                     use_edgar=use_edgar, use_openalex=use_openalex, use_crossref=use_crossref,
-                    deep=deep, top=int(top), go=go)
+                    deep=deep, top=int(top), go=go, use_demo=use_demo, offline=offline)
     return dataset, int(limit), mine
 
 
@@ -437,17 +462,24 @@ def main() -> None:
     else:
         if mine["go"]:
             try:
+                if mine["use_demo"]:
+                    zip_bytes = DEMO_ZIP.read_bytes()
+                    enrichment_bytes = (mine["enrichment"].getvalue() if mine["enrichment"]
+                                        else DEMO_ENRICHMENT.read_bytes())
+                else:
+                    zip_bytes = mine["upload"].getvalue()
+                    enrichment_bytes = mine["enrichment"].getvalue() if mine["enrichment"] else None
                 with tempfile.TemporaryDirectory() as tmp:
-                    net = load_network_from_zip(
-                        mine["upload"].getvalue(),
-                        mine["enrichment"].getvalue() if mine["enrichment"] else None, Path(tmp))
+                    net = load_network_from_zip(zip_bytes, enrichment_bytes, Path(tmp))
                 status = st.status("Ищу пути…", expanded=False)
+                today_mine = DEMO_TODAY if mine["use_demo"] else date.today()
                 res = run_search(net, kind=mine["kind"], name=mine["name"], ticker=mine["ticker"],
                                  use_edgar=mine["use_edgar"], use_openalex=mine["use_openalex"],
                                  use_crossref=mine["use_crossref"], deep=mine["deep"], top=mine["top"],
-                                 limit=limit, progress=status.write)
+                                 limit=limit, progress=status.write, today=today_mine,
+                                 snapshot_dir=DEMO_TARGETS if mine["offline"] else None)
                 status.update(label="Готово", state="complete")
-                st.session_state["mine"] = (res.network, res.target, res.notes)
+                st.session_state["mine"] = (res.network, res.target, res.notes, today_mine, mine["use_demo"])
             except (ValueError, FileNotFoundError, zipfile.BadZipFile) as exc:
                 st.error(f"Ошибка: {exc}")
                 return
@@ -458,10 +490,11 @@ def main() -> None:
             st.info("Загрузите ZIP экспорта LinkedIn, укажите цель и нажмите «Найти пути». "
                     "Или выберите синтетический набор в боковой панели.")
             return
-        network, target, notes = st.session_state["mine"]
+        network, target, notes, today, synthetic = st.session_state["mine"]
+        if synthetic:
+            st.warning("СИНТЕТИЧЕСКИЕ ДАННЫЕ: демо-ZIP вымышлен (см. data/demo/DISCLAIMER.md).")
         for note in notes:
             st.caption(note)
-        today = date.today()
 
     names = ["Обзор", "Данные", "Граф", "Пути", "Как считается", "Источники и приватность"]
     tabs = st.tabs(names)
