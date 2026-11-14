@@ -135,7 +135,7 @@ def save_network(network: Network, path: Path) -> None:
         "owner": _person_to_dict(network.owner),
         "contacts": [_person_to_dict(p) for p in network.contacts.values()],
     }
-    Path(path).write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    Path(path).write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8", newline="\n")
 
 
 def load_network(path: Path) -> Network:
@@ -169,7 +169,7 @@ def target_from_dict(data: dict) -> Target:
 
 def save_target(target: Target, path: Path) -> None:
     Path(path).write_text(
-        json.dumps(target_to_dict(target), ensure_ascii=False, indent=2), encoding="utf-8"
+        json.dumps(target_to_dict(target), ensure_ascii=False, indent=2), encoding="utf-8", newline="\n"
     )
 
 

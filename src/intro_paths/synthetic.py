@@ -193,7 +193,7 @@ def _write_csv(path: Path, header: list[str], rows: list[list], preamble: str = 
     with open(path, "w", encoding="utf-8", newline="") as f:
         if preamble:
             f.write(preamble)
-        w = csv.writer(f)
+        w = csv.writer(f, lineterminator="\n")  # LF на любой ОС: файлы побайтово воспроизводимы
         w.writerow(header)
         w.writerows(rows)
 
@@ -276,7 +276,8 @@ def generate(out_dir: Path, *, seed: int = 7, snapshots_dir: Path | None = None)
     save_network(network, out / "network.json")
 
     scenarios = {s.slug: {"tag": s.tag, "note": s.note} for s in specs}
-    (out / "scenarios.json").write_text(json.dumps(scenarios, ensure_ascii=False, indent=2), encoding="utf-8")
-    (out / "DISCLAIMER.md").write_text(DISCLAIMER, encoding="utf-8")
+    (out / "scenarios.json").write_text(
+        json.dumps(scenarios, ensure_ascii=False, indent=2), encoding="utf-8", newline="\n")
+    (out / "DISCLAIMER.md").write_text(DISCLAIMER, encoding="utf-8", newline="\n")
     return {"contacts": len(specs), "messages": len(messages), "invitations": len(invites),
             "scenarios": sorted({s.tag for s in specs})}
