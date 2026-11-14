@@ -1,0 +1,113 @@
+person_id,kind,name,start,end,role
+demo-kevan-parekh,position,Apple Inc,2012-01,,CFO
+demo-sabih-khan,position,Apple Inc,2012-01,,COO
+demo-jennifer-newstead,position,Apple Inc,2012-01,,General Counsel
+demo-deirdre-obrien,position,Apple Inc,2012-01,,SVP
+demo-timothy-cook,position,Apple Inc,2012-01,,Executive Chair
+demo-john-ternus,position,Apple Inc,2012-01,,CEO
+demo-arthur-levinson,position,Northwind Capital,2014-01,,Partner
+demo-susan-wagner,position,Contoso Labs,2014-01,,Partner
+demo-andrea-jung,position,Contoso Labs,2014-01,,Partner
+demo-alex-gorsky,position,Northwind Capital,2014-01,,Partner
+demo-sabih-khan-2,position,Tailspin Toys,2019-01,,Engineer
+demo-ilya-sutskever,education,University of Toronto,2004-09,2010-06,PhD
+demo-alex-krizhevsky,education,University of Toronto,2004-09,2010-06,PhD
+demo-zoubin-ghahramani,education,University of Toronto,2004-09,2010-06,PhD
+demo-yoshua-bengio,education,Université de Montréal,2004-09,2010-06,PhD
+demo-ruslan-salakhutdinov,position,Northwind Capital,2015-01,,Consultant
+demo-george-dahl,education,University of Toronto,2004-09,2010-06,PhD
+demo-abdelrahman-mohamed,position,Contoso Labs,2015-01,,Consultant
+demo-ava-whitlock,position,Apple Inc,2021-04,,Staff
+demo-ava-whitlock,education,Stanford University,2011-09,2015-06,BSc
+demo-ava-zeller,position,Apple Inc,2014-03,,Staff
+demo-leo-kensington,position,Apple Inc,2020-06,,Staff
+demo-leo-kensington,education,Higher School of Economics,2004-09,2008-06,BSc
+demo-nora-underhill,position,Apple Inc,2018-11,,Staff
+demo-nora-underhill,position,Northwind Capital,2014-01,2017-12,Staff
+demo-noah-galloway,position,Apple Inc,2021-05,,Staff
+demo-noah-galloway,education,MIT,2009-09,2013-06,BSc
+demo-noah-galloway,position,Contoso Labs,2017-01,2020-12,Staff
+demo-kai-eastwood,position,Apple Inc,2022-07,,Staff
+demo-kai-eastwood,position,Northwind Capital,2018-01,2021-12,Staff
+demo-ella-hargrove,position,Google,2009-08,,Staff
+demo-ella-hargrove,position,Vector Institute,2005-01,2008-12,Staff
+demo-hugo-kensington,position,Google,2011-12,,Staff
+demo-max-marlowe,position,Google,2015-02,,Staff
+demo-max-marlowe,education,Higher School of Economics,2003-09,2007-06,BSc
+demo-max-marlowe,position,University of Toronto,2011-01,2014-12,Staff
+demo-hugo-eastwood,position,Google,2017-02,,Staff
+demo-ethan-lockhart,position,Google,2018-06,,Staff
+demo-ethan-lockhart,education,University of Toronto,2010-09,2014-06,BSc
+demo-leo-yarrow,position,Google,2013-08,,Staff
+demo-leo-yarrow,position,Apple Inc,2009-01,2012-12,Staff
+demo-sam-quill,position,Google,2013-11,,Staff
+demo-lena-zeller,position,Google,2017-06,,Staff
+demo-iris-yarrow,position,Meta,2009-01,,Staff
+demo-iris-calloway,position,Meta,2012-02,,Staff
+demo-iris-calloway,education,MIT,2008-09,2012-06,BSc
+demo-iris-calloway,position,Fabrikam,2008-01,2011-12,Staff
+demo-liam-vandermeer,position,Meta,2010-07,,Staff
+demo-ada-marlowe,position,Meta,2016-07,,Staff
+demo-ada-marlowe,position,Meta,2012-01,2015-12,Staff
+demo-finn-underhill,position,Meta,2011-10,,Staff
+demo-ada-underhill,position,University of Toronto,2010-09,,Staff
+demo-ada-underhill,position,University of Toronto,2006-01,2009-12,Staff
+demo-ethan-radcliffe,position,University of Toronto,2015-03,,Staff
+demo-ethan-radcliffe,education,Stanford University,2010-09,2014-06,BSc
+demo-uma-oakley,position,University of Toronto,2021-03,,Staff
+demo-emma-radcliffe,position,University of Toronto,2009-06,,Staff
+demo-sam-dunmore,position,University of Toronto,2017-08,,Staff
+demo-sam-dunmore,education,University of Toronto,2010-09,2014-06,BSc
+demo-sam-dunmore,position,Tailspin Toys,2013-01,2016-12,Staff
+demo-zoe-whitlock,position,University of Toronto,2017-05,,Staff
+demo-zoe-northcott,position,University of Toronto,2010-04,,Staff
+demo-finn-hargrove,position,Vector Institute,2020-02,,Staff
+demo-finn-hargrove,education,Higher School of Economics,2005-09,2009-06,BSc
+demo-lucas-lockhart,position,Vector Institute,2014-02,,Staff
+demo-lucas-lockhart,position,Tailspin Toys,2010-01,2013-12,Staff
+demo-nora-quill,position,Vector Institute,2010-02,,Staff
+demo-sam-fairchild,position,Vector Institute,2013-03,,Staff
+demo-leo-calloway,position,Vector Institute,2013-01,,Staff
+demo-leo-calloway,position,Google,2009-01,2012-12,Staff
+demo-zoe-calloway,position,Vector Institute,2013-02,,Staff
+demo-zoe-calloway,education,Stanford University,2011-09,2015-06,BSc
+demo-emma-fairchild,position,MIT,2013-01,,Staff
+demo-emma-fairchild,education,Stanford University,2013-09,2017-06,BSc
+demo-emma-fairchild,position,University of Toronto,2009-01,2012-12,Staff
+demo-mia-ingram,position,MIT,2009-01,,Staff
+demo-mia-ingram,education,MIT,2011-09,2015-06,BSc
+demo-ian-marlowe,position,MIT,2017-05,,Staff
+demo-noah-eastwood,position,Northwind Capital,2009-02,,Staff
+demo-nora-thornton,position,Northwind Capital,2012-12,,Staff
+demo-nora-thornton,education,Higher School of Economics,2005-09,2009-06,BSc
+demo-nora-thornton,position,Contoso Labs,2008-01,2011-12,Staff
+demo-lena-kensington,position,Northwind Capital,2012-01,,Staff
+demo-lena-kensington,position,MIT,2008-01,2011-12,Staff
+demo-ethan-quill,position,Northwind Capital,2019-04,,Staff
+demo-ethan-quill,education,University of Toronto,2004-09,2008-06,BSc
+demo-ethan-quill,position,Google,2015-01,2018-12,Staff
+demo-nora-jessup,position,Northwind Capital,2019-04,,Staff
+demo-nora-jessup,education,MIT,2013-09,2017-06,BSc
+demo-owen-eastwood,position,Northwind Capital,2009-12,,Staff
+demo-eva-ashford,position,Contoso Labs,2022-11,,Staff
+demo-eva-ashford,education,MIT,2004-09,2008-06,BSc
+demo-eva-ashford,position,Meta,2018-01,2021-12,Staff
+demo-mia-underhill,position,Contoso Labs,2017-11,,Staff
+demo-mia-underhill,education,Stanford University,2003-09,2007-06,BSc
+demo-liam-yarrow,position,Contoso Labs,2020-08,,Staff
+demo-liam-yarrow,education,University of Toronto,2007-09,2011-06,BSc
+demo-liam-yarrow,position,University of Toronto,2016-01,2019-12,Staff
+demo-ella-jessup,position,Contoso Labs,2021-01,,Staff
+demo-ada-whitlock,position,Contoso Labs,2013-10,,Staff
+demo-ada-whitlock,education,University of Toronto,2010-09,2014-06,BSc
+demo-ada-whitlock,position,Vector Institute,2009-01,2012-12,Staff
+demo-theo-jessup,position,Tailspin Toys,2016-08,,Staff
+demo-theo-jessup,education,University of Toronto,2011-09,2015-06,BSc
+demo-theo-jessup,position,Google,2012-01,2015-12,Staff
+demo-finn-ingram,position,Tailspin Toys,2015-04,,Staff
+demo-oliver-thornton,position,Fabrikam,2022-11,,Staff
+demo-oliver-thornton,education,University of Toronto,2014-09,2018-06,BSc
+demo-oliver-thornton,position,Contoso Labs,2018-01,2021-12,Staff
+demo-max-jessup,position,Litware,2020-03,,Staff
+demo-max-jessup,education,Higher School of Economics,2008-09,2012-06,BSc
+demo-max-jessup,position,MIT,2016-01,2019-12,Staff

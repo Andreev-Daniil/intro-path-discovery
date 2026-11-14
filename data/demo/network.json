@@ -1,0 +1,3560 @@
+{
+  "owner": {
+    "id": "me",
+    "first_name": "Alex",
+    "last_name": "Demo",
+    "profile_url": "",
+    "connected_on": null,
+    "affiliations": [
+      {
+        "kind": "position",
+        "name": "Northwind Capital",
+        "norm": "northwind capital",
+        "start": "2016-01-01",
+        "end": "2020-12-31",
+        "role": "Analyst"
+      },
+      {
+        "kind": "position",
+        "name": "Vector Institute",
+        "norm": "vector institute",
+        "start": "2021-01-01",
+        "end": null,
+        "role": "Research Engineer"
+      },
+      {
+        "kind": "education",
+        "name": "University of Toronto",
+        "norm": "university of toronto",
+        "start": "2010-01-01",
+        "end": "2014-12-31",
+        "role": "BSc"
+      }
+    ],
+    "works": [],
+    "interactions": []
+  },
+  "contacts": [
+    {
+      "id": "demo-kevan-parekh",
+      "first_name": "Kevan",
+      "last_name": "Parekh",
+      "profile_url": "https://www.linkedin.com/in/demo-kevan-parekh/",
+      "connected_on": "2020-03-13",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": null,
+          "end": null,
+          "role": "CFO"
+        },
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": "2012-01-01",
+          "end": null,
+          "role": "CFO"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2020-03-13",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-sabih-khan",
+      "first_name": "Sabih",
+      "last_name": "Khan",
+      "profile_url": "https://www.linkedin.com/in/demo-sabih-khan/",
+      "connected_on": "2022-02-12",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": null,
+          "end": null,
+          "role": "COO"
+        },
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": "2012-01-01",
+          "end": null,
+          "role": "COO"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-10-02",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2024-09-01",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2022-02-12",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-jennifer-newstead",
+      "first_name": "Jennifer",
+      "last_name": "Newstead",
+      "profile_url": "https://www.linkedin.com/in/demo-jennifer-newstead/",
+      "connected_on": "2022-04-02",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": null,
+          "end": null,
+          "role": "General Counsel"
+        },
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": "2012-01-01",
+          "end": null,
+          "role": "General Counsel"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2022-04-02",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-deirdre-obrien",
+      "first_name": "Deirdre",
+      "last_name": "O'Brien",
+      "profile_url": "https://www.linkedin.com/in/demo-deirdre-obrien/",
+      "connected_on": "2018-07-14",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": null,
+          "end": null,
+          "role": "SVP"
+        },
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": "2012-01-01",
+          "end": null,
+          "role": "SVP"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2018-07-14",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-timothy-cook",
+      "first_name": "Timothy",
+      "last_name": "Cook",
+      "profile_url": "https://www.linkedin.com/in/demo-timothy-cook/",
+      "connected_on": "2018-09-14",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": null,
+          "end": null,
+          "role": "Executive Chair"
+        },
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": "2012-01-01",
+          "end": null,
+          "role": "Executive Chair"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2018-09-14",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-john-ternus",
+      "first_name": "John",
+      "last_name": "Ternus",
+      "profile_url": "https://www.linkedin.com/in/demo-john-ternus/",
+      "connected_on": "2018-10-04",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": null,
+          "end": null,
+          "role": "CEO"
+        },
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": "2012-01-01",
+          "end": null,
+          "role": "CEO"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-08",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-14",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2018-10-04",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-arthur-levinson",
+      "first_name": "Arthur",
+      "last_name": "Levinson",
+      "profile_url": "https://www.linkedin.com/in/demo-arthur-levinson/",
+      "connected_on": "2021-10-02",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": null,
+          "end": null,
+          "role": "Partner"
+        },
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": "2014-01-01",
+          "end": null,
+          "role": "Partner"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2021-10-02",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-susan-wagner",
+      "first_name": "Susan",
+      "last_name": "Wagner",
+      "profile_url": "https://www.linkedin.com/in/demo-susan-wagner/",
+      "connected_on": "2019-01-08",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": null,
+          "end": null,
+          "role": "Partner"
+        },
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": "2014-01-01",
+          "end": null,
+          "role": "Partner"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2019-01-08",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-andrea-jung",
+      "first_name": "Andrea",
+      "last_name": "Jung",
+      "profile_url": "https://www.linkedin.com/in/demo-andrea-jung/",
+      "connected_on": "2016-09-28",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": null,
+          "end": null,
+          "role": "Partner"
+        },
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": "2014-01-01",
+          "end": null,
+          "role": "Partner"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-03-10",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2016-09-28",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-alex-gorsky",
+      "first_name": "Alex",
+      "last_name": "Gorsky",
+      "profile_url": "https://www.linkedin.com/in/demo-alex-gorsky/",
+      "connected_on": "2019-03-18",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": null,
+          "end": null,
+          "role": "Partner"
+        },
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": "2014-01-01",
+          "end": null,
+          "role": "Partner"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2019-03-18",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-sabih-khan-2",
+      "first_name": "Sabih",
+      "last_name": "Khan",
+      "profile_url": "https://www.linkedin.com/in/demo-sabih-khan-2/",
+      "connected_on": "2019-10-10",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Tailspin Toys",
+          "norm": "tailspin toys",
+          "start": null,
+          "end": null,
+          "role": "Engineer"
+        },
+        {
+          "kind": "position",
+          "name": "Tailspin Toys",
+          "norm": "tailspin toys",
+          "start": "2019-01-01",
+          "end": null,
+          "role": "Engineer"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2019-10-10",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-ilya-sutskever",
+      "first_name": "Ilya",
+      "last_name": "Sutskever",
+      "profile_url": "https://www.linkedin.com/in/demo-ilya-sutskever/",
+      "connected_on": "2021-11-06",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Vector Institute",
+          "norm": "vector institute",
+          "start": null,
+          "end": null,
+          "role": "Researcher"
+        },
+        {
+          "kind": "education",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2004-09-01",
+          "end": "2010-06-30",
+          "role": "PhD"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2021-11-06",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-alex-krizhevsky",
+      "first_name": "Alex",
+      "last_name": "Krizhevsky",
+      "profile_url": "https://www.linkedin.com/in/demo-alex-krizhevsky/",
+      "connected_on": "2021-11-07",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": null,
+          "end": null,
+          "role": "Researcher"
+        },
+        {
+          "kind": "education",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2004-09-01",
+          "end": "2010-06-30",
+          "role": "PhD"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2021-11-07",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-zoubin-ghahramani",
+      "first_name": "Zoubin",
+      "last_name": "Ghahramani",
+      "profile_url": "https://www.linkedin.com/in/demo-zoubin-ghahramani/",
+      "connected_on": "2019-02-18",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Vector Institute",
+          "norm": "vector institute",
+          "start": null,
+          "end": null,
+          "role": "Researcher"
+        },
+        {
+          "kind": "education",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2004-09-01",
+          "end": "2010-06-30",
+          "role": "PhD"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-12-03",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2024-11-02",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2019-02-18",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-yoshua-bengio",
+      "first_name": "Yoshua",
+      "last_name": "Bengio",
+      "profile_url": "https://www.linkedin.com/in/demo-yoshua-bengio/",
+      "connected_on": "2021-01-20",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Vector Institute",
+          "norm": "vector institute",
+          "start": null,
+          "end": null,
+          "role": "Researcher"
+        },
+        {
+          "kind": "education",
+          "name": "Université de Montréal",
+          "norm": "université de montréal",
+          "start": "2004-09-01",
+          "end": "2010-06-30",
+          "role": "PhD"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-04-16",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2021-01-20",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-ruslan-salakhutdinov",
+      "first_name": "Ruslan",
+      "last_name": "Salakhutdinov",
+      "profile_url": "https://www.linkedin.com/in/demo-ruslan-salakhutdinov/",
+      "connected_on": "2022-09-14",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": null,
+          "end": null,
+          "role": "Consultant"
+        },
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": "2015-01-01",
+          "end": null,
+          "role": "Consultant"
+        }
+      ],
+      "works": [
+        {
+          "id": "W2095705004",
+          "title": "Dropout: a simple way to prevent neural networks from overfitting",
+          "year": 2014,
+          "doi": "",
+          "url": "https://openalex.org/W2095705004",
+          "coauthors": []
+        },
+        {
+          "id": "W2100495367",
+          "title": "Reducing the Dimensionality of Data with Neural Networks",
+          "year": 2006,
+          "doi": "10.1126/science.1127647",
+          "url": "https://openalex.org/W2100495367",
+          "coauthors": []
+        },
+        {
+          "id": "W2099866409",
+          "title": "Restricted Boltzmann machines for collaborative filtering",
+          "year": 2007,
+          "doi": "10.1145/1273496.1273596",
+          "url": "https://openalex.org/W2099866409",
+          "coauthors": []
+        },
+        {
+          "id": "W189596042",
+          "title": "Deep Boltzmann machines",
+          "year": 2009,
+          "doi": "",
+          "url": "https://openalex.org/W189596042",
+          "coauthors": []
+        },
+        {
+          "id": "W2144935315",
+          "title": "Neighbourhood Components Analysis",
+          "year": 2004,
+          "doi": "",
+          "url": "https://openalex.org/W2144935315",
+          "coauthors": []
+        },
+        {
+          "id": "W2913932916",
+          "title": "Semantic hashing",
+          "year": 2008,
+          "doi": "10.1016/j.ijar.2008.11.006",
+          "url": "https://openalex.org/W2913932916",
+          "coauthors": []
+        },
+        {
+          "id": "W2071709160",
+          "title": "An Efficient Learning Procedure for Deep Boltzmann Machines",
+          "year": 2012,
+          "doi": "10.1162/neco_a_00311",
+          "url": "https://openalex.org/W2071709160",
+          "coauthors": []
+        },
+        {
+          "id": "W205159212",
+          "title": "Learning a Nonlinear Embedding by Preserving Class Neighbourhood Structure",
+          "year": 2007,
+          "doi": "",
+          "url": "https://openalex.org/W205159212",
+          "coauthors": []
+        },
+        {
+          "id": "W2100002341",
+          "title": "Replicated Softmax: an Undirected Topic Model",
+          "year": 2009,
+          "doi": "",
+          "url": "https://openalex.org/W2100002341",
+          "coauthors": []
+        }
+      ],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2022-09-14",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-george-dahl",
+      "first_name": "George",
+      "last_name": "Dahl",
+      "profile_url": "https://www.linkedin.com/in/demo-george-dahl/",
+      "connected_on": "2021-08-12",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": null,
+          "end": null,
+          "role": "Researcher"
+        },
+        {
+          "kind": "education",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2004-09-01",
+          "end": "2010-06-30",
+          "role": "PhD"
+        }
+      ],
+      "works": [
+        {
+          "id": "W2160815625",
+          "title": "Deep Neural Networks for Acoustic Modeling in Speech Recognition: The Shared Views of Four Research Groups",
+          "year": 2012,
+          "doi": "10.1109/msp.2012.2205597",
+          "url": "https://openalex.org/W2160815625",
+          "coauthors": []
+        },
+        {
+          "id": "W104184427",
+          "title": "On the importance of initialization and momentum in deep learning",
+          "year": 2013,
+          "doi": "",
+          "url": "https://openalex.org/W104184427",
+          "coauthors": []
+        },
+        {
+          "id": "W2184045248",
+          "title": "Deep Neural Networks for Acoustic Modeling in Speech Recognition",
+          "year": 2012,
+          "doi": "",
+          "url": "https://openalex.org/W2184045248",
+          "coauthors": []
+        },
+        {
+          "id": "W1993882792",
+          "title": "Acoustic Modeling Using Deep Belief Networks",
+          "year": 2011,
+          "doi": "10.1109/tasl.2011.2109382",
+          "url": "https://openalex.org/W1993882792",
+          "coauthors": []
+        },
+        {
+          "id": "W2062227835",
+          "title": "Improving deep neural networks for LVCSR using rectified linear units and dropout",
+          "year": 2013,
+          "doi": "10.1109/icassp.2013.6639346",
+          "url": "https://openalex.org/W2062227835",
+          "coauthors": []
+        },
+        {
+          "id": "W2106051978",
+          "title": "Deep Belief Networks using discriminative features for phone recognition",
+          "year": 2011,
+          "doi": "10.1109/icassp.2011.5947494",
+          "url": "https://openalex.org/W2106051978",
+          "coauthors": []
+        },
+        {
+          "id": "W2103359087",
+          "title": "Phone Recognition with the Mean-Covariance Restricted Boltzmann Machine",
+          "year": 2010,
+          "doi": "",
+          "url": "https://openalex.org/W2103359087",
+          "coauthors": []
+        }
+      ],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2021-08-12",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-abdelrahman-mohamed",
+      "first_name": "Abdelrahman",
+      "last_name": "Mohamed",
+      "profile_url": "https://www.linkedin.com/in/demo-abdelrahman-mohamed/",
+      "connected_on": "2019-04-26",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": null,
+          "end": null,
+          "role": "Consultant"
+        },
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": "2015-01-01",
+          "end": null,
+          "role": "Consultant"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2019-04-26",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-ava-whitlock",
+      "first_name": "Ava",
+      "last_name": "Whitlock",
+      "profile_url": "https://www.linkedin.com/in/demo-ava-whitlock/",
+      "connected_on": "2022-05-20",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": "2021-04-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Stanford University",
+          "norm": "stanford university",
+          "start": "2011-09-01",
+          "end": "2015-06-30",
+          "role": "BSc"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2022-05-20",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-ava-zeller",
+      "first_name": "Ava",
+      "last_name": "Zeller",
+      "profile_url": "https://www.linkedin.com/in/demo-ava-zeller/",
+      "connected_on": "2023-10-26",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": "2014-03-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": []
+    },
+    {
+      "id": "demo-leo-kensington",
+      "first_name": "Leo",
+      "last_name": "Kensington",
+      "profile_url": "https://www.linkedin.com/in/demo-leo-kensington/",
+      "connected_on": "2022-12-22",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": "2020-06-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Higher School of Economics",
+          "norm": "higher school of economics",
+          "start": "2004-09-01",
+          "end": "2008-06-30",
+          "role": "BSc"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-02-02",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2024-01-01",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2022-12-22",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-nora-underhill",
+      "first_name": "Nora",
+      "last_name": "Underhill",
+      "profile_url": "https://www.linkedin.com/in/demo-nora-underhill/",
+      "connected_on": "2015-08-12",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": "2018-11-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": "2014-01-01",
+          "end": "2017-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2015-08-12",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-noah-galloway",
+      "first_name": "Noah",
+      "last_name": "Galloway",
+      "profile_url": "https://www.linkedin.com/in/demo-noah-galloway/",
+      "connected_on": "2017-08-13",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": "2021-05-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "MIT",
+          "norm": "mit",
+          "start": "2009-09-01",
+          "end": "2013-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": "2017-01-01",
+          "end": "2020-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2017-08-13",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-kai-eastwood",
+      "first_name": "Kai",
+      "last_name": "Eastwood",
+      "profile_url": "https://www.linkedin.com/in/demo-kai-eastwood/",
+      "connected_on": "2021-04-05",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": "2022-07-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": "2018-01-01",
+          "end": "2021-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2021-04-05",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-ella-hargrove",
+      "first_name": "Ella",
+      "last_name": "Hargrove",
+      "profile_url": "https://www.linkedin.com/in/demo-ella-hargrove/",
+      "connected_on": "2017-07-18",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Google",
+          "norm": "google",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Google",
+          "norm": "google",
+          "start": "2009-08-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Vector Institute",
+          "norm": "vector institute",
+          "start": "2005-01-01",
+          "end": "2008-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2017-07-18",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-hugo-kensington",
+      "first_name": "Hugo",
+      "last_name": "Kensington",
+      "profile_url": "https://www.linkedin.com/in/demo-hugo-kensington/",
+      "connected_on": "2022-11-26",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Google",
+          "norm": "google",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Google",
+          "norm": "google",
+          "start": "2011-12-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2022-11-26",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-max-marlowe",
+      "first_name": "Max",
+      "last_name": "Marlowe",
+      "profile_url": "https://www.linkedin.com/in/demo-max-marlowe/",
+      "connected_on": "2017-02-11",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Google",
+          "norm": "google",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Google",
+          "norm": "google",
+          "start": "2015-02-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Higher School of Economics",
+          "norm": "higher school of economics",
+          "start": "2003-09-01",
+          "end": "2007-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2011-01-01",
+          "end": "2014-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-08",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-13",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2017-02-11",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-hugo-eastwood",
+      "first_name": "Hugo",
+      "last_name": "Eastwood",
+      "profile_url": "https://www.linkedin.com/in/demo-hugo-eastwood/",
+      "connected_on": "2018-10-13",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Google",
+          "norm": "google",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Google",
+          "norm": "google",
+          "start": "2017-02-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2018-10-13",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-ethan-lockhart",
+      "first_name": "Ethan",
+      "last_name": "Lockhart",
+      "profile_url": "https://www.linkedin.com/in/demo-ethan-lockhart/",
+      "connected_on": "2022-08-10",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Google",
+          "norm": "google",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Google",
+          "norm": "google",
+          "start": "2018-06-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2010-09-01",
+          "end": "2014-06-30",
+          "role": "BSc"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-08",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-13",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2022-08-10",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-leo-yarrow",
+      "first_name": "Leo",
+      "last_name": "Yarrow",
+      "profile_url": "https://www.linkedin.com/in/demo-leo-yarrow/",
+      "connected_on": "2023-06-05",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Google",
+          "norm": "google",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Google",
+          "norm": "google",
+          "start": "2013-08-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Apple Inc",
+          "norm": "apple",
+          "start": "2009-01-01",
+          "end": "2012-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-12-18",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-sam-quill",
+      "first_name": "Sam",
+      "last_name": "Quill",
+      "profile_url": "https://www.linkedin.com/in/demo-sam-quill/",
+      "connected_on": "2023-06-06",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Google",
+          "norm": "google",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Google",
+          "norm": "google",
+          "start": "2013-11-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-06-25",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2024-05-24",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2023-06-06",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-lena-zeller",
+      "first_name": "Lena",
+      "last_name": "Zeller",
+      "profile_url": "https://www.linkedin.com/in/demo-lena-zeller/",
+      "connected_on": "2018-07-24",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Google",
+          "norm": "google",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Google",
+          "norm": "google",
+          "start": "2017-06-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-04-07",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2018-07-24",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-iris-yarrow",
+      "first_name": "Iris",
+      "last_name": "Yarrow",
+      "profile_url": "https://www.linkedin.com/in/demo-iris-yarrow/",
+      "connected_on": "2024-06-15",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Meta",
+          "norm": "meta",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Meta",
+          "norm": "meta",
+          "start": "2009-01-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-12-12",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-iris-calloway",
+      "first_name": "Iris",
+      "last_name": "Calloway",
+      "profile_url": "https://www.linkedin.com/in/demo-iris-calloway/",
+      "connected_on": "2022-11-12",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Meta",
+          "norm": "meta",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Meta",
+          "norm": "meta",
+          "start": "2012-02-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "MIT",
+          "norm": "mit",
+          "start": "2008-09-01",
+          "end": "2012-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "Fabrikam",
+          "norm": "fabrikam",
+          "start": "2008-01-01",
+          "end": "2011-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": []
+    },
+    {
+      "id": "demo-liam-vandermeer",
+      "first_name": "Liam",
+      "last_name": "Vandermeer",
+      "profile_url": "https://www.linkedin.com/in/demo-liam-vandermeer/",
+      "connected_on": "2017-07-26",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Meta",
+          "norm": "meta",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Meta",
+          "norm": "meta",
+          "start": "2010-07-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-08",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-13",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-ada-marlowe",
+      "first_name": "Ada",
+      "last_name": "Marlowe",
+      "profile_url": "https://www.linkedin.com/in/demo-ada-marlowe/",
+      "connected_on": "2017-01-05",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Meta",
+          "norm": "meta",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Meta",
+          "norm": "meta",
+          "start": "2016-07-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Meta",
+          "norm": "meta",
+          "start": "2012-01-01",
+          "end": "2015-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2017-01-05",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-finn-underhill",
+      "first_name": "Finn",
+      "last_name": "Underhill",
+      "profile_url": "https://www.linkedin.com/in/demo-finn-underhill/",
+      "connected_on": "2017-09-18",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Meta",
+          "norm": "meta",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Meta",
+          "norm": "meta",
+          "start": "2011-10-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2017-09-18",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-ada-underhill",
+      "first_name": "Ada",
+      "last_name": "Underhill",
+      "profile_url": "https://www.linkedin.com/in/demo-ada-underhill/",
+      "connected_on": "2015-05-07",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2010-09-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2006-01-01",
+          "end": "2009-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-05-17",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2015-05-07",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-ethan-radcliffe",
+      "first_name": "Ethan",
+      "last_name": "Radcliffe",
+      "profile_url": "https://www.linkedin.com/in/demo-ethan-radcliffe/",
+      "connected_on": "2023-03-18",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2015-03-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Stanford University",
+          "norm": "stanford university",
+          "start": "2010-09-01",
+          "end": "2014-06-30",
+          "role": "BSc"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2023-03-18",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-uma-oakley",
+      "first_name": "Uma",
+      "last_name": "Oakley",
+      "profile_url": "https://www.linkedin.com/in/demo-uma-oakley/",
+      "connected_on": "2017-03-16",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2021-03-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2017-03-16",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-emma-radcliffe",
+      "first_name": "Emma",
+      "last_name": "Radcliffe",
+      "profile_url": "https://www.linkedin.com/in/demo-emma-radcliffe/",
+      "connected_on": "2016-09-02",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2009-06-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-08",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-13",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2016-09-02",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-sam-dunmore",
+      "first_name": "Sam",
+      "last_name": "Dunmore",
+      "profile_url": "https://www.linkedin.com/in/demo-sam-dunmore/",
+      "connected_on": "2019-08-17",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2017-08-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2010-09-01",
+          "end": "2014-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "Tailspin Toys",
+          "norm": "tailspin toys",
+          "start": "2013-01-01",
+          "end": "2016-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-09-26",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2019-08-17",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-zoe-whitlock",
+      "first_name": "Zoe",
+      "last_name": "Whitlock",
+      "profile_url": "https://www.linkedin.com/in/demo-zoe-whitlock/",
+      "connected_on": "2022-03-14",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2017-05-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-02-13",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2022-03-14",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-zoe-northcott",
+      "first_name": "Zoe",
+      "last_name": "Northcott",
+      "profile_url": "https://www.linkedin.com/in/demo-zoe-northcott/",
+      "connected_on": "2020-03-09",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2010-04-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": []
+    },
+    {
+      "id": "demo-finn-hargrove",
+      "first_name": "Finn",
+      "last_name": "Hargrove",
+      "profile_url": "https://www.linkedin.com/in/demo-finn-hargrove/",
+      "connected_on": "2017-12-14",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Vector Institute",
+          "norm": "vector institute",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Vector Institute",
+          "norm": "vector institute",
+          "start": "2020-02-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Higher School of Economics",
+          "norm": "higher school of economics",
+          "start": "2005-09-01",
+          "end": "2009-06-30",
+          "role": "BSc"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-09-13",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2017-12-14",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-lucas-lockhart",
+      "first_name": "Lucas",
+      "last_name": "Lockhart",
+      "profile_url": "https://www.linkedin.com/in/demo-lucas-lockhart/",
+      "connected_on": "2022-12-01",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Vector Institute",
+          "norm": "vector institute",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Vector Institute",
+          "norm": "vector institute",
+          "start": "2014-02-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Tailspin Toys",
+          "norm": "tailspin toys",
+          "start": "2010-01-01",
+          "end": "2013-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-08",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-13",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2022-12-01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-nora-quill",
+      "first_name": "Nora",
+      "last_name": "Quill",
+      "profile_url": "https://www.linkedin.com/in/demo-nora-quill/",
+      "connected_on": "2016-05-09",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Vector Institute",
+          "norm": "vector institute",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Vector Institute",
+          "norm": "vector institute",
+          "start": "2010-02-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2016-05-09",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-sam-fairchild",
+      "first_name": "Sam",
+      "last_name": "Fairchild",
+      "profile_url": "https://www.linkedin.com/in/demo-sam-fairchild/",
+      "connected_on": "2021-03-18",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Vector Institute",
+          "norm": "vector institute",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Vector Institute",
+          "norm": "vector institute",
+          "start": "2013-03-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-09-19",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2024-08-18",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2021-03-18",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-leo-calloway",
+      "first_name": "Leo",
+      "last_name": "Calloway",
+      "profile_url": "https://www.linkedin.com/in/demo-leo-calloway/",
+      "connected_on": "2015-11-03",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Vector Institute",
+          "norm": "vector institute",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Vector Institute",
+          "norm": "vector institute",
+          "start": "2013-01-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Google",
+          "norm": "google",
+          "start": "2009-01-01",
+          "end": "2012-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-05-03",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2024-04-02",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2015-11-03",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-zoe-calloway",
+      "first_name": "Zoe",
+      "last_name": "Calloway",
+      "profile_url": "https://www.linkedin.com/in/demo-zoe-calloway/",
+      "connected_on": "2024-03-02",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Vector Institute",
+          "norm": "vector institute",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Vector Institute",
+          "norm": "vector institute",
+          "start": "2013-02-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Stanford University",
+          "norm": "stanford university",
+          "start": "2011-09-01",
+          "end": "2015-06-30",
+          "role": "BSc"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-09-23",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2024-08-22",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2024-03-02",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-emma-fairchild",
+      "first_name": "Emma",
+      "last_name": "Fairchild",
+      "profile_url": "https://www.linkedin.com/in/demo-emma-fairchild/",
+      "connected_on": "2022-09-22",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "MIT",
+          "norm": "mit",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "MIT",
+          "norm": "mit",
+          "start": "2013-01-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Stanford University",
+          "norm": "stanford university",
+          "start": "2013-09-01",
+          "end": "2017-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2009-01-01",
+          "end": "2012-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-03-09",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2024-02-08",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2022-09-22",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-mia-ingram",
+      "first_name": "Mia",
+      "last_name": "Ingram",
+      "profile_url": "https://www.linkedin.com/in/demo-mia-ingram/",
+      "connected_on": "2016-11-27",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "MIT",
+          "norm": "mit",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "MIT",
+          "norm": "mit",
+          "start": "2009-01-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "MIT",
+          "norm": "mit",
+          "start": "2011-09-01",
+          "end": "2015-06-30",
+          "role": "BSc"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-08",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-13",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2016-11-27",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-ian-marlowe",
+      "first_name": "Ian",
+      "last_name": "Marlowe",
+      "profile_url": "https://www.linkedin.com/in/demo-ian-marlowe/",
+      "connected_on": "2018-12-24",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "MIT",
+          "norm": "mit",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "MIT",
+          "norm": "mit",
+          "start": "2017-05-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-noah-eastwood",
+      "first_name": "Noah",
+      "last_name": "Eastwood",
+      "profile_url": "https://www.linkedin.com/in/demo-noah-eastwood/",
+      "connected_on": "2017-01-03",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": "2009-02-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2017-01-03",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-nora-thornton",
+      "first_name": "Nora",
+      "last_name": "Thornton",
+      "profile_url": "https://www.linkedin.com/in/demo-nora-thornton/",
+      "connected_on": "2019-06-11",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": "2012-12-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Higher School of Economics",
+          "norm": "higher school of economics",
+          "start": "2005-09-01",
+          "end": "2009-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": "2008-01-01",
+          "end": "2011-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": []
+    },
+    {
+      "id": "demo-lena-kensington",
+      "first_name": "Lena",
+      "last_name": "Kensington",
+      "profile_url": "https://www.linkedin.com/in/demo-lena-kensington/",
+      "connected_on": "2015-06-13",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": "2012-01-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "MIT",
+          "norm": "mit",
+          "start": "2008-01-01",
+          "end": "2011-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2015-06-13",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-ethan-quill",
+      "first_name": "Ethan",
+      "last_name": "Quill",
+      "profile_url": "https://www.linkedin.com/in/demo-ethan-quill/",
+      "connected_on": "2021-10-02",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": "2019-04-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2004-09-01",
+          "end": "2008-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "Google",
+          "norm": "google",
+          "start": "2015-01-01",
+          "end": "2018-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2021-10-02",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-nora-jessup",
+      "first_name": "Nora",
+      "last_name": "Jessup",
+      "profile_url": "https://www.linkedin.com/in/demo-nora-jessup/",
+      "connected_on": "2020-12-16",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": "2019-04-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "MIT",
+          "norm": "mit",
+          "start": "2013-09-01",
+          "end": "2017-06-30",
+          "role": "BSc"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2020-12-16",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-owen-eastwood",
+      "first_name": "Owen",
+      "last_name": "Eastwood",
+      "profile_url": "https://www.linkedin.com/in/demo-owen-eastwood/",
+      "connected_on": "2023-09-19",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": "2009-12-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": []
+    },
+    {
+      "id": "demo-eva-ashford",
+      "first_name": "Eva",
+      "last_name": "Ashford",
+      "profile_url": "https://www.linkedin.com/in/demo-eva-ashford/",
+      "connected_on": "2016-07-27",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": "2022-11-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "MIT",
+          "norm": "mit",
+          "start": "2004-09-01",
+          "end": "2008-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "Meta",
+          "norm": "meta",
+          "start": "2018-01-01",
+          "end": "2021-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2016-07-27",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-mia-underhill",
+      "first_name": "Mia",
+      "last_name": "Underhill",
+      "profile_url": "https://www.linkedin.com/in/demo-mia-underhill/",
+      "connected_on": "2023-09-03",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": "2017-11-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Stanford University",
+          "norm": "stanford university",
+          "start": "2003-09-01",
+          "end": "2007-06-30",
+          "role": "BSc"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2023-09-03",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-liam-yarrow",
+      "first_name": "Liam",
+      "last_name": "Yarrow",
+      "profile_url": "https://www.linkedin.com/in/demo-liam-yarrow/",
+      "connected_on": "2022-08-28",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": "2020-08-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2007-09-01",
+          "end": "2011-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2016-01-01",
+          "end": "2019-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-07-03",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2022-08-28",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-ella-jessup",
+      "first_name": "Ella",
+      "last_name": "Jessup",
+      "profile_url": "https://www.linkedin.com/in/demo-ella-jessup/",
+      "connected_on": "2024-03-11",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": "2021-01-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2024-03-11",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-ada-whitlock",
+      "first_name": "Ada",
+      "last_name": "Whitlock",
+      "profile_url": "https://www.linkedin.com/in/demo-ada-whitlock/",
+      "connected_on": "2018-11-16",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": "2013-10-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2010-09-01",
+          "end": "2014-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "Vector Institute",
+          "norm": "vector institute",
+          "start": "2009-01-01",
+          "end": "2012-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2018-11-16",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-theo-jessup",
+      "first_name": "Theo",
+      "last_name": "Jessup",
+      "profile_url": "https://www.linkedin.com/in/demo-theo-jessup/",
+      "connected_on": "2015-05-15",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Tailspin Toys",
+          "norm": "tailspin toys",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Tailspin Toys",
+          "norm": "tailspin toys",
+          "start": "2016-08-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2011-09-01",
+          "end": "2015-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "Google",
+          "norm": "google",
+          "start": "2012-01-01",
+          "end": "2015-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-08",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-13",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2015-05-15",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-finn-ingram",
+      "first_name": "Finn",
+      "last_name": "Ingram",
+      "profile_url": "https://www.linkedin.com/in/demo-finn-ingram/",
+      "connected_on": "2024-02-05",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Tailspin Toys",
+          "norm": "tailspin toys",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Tailspin Toys",
+          "norm": "tailspin toys",
+          "start": "2015-04-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2024-02-05",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-oliver-thornton",
+      "first_name": "Oliver",
+      "last_name": "Thornton",
+      "profile_url": "https://www.linkedin.com/in/demo-oliver-thornton/",
+      "connected_on": "2021-01-06",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Fabrikam",
+          "norm": "fabrikam",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Fabrikam",
+          "norm": "fabrikam",
+          "start": "2022-11-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2014-09-01",
+          "end": "2018-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": "2018-01-01",
+          "end": "2021-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-08",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-13",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2021-01-06",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-max-jessup",
+      "first_name": "Max",
+      "last_name": "Jessup",
+      "profile_url": "https://www.linkedin.com/in/demo-max-jessup/",
+      "connected_on": "2020-06-27",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Litware",
+          "norm": "litware",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Litware",
+          "norm": "litware",
+          "start": "2020-03-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Higher School of Economics",
+          "norm": "higher school of economics",
+          "start": "2008-09-01",
+          "end": "2012-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "MIT",
+          "norm": "mit",
+          "start": "2016-01-01",
+          "end": "2019-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2020-06-27",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

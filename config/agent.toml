@@ -1,0 +1,18 @@
+# Рабочий конфиг агента: модель за OpenAI-совместимым API (routerai.ru).
+# Ключ и адрес API здесь НЕ хранятся: в .env заданы переменные с именами из api_key_env / base_url_env.
+provider = "openai_compatible"
+model = "qwen/qwen3.8-27b"   # поменяйте модель здесь — код не меняется
+api_key_env = "API_KEY"      # имя переменной окружения с ключом
+base_url_env = "API_LINK"    # имя переменной окружения с адресом API
+
+max_tokens = 4000
+request_timeout_s = 120
+max_steps = 8               # лимит шагов цикла
+tool_timeout_s = 20         # таймаут одного вызова инструмента
+result_max_chars = 6000     # предел размера результата инструмента
+max_intro_requests = 3
+
+network = "data/demo/network.json"
+targets_dir = "data/demo/targets"
+outbox_dir = "data/outbox"
+enrichment = "snapshot"     # snapshot — офлайн-снимки; live — SEC EDGAR / OpenAlex (нужен SEC_USER_AGENT)

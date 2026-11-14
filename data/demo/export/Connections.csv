@@ -1,0 +1,72 @@
+Notes:
+"Синтетический экспорт: все данные вымышлены."
+
+First Name,Last Name,URL,Email Address,Company,Position,Connected On
+Kevan,Parekh,https://www.linkedin.com/in/demo-kevan-parekh/,,Apple Inc,CFO,13 Mar 2020
+Sabih,Khan,https://www.linkedin.com/in/demo-sabih-khan/,,Apple Inc,COO,12 Feb 2022
+Jennifer,Newstead,https://www.linkedin.com/in/demo-jennifer-newstead/,,Apple Inc,General Counsel,02 Apr 2022
+Deirdre,O'Brien,https://www.linkedin.com/in/demo-deirdre-obrien/,,Apple Inc,SVP,14 Jul 2018
+Timothy,Cook,https://www.linkedin.com/in/demo-timothy-cook/,,Apple Inc,Executive Chair,14 Sep 2018
+John,Ternus,https://www.linkedin.com/in/demo-john-ternus/,,Apple Inc,CEO,04 Oct 2018
+Arthur,Levinson,https://www.linkedin.com/in/demo-arthur-levinson/,,Northwind Capital,Partner,02 Oct 2021
+Susan,Wagner,https://www.linkedin.com/in/demo-susan-wagner/,,Contoso Labs,Partner,08 Jan 2019
+Andrea,Jung,https://www.linkedin.com/in/demo-andrea-jung/,,Contoso Labs,Partner,28 Sep 2016
+Alex,Gorsky,https://www.linkedin.com/in/demo-alex-gorsky/,,Northwind Capital,Partner,18 Mar 2019
+Sabih,Khan,https://www.linkedin.com/in/demo-sabih-khan-2/,,Tailspin Toys,Engineer,10 Oct 2019
+Ilya,Sutskever,https://www.linkedin.com/in/demo-ilya-sutskever/,,Vector Institute,Researcher,06 Nov 2021
+Alex,Krizhevsky,https://www.linkedin.com/in/demo-alex-krizhevsky/,,Northwind Capital,Researcher,07 Nov 2021
+Zoubin,Ghahramani,https://www.linkedin.com/in/demo-zoubin-ghahramani/,,Vector Institute,Researcher,18 Feb 2019
+Yoshua,Bengio,https://www.linkedin.com/in/demo-yoshua-bengio/,,Vector Institute,Researcher,20 Jan 2021
+Ruslan,Salakhutdinov,https://www.linkedin.com/in/demo-ruslan-salakhutdinov/,,Northwind Capital,Consultant,14 Sep 2022
+George,Dahl,https://www.linkedin.com/in/demo-george-dahl/,,Northwind Capital,Researcher,12 Aug 2021
+Abdelrahman,Mohamed,https://www.linkedin.com/in/demo-abdelrahman-mohamed/,,Contoso Labs,Consultant,26 Apr 2019
+Ava,Whitlock,https://www.linkedin.com/in/demo-ava-whitlock/,,Apple Inc,Staff,20 May 2022
+Ava,Zeller,https://www.linkedin.com/in/demo-ava-zeller/,,Apple Inc,Staff,26 Oct 2023
+Leo,Kensington,https://www.linkedin.com/in/demo-leo-kensington/,,Apple Inc,Staff,22 Dec 2022
+Nora,Underhill,https://www.linkedin.com/in/demo-nora-underhill/,,Apple Inc,Staff,12 Aug 2015
+Noah,Galloway,https://www.linkedin.com/in/demo-noah-galloway/,,Apple Inc,Staff,13 Aug 2017
+Kai,Eastwood,https://www.linkedin.com/in/demo-kai-eastwood/,,Apple Inc,Staff,05 Apr 2021
+Ella,Hargrove,https://www.linkedin.com/in/demo-ella-hargrove/,,Google,Staff,18 Jul 2017
+Hugo,Kensington,https://www.linkedin.com/in/demo-hugo-kensington/,,Google,Staff,26 Nov 2022
+Max,Marlowe,https://www.linkedin.com/in/demo-max-marlowe/,,Google,Staff,11 Feb 2017
+Hugo,Eastwood,https://www.linkedin.com/in/demo-hugo-eastwood/,,Google,Staff,13 Oct 2018
+Ethan,Lockhart,https://www.linkedin.com/in/demo-ethan-lockhart/,,Google,Staff,10 Aug 2022
+Leo,Yarrow,https://www.linkedin.com/in/demo-leo-yarrow/,,Google,Staff,05 Jun 2023
+Sam,Quill,https://www.linkedin.com/in/demo-sam-quill/,,Google,Staff,06 Jun 2023
+Lena,Zeller,https://www.linkedin.com/in/demo-lena-zeller/,,Google,Staff,24 Jul 2018
+Iris,Yarrow,https://www.linkedin.com/in/demo-iris-yarrow/,,Meta,Staff,15 Jun 2024
+Iris,Calloway,https://www.linkedin.com/in/demo-iris-calloway/,,Meta,Staff,12 Nov 2022
+Liam,Vandermeer,https://www.linkedin.com/in/demo-liam-vandermeer/,,Meta,Staff,26 Jul 2017
+Ada,Marlowe,https://www.linkedin.com/in/demo-ada-marlowe/,,Meta,Staff,05 Jan 2017
+Finn,Underhill,https://www.linkedin.com/in/demo-finn-underhill/,,Meta,Staff,18 Sep 2017
+Ada,Underhill,https://www.linkedin.com/in/demo-ada-underhill/,,University of Toronto,Staff,07 May 2015
+Ethan,Radcliffe,https://www.linkedin.com/in/demo-ethan-radcliffe/,,University of Toronto,Staff,18 Mar 2023
+Uma,Oakley,https://www.linkedin.com/in/demo-uma-oakley/,,University of Toronto,Staff,16 Mar 2017
+Emma,Radcliffe,https://www.linkedin.com/in/demo-emma-radcliffe/,,University of Toronto,Staff,02 Sep 2016
+Sam,Dunmore,https://www.linkedin.com/in/demo-sam-dunmore/,,University of Toronto,Staff,17 Aug 2019
+Zoe,Whitlock,https://www.linkedin.com/in/demo-zoe-whitlock/,,University of Toronto,Staff,14 Mar 2022
+Zoe,Northcott,https://www.linkedin.com/in/demo-zoe-northcott/,,University of Toronto,Staff,09 Mar 2020
+Finn,Hargrove,https://www.linkedin.com/in/demo-finn-hargrove/,,Vector Institute,Staff,14 Dec 2017
+Lucas,Lockhart,https://www.linkedin.com/in/demo-lucas-lockhart/,,Vector Institute,Staff,01 Dec 2022
+Nora,Quill,https://www.linkedin.com/in/demo-nora-quill/,,Vector Institute,Staff,09 May 2016
+Sam,Fairchild,https://www.linkedin.com/in/demo-sam-fairchild/,,Vector Institute,Staff,18 Mar 2021
+Leo,Calloway,https://www.linkedin.com/in/demo-leo-calloway/,,Vector Institute,Staff,03 Nov 2015
+Zoe,Calloway,https://www.linkedin.com/in/demo-zoe-calloway/,,Vector Institute,Staff,02 Mar 2024
+Emma,Fairchild,https://www.linkedin.com/in/demo-emma-fairchild/,,MIT,Staff,22 Sep 2022
+Mia,Ingram,https://www.linkedin.com/in/demo-mia-ingram/,,MIT,Staff,27 Nov 2016
+Ian,Marlowe,https://www.linkedin.com/in/demo-ian-marlowe/,,MIT,Staff,24 Dec 2018
+Noah,Eastwood,https://www.linkedin.com/in/demo-noah-eastwood/,,Northwind Capital,Staff,03 Jan 2017
+Nora,Thornton,https://www.linkedin.com/in/demo-nora-thornton/,,Northwind Capital,Staff,11 Jun 2019
+Lena,Kensington,https://www.linkedin.com/in/demo-lena-kensington/,,Northwind Capital,Staff,13 Jun 2015
+Ethan,Quill,https://www.linkedin.com/in/demo-ethan-quill/,,Northwind Capital,Staff,02 Oct 2021
+Nora,Jessup,https://www.linkedin.com/in/demo-nora-jessup/,,Northwind Capital,Staff,16 Dec 2020
+Owen,Eastwood,https://www.linkedin.com/in/demo-owen-eastwood/,,Northwind Capital,Staff,19 Sep 2023
+Eva,Ashford,https://www.linkedin.com/in/demo-eva-ashford/,,Contoso Labs,Staff,27 Jul 2016
+Mia,Underhill,https://www.linkedin.com/in/demo-mia-underhill/,,Contoso Labs,Staff,03 Sep 2023
+Liam,Yarrow,https://www.linkedin.com/in/demo-liam-yarrow/,,Contoso Labs,Staff,28 Aug 2022
+Ella,Jessup,https://www.linkedin.com/in/demo-ella-jessup/,,Contoso Labs,Staff,11 Mar 2024
+Ada,Whitlock,https://www.linkedin.com/in/demo-ada-whitlock/,,Contoso Labs,Staff,16 Nov 2018
+Theo,Jessup,https://www.linkedin.com/in/demo-theo-jessup/,,Tailspin Toys,Staff,15 May 2015
+Finn,Ingram,https://www.linkedin.com/in/demo-finn-ingram/,,Tailspin Toys,Staff,05 Feb 2024
+Oliver,Thornton,https://www.linkedin.com/in/demo-oliver-thornton/,,Fabrikam,Staff,06 Jan 2021
+Max,Jessup,https://www.linkedin.com/in/demo-max-jessup/,,Litware,Staff,27 Jun 2020

@@ -1,0 +1,130 @@
+{
+  "owner": {
+    "id": "me",
+    "first_name": "Анна",
+    "last_name": "Тестова",
+    "profile_url": "",
+    "connected_on": null,
+    "affiliations": [
+      {
+        "kind": "position",
+        "name": "Example Corp",
+        "norm": "example corp",
+        "start": "2018-03-01",
+        "end": "2021-02-28",
+        "role": "Product Manager"
+      },
+      {
+        "kind": "position",
+        "name": "ООО Ромашка",
+        "norm": "ромашка",
+        "start": "2021-03-01",
+        "end": null,
+        "role": "Analyst"
+      },
+      {
+        "kind": "education",
+        "name": "Московский университет (пример)",
+        "norm": "московский университет пример",
+        "start": "2012-01-01",
+        "end": "2016-12-31",
+        "role": "Бакалавр"
+      }
+    ]
+  },
+  "contacts": [
+    {
+      "id": "ivan-petrov-example",
+      "first_name": "Иван",
+      "last_name": "Петров",
+      "profile_url": "https://www.linkedin.com/in/ivan-petrov-example/",
+      "connected_on": "2021-03-15",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Example Corp",
+          "norm": "example corp",
+          "start": null,
+          "end": null,
+          "role": "Head of Analytics"
+        },
+        {
+          "kind": "education",
+          "name": "Московский университет (пример)",
+          "norm": "московский университет пример",
+          "start": "2010-01-01",
+          "end": "2014-12-31",
+          "role": "Магистр"
+        }
+      ]
+    },
+    {
+      "id": "maria-sokolova-example",
+      "first_name": "Мария",
+      "last_name": "Соколова",
+      "profile_url": "https://www.linkedin.com/in/maria-sokolova-example/",
+      "connected_on": "2022-02-02",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "ООО Ромашка",
+          "norm": "ромашка",
+          "start": null,
+          "end": null,
+          "role": "Recruiter"
+        }
+      ]
+    },
+    {
+      "id": "oleg-smirnov-example",
+      "first_name": "Олег",
+      "last_name": "Смирнов",
+      "profile_url": "https://www.linkedin.com/in/oleg-smirnov-example/",
+      "connected_on": "2023-06-10",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Example Corp",
+          "norm": "example corp",
+          "start": null,
+          "end": null,
+          "role": "Engineer"
+        }
+      ]
+    },
+    {
+      "id": "elena-kuznetsova-example",
+      "first_name": "Елена",
+      "last_name": "Кузнецова",
+      "profile_url": "https://www.linkedin.com/in/elena-kuznetsova-example/",
+      "connected_on": "2024-01-01",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Other LLC",
+          "norm": "other",
+          "start": null,
+          "end": null,
+          "role": "Analyst"
+        }
+      ]
+    },
+    {
+      "id": "pavel-novikov-example",
+      "first_name": "Павел",
+      "last_name": "Новиков",
+      "profile_url": "https://www.linkedin.com/in/pavel-novikov-example/",
+      "connected_on": "2020-01-20",
+      "affiliations": [
+        {
+          "kind": "board",
+          "name": "Example Corp",
+          "norm": "example corp",
+          "start": "2016-01-01",
+          "end": "2018-12-31",
+          "role": "Член совета директоров"
+        }
+      ]
+    }
+  ]
+}

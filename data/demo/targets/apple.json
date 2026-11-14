@@ -1,0 +1,169 @@
+{
+  "name": "Apple Inc",
+  "kind": "company",
+  "affiliations": [
+    {
+      "kind": "position",
+      "name": "Apple Inc",
+      "norm": "apple",
+      "start": null,
+      "end": null,
+      "role": ""
+    },
+    {
+      "kind": "position",
+      "name": "Apple Inc.",
+      "norm": "apple",
+      "start": null,
+      "end": null,
+      "role": ""
+    }
+  ],
+  "works": [],
+  "insiders": [
+    {
+      "name": "Jennifer Newstead",
+      "is_director": false,
+      "is_officer": true,
+      "title": "SVP, GC and Government Affairs",
+      "first_seen": "2026-03-06",
+      "last_seen": "2026-11-12",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126043484/form4.xml"
+    },
+    {
+      "name": "Ben Borders",
+      "is_director": false,
+      "is_officer": true,
+      "title": "Principal Accounting Officer",
+      "first_seen": "2026-01-02",
+      "last_seen": "2026-10-19",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126040127/form4.xml"
+    },
+    {
+      "name": "Kevan Parekh",
+      "is_director": false,
+      "is_officer": true,
+      "title": "Senior Vice President,  CFO",
+      "first_seen": "2025-10-17",
+      "last_seen": "2026-10-19",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126040126/form4.xml"
+    },
+    {
+      "name": "Timothy D Cook",
+      "is_director": true,
+      "is_officer": true,
+      "title": "Executive Chair",
+      "first_seen": "2026-04-03",
+      "last_seen": "2026-10-05",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126038674/form4.xml"
+    },
+    {
+      "name": "Deirdre Obrien",
+      "is_director": false,
+      "is_officer": true,
+      "title": "Senior Vice President",
+      "first_seen": "2026-04-03",
+      "last_seen": "2026-10-05",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126038672/form4.xml"
+    },
+    {
+      "name": "John Ternus",
+      "is_director": true,
+      "is_officer": true,
+      "title": "CEO",
+      "first_seen": "2026-09-01",
+      "last_seen": "2026-10-05",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126038669/form4.xml"
+    },
+    {
+      "name": "Sabih Khan",
+      "is_director": false,
+      "is_officer": true,
+      "title": "COO",
+      "first_seen": "2026-04-03",
+      "last_seen": "2026-10-05",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126038667/form4.xml"
+    },
+    {
+      "name": "Arthur D Levinson",
+      "is_director": true,
+      "is_officer": false,
+      "title": "",
+      "first_seen": "2026-02-03",
+      "last_seen": "2026-05-29",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000114036126023363/form4.xml"
+    },
+    {
+      "name": "Susan Wagner",
+      "is_director": true,
+      "is_officer": false,
+      "title": "",
+      "first_seen": "2026-02-03",
+      "last_seen": "2026-02-26",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000105923526000004/wk-form4_1772148856.xml"
+    },
+    {
+      "name": "Ronald D Sugar",
+      "is_director": true,
+      "is_officer": false,
+      "title": "",
+      "first_seen": "2026-02-03",
+      "last_seen": "2026-02-26",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000121651926000004/wk-form4_1772148826.xml"
+    },
+    {
+      "name": "Monica C Lozano",
+      "is_director": true,
+      "is_officer": false,
+      "title": "",
+      "first_seen": "2026-02-03",
+      "last_seen": "2026-02-26",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000117986426000004/wk-form4_1772148791.xml"
+    },
+    {
+      "name": "Andrea Jung",
+      "is_director": true,
+      "is_officer": false,
+      "title": "",
+      "first_seen": "2026-02-03",
+      "last_seen": "2026-02-26",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000105140126000004/wk-form4_1772148721.xml"
+    },
+    {
+      "name": "Alex Gorsky",
+      "is_director": true,
+      "is_officer": false,
+      "title": "",
+      "first_seen": "2026-02-03",
+      "last_seen": "2026-02-26",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000145314926000005/wk-form4_1772148681.xml"
+    },
+    {
+      "name": "Wanda M Austin",
+      "is_director": true,
+      "is_officer": false,
+      "title": "",
+      "first_seen": "2026-02-03",
+      "last_seen": "2026-02-26",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000169088226000004/wk-form4_1772148630.xml"
+    },
+    {
+      "name": "Katherine L Adams",
+      "is_director": false,
+      "is_officer": true,
+      "title": "SVP, GC and Secretary",
+      "first_seen": "2025-11-14",
+      "last_seen": "2025-11-14",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000146235625000012/wk-form4_1763163012.xml"
+    },
+    {
+      "name": "Chris Kondo",
+      "is_director": false,
+      "is_officer": true,
+      "title": "Principal Accounting Officer",
+      "first_seen": "2025-10-17",
+      "last_seen": "2025-11-12",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000163198225000011/wk-form4_1762990206.xml"
+    }
+  ]
+}

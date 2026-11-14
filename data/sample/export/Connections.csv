@@ -1,0 +1,9 @@
+Notes:
+"When exporting your connection data, you may notice some connections are missing."
+
+First Name,Last Name,URL,Email Address,Company,Position,Connected On
+Иван,Петров,https://www.linkedin.com/in/ivan-petrov-example/,,Example Corp,Head of Analytics,15 Mar 2021
+Мария,Соколова,https://www.linkedin.com/in/maria-sokolova-example/,,ООО Ромашка,Recruiter,02 Feb 2022
+Олег,Смирнов,https://www.linkedin.com/in/oleg-smirnov-example/,,Example Corp,Engineer,10 Jun 2023
+Елена,Кузнецова,https://www.linkedin.com/in/elena-kuznetsova-example/,,Other LLC,Analyst,01 Jan 2024
+Павел,Новиков,https://www.linkedin.com/in/pavel-novikov-example/,,,Advisor,20 Jan 2020

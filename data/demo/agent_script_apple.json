@@ -1,0 +1,29 @@
+[
+  {
+    "text": "Начну с обогащения цели данными SEC EDGAR.",
+    "tool_calls": [
+      {"id": "t1", "name": "enrich_target", "input": {"target": "Apple Inc", "kind": "company", "ticker": "AAPL"}}
+    ]
+  },
+  {
+    "text": "SEC не ответил вовремя — повторю вызов один раз.",
+    "tool_calls": [
+      {"id": "t2", "name": "enrich_target", "input": {"target": "Apple Inc", "kind": "company", "ticker": "AAPL"}}
+    ]
+  },
+  {
+    "text": "Данные получены. Ищу пути среди ваших контактов, включая цепочки через знакомых.",
+    "tool_calls": [
+      {"id": "t3", "name": "find_intro_paths", "input": {"target": "Apple Inc", "kind": "company", "limit": 3, "include_chains": true}}
+    ]
+  },
+  {
+    "text": "Сильнее всего путь через John Ternus: директор Apple по данным SEC, работает там же, с ним есть переписка. Готовлю запрос на знакомство.",
+    "tool_calls": [
+      {"id": "t4", "name": "request_introduction", "input": {"connector_id": "demo-john-ternus", "target": "Apple Inc", "message": "Привет, John! Хочу познакомиться с командой Apple по вопросу сотрудничества. Сможешь представить меня подходящему человеку?"}}
+    ]
+  },
+  {
+    "text": "Готово. Лучшие пути: John Ternus, Kevan Parekh и Deirdre O'Brien — силы и сигналы приведены в результатах инструмента выше. Статус запроса на знакомство смотрите в результате последнего шага: без подтверждения человеком ничего не выполняется."
+  }
+]

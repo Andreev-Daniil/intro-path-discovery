@@ -1,0 +1,3 @@
+person_id,kind,name,start,end,role
+ivan-petrov-example,education,Московский университет (пример),2010,2014,Магистр
+pavel-novikov-example,board,Example Corp,2016-01,2018-12,Член совета директоров

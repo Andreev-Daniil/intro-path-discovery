@@ -1,0 +1,6 @@
+{
+  "name": "Example Corp (компания)",
+  "affiliations": [
+    {"kind": "position", "name": "Example Corp"}
+  ]
+}

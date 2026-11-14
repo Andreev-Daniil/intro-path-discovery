@@ -1,0 +1,12 @@
+.env
+.claude/
+.cookies/
+.venv/
+data/.fetched.json
+data/.cache/
+data/outbox/
+data/live_*.json
+data/enrichment_live.csv
+__pycache__/
+*.egg-info/
+.pytest_cache/

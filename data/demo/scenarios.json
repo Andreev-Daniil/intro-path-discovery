@@ -1,0 +1,274 @@
+{
+  "demo-kevan-parekh": {
+    "tag": "insider_corroborated",
+    "note": "офицер/директор Apple; место работы подтверждает совпадение имени"
+  },
+  "demo-sabih-khan": {
+    "tag": "insider_corroborated",
+    "note": "офицер/директор Apple; место работы подтверждает совпадение имени"
+  },
+  "demo-jennifer-newstead": {
+    "tag": "insider_corroborated",
+    "note": "офицер/директор Apple; место работы подтверждает совпадение имени"
+  },
+  "demo-deirdre-obrien": {
+    "tag": "insider_corroborated",
+    "note": "офицер/директор Apple; место работы подтверждает совпадение имени"
+  },
+  "demo-timothy-cook": {
+    "tag": "insider_corroborated",
+    "note": "офицер/директор Apple; место работы подтверждает совпадение имени"
+  },
+  "demo-john-ternus": {
+    "tag": "insider_corroborated",
+    "note": "офицер/директор Apple; место работы подтверждает совпадение имени"
+  },
+  "demo-arthur-levinson": {
+    "tag": "insider_name_only",
+    "note": "директор Apple, но вымышленный работодатель: совпало только имя (×0.5)"
+  },
+  "demo-susan-wagner": {
+    "tag": "insider_name_only",
+    "note": "директор Apple, но вымышленный работодатель: совпало только имя (×0.5)"
+  },
+  "demo-andrea-jung": {
+    "tag": "insider_name_only",
+    "note": "директор Apple, но вымышленный работодатель: совпало только имя (×0.5)"
+  },
+  "demo-alex-gorsky": {
+    "tag": "insider_name_only",
+    "note": "директор Apple, но вымышленный работодатель: совпало только имя (×0.5)"
+  },
+  "demo-sabih-khan-2": {
+    "tag": "homonym",
+    "note": "однофамилец реального офицера: ложное совпадение по имени"
+  },
+  "demo-ilya-sutskever": {
+    "tag": "coauthor_confirmed_institution",
+    "note": "соавтор Хинтона; подтверждён вузом University of Toronto"
+  },
+  "demo-alex-krizhevsky": {
+    "tag": "coauthor_confirmed_institution",
+    "note": "соавтор Хинтона; подтверждён вузом University of Toronto"
+  },
+  "demo-zoubin-ghahramani": {
+    "tag": "coauthor_confirmed_institution",
+    "note": "соавтор Хинтона; подтверждён вузом University of Toronto"
+  },
+  "demo-yoshua-bengio": {
+    "tag": "coauthor_confirmed_institution",
+    "note": "соавтор Хинтона; подтверждён вузом Université de Montréal"
+  },
+  "demo-ruslan-salakhutdinov": {
+    "tag": "coauthor_confirmed_works",
+    "note": "соавтор Хинтона; подтверждён общими работами (deep)"
+  },
+  "demo-george-dahl": {
+    "tag": "coauthor_confirmed_works",
+    "note": "соавтор Хинтона; подтверждён вузом University of Toronto"
+  },
+  "demo-abdelrahman-mohamed": {
+    "tag": "coauthor_name_only",
+    "note": "соавтор Хинтона без подтверждения: только имя (×0.5)"
+  },
+  "demo-ava-whitlock": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-ava-zeller": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-leo-kensington": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-nora-underhill": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-noah-galloway": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-kai-eastwood": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-ella-hargrove": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-hugo-kensington": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-max-marlowe": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-hugo-eastwood": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-ethan-lockhart": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-leo-yarrow": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-sam-quill": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-lena-zeller": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-iris-yarrow": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-iris-calloway": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-liam-vandermeer": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-ada-marlowe": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-finn-underhill": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-ada-underhill": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-ethan-radcliffe": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-uma-oakley": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-emma-radcliffe": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-sam-dunmore": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-zoe-whitlock": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-zoe-northcott": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-finn-hargrove": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-lucas-lockhart": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-nora-quill": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-sam-fairchild": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-leo-calloway": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-zoe-calloway": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-emma-fairchild": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-mia-ingram": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-ian-marlowe": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-noah-eastwood": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-nora-thornton": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-lena-kensington": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-ethan-quill": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-nora-jessup": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-owen-eastwood": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-eva-ashford": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-mia-underhill": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-liam-yarrow": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-ella-jessup": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-ada-whitlock": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-theo-jessup": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-finn-ingram": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-oliver-thornton": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-max-jessup": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  }
+}

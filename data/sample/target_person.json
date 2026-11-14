@@ -1,0 +1,8 @@
+{
+  "name": "Целевой человек (пример)",
+  "affiliations": [
+    {"kind": "position", "name": "Example Corp", "start": "2015-01", "end": "2019-12"},
+    {"kind": "education", "name": "Московский университет (пример)", "start": "2010", "end": "2014"},
+    {"kind": "board", "name": "Example Corp", "start": "2017-01", "end": "2019-12"}
+  ]
+}

@@ -1,0 +1,15 @@
+# Демо без сети и без ключа: «модель» воспроизводит записанный сценарий,
+# а инструменты настоящие. Первый вызов enrich_target падает по таймауту — агент должен выкрутиться.
+provider = "scripted"
+script = "data/demo/agent_script_apple.json"
+
+max_steps = 8
+tool_timeout_s = 5
+result_max_chars = 6000
+max_intro_requests = 3
+
+network = "data/demo/network.json"
+targets_dir = "data/demo/targets"
+outbox_dir = "data/outbox"
+enrichment = "snapshot"
+simulate_enrichment_failures = 1
