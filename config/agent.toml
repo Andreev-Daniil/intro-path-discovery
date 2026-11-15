@@ -15,4 +15,5 @@ max_intro_requests = 3
 network = "data/demo/network.json"
 targets_dir = "data/demo/targets"
 outbox_dir = "data/outbox"
-enrichment = "snapshot"     # snapshot — офлайн-снимки; live — SEC EDGAR / OpenAlex (нужен SEC_USER_AGENT)
+enrichment = "live"         # онлайн: SEC EDGAR / OpenAlex / Crossref (SEC_USER_AGENT в .env); snapshot — только офлайн
+fallback_to_snapshot = true # если онлайн-источник недоступен или цели в нём нет — взять офлайн-снимок

@@ -66,7 +66,7 @@ def _mine_flow(kind_label, name, *, ticker=None):
     at.sidebar.selectbox[0].select("Мои данные (ZIP экспорта LinkedIn)").run()
     assert not at.exception, [e.value for e in at.exception]
     next(c for c in at.sidebar.checkbox if c.label.startswith("Использовать встроенный")).check()
-    next(c for c in at.sidebar.checkbox if c.label.startswith("Офлайн-снимки")).check()
+    next(c for c in at.sidebar.checkbox if c.label.startswith("Только офлайн-снимки")).check()
     at.sidebar.radio[0].set_value(kind_label)
     at.run()
     at.sidebar.text_input[0].set_value(name)
@@ -108,7 +108,7 @@ def test_real_file_upload_through_the_uploader_widgets():
     csv_uploader = next(u for u in at.sidebar.file_uploader if u.label.startswith("enrichment.csv"))
     zip_uploader.set_value(("my_linkedin_export.zip", app.DEMO_ZIP.read_bytes(), "application/zip")).run()
     csv_uploader.set_value(("enrichment.csv", app.DEMO_ENRICHMENT.read_bytes(), "text/csv")).run()
-    next(c for c in at.sidebar.checkbox if c.label.startswith("Офлайн-снимки")).check()
+    next(c for c in at.sidebar.checkbox if c.label.startswith("Только офлайн-снимки")).check()
     at.sidebar.text_input[0].set_value("Apple Inc")
     at.run()
     go = next(b for b in at.sidebar.button if b.label == "Найти пути")
@@ -226,18 +226,20 @@ def test_agent_tab_decline_writes_nothing(monkeypatch, tmp_path):
     assert any("отклонил" in e.value for e in at.error) and not (tmp_path / "outbox").exists()
 
 
-def test_agent_tab_default_mode_is_offline_and_free():
-    """Случайный клик по «Запустить агента» не должен обращаться к платной модели."""
+def test_agent_tab_online_mode_is_always_first_and_default():
+    """Онлайн-режим есть всегда и выбран по умолчанию; офлайн-сценарии — запасные."""
     at = run_app()
     mode = at.selectbox(key="agent_mode")
-    assert mode.value.startswith("Офлайн")
-    assert [o for o in mode.options if o.startswith("Живая")] == mode.options[2:]  # живые — после офлайн-режимов
+    assert mode.value.startswith("Онлайн") and mode.options[0] == mode.value
+    assert [o for o in mode.options if o.startswith("Офлайн")] == mode.options[2:]
+    # без ключа интерфейс прямо говорит, что нужно настроить для онлайн-режима (значения ключей не показываются)
+    assert any("Онлайн-режим не настроен" in w.value and "API_KEY" in w.value for w in at.warning)
 
 
 def test_agent_tab_live_mode_without_key_shows_the_problem(monkeypatch, tmp_path):
     monkeypatch.delenv("API_KEY", raising=False)
     monkeypatch.delenv("API_LINK", raising=False)
-    at, runner = _agent_flow(monkeypatch, tmp_path, "Живая модель (config/agent.toml)")
+    at, runner = _agent_flow(monkeypatch, tmp_path, "Онлайн: живая модель (config/agent.toml)")
     runner.join(10)
     at.run()
     assert not at.exception and any("API_KEY" in e.value for e in at.error)

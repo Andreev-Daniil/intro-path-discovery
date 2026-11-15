@@ -154,6 +154,7 @@ def target_to_dict(t: Target) -> dict:
         "affiliations": [_affiliation_to_dict(a) for a in t.affiliations],
         "works": [_work_to_dict(w) for w in t.works],
         "insiders": [_insider_to_dict(i) for i in t.insiders],
+        "fictional": t.fictional,
     }
 
 
@@ -164,6 +165,7 @@ def target_from_dict(data: dict) -> Target:
         kind=data.get("kind", ""),
         works=[_work_from_dict(w) for w in data.get("works", [])],
         insiders=[_insider_from_dict(i) for i in data.get("insiders", [])],
+        fictional=bool(data.get("fictional", False)),
     )
 
 

@@ -43,6 +43,7 @@ from intro_paths.store import load_network, load_target
 from intro_paths.target_enrich import confirm_candidates, enrich_company, enrich_person
 from intro_paths.agent.config import AgentConfig, load_config
 from intro_paths.agent.runner import AgentRunner
+from intro_paths.online import LIVE_ERRORS, OFFLINE_ENV, check_online, enrich_online, forced_offline
 from intro_paths.picture import graph_svg, paths_diagram_svg
 from intro_paths.ui_graph import legend, render_graph_html
 
@@ -116,39 +117,54 @@ def load_network_from_zip(data: bytes, enrichment: bytes | None, workdir: Path) 
 
 
 def run_search(
-    network: Network, *, kind: str, name: str, ticker: str, use_edgar: bool, use_openalex: bool,
-    use_crossref: bool, deep: bool, top: int, limit: int, progress=lambda m: None,
-    snapshot_dir: Path | None = None, today: date | None = None,
+    network: Network, *, kind: str, name: str, ticker: str = "", online: bool = True,
+    offline_only: bool = False, deep: bool = False, top: int = 20, limit: int = 10,
+    progress=lambda m: None, snapshot_dir: Path | None = None, today: date | None = None, services=None,
 ) -> Result:
+    """Поиск путей. Онлайн-режим включён по умолчанию; офлайн-снимок — только запасной вариант."""
     notes: list[str] = []
     target = Target(name=name, kind=kind)
     if kind == "company":
         target.affiliations.append(Affiliation("position", name, normalize_org(name), Period(), ""))
-    if snapshot_dir is not None:  # офлайн: готовые снимки SEC EDGAR / OpenAlex, без сети
-        from intro_paths.agent.tools import SnapshotEnrichment, ToolError
+    if offline_only or not online or forced_offline():
+        if forced_offline() and not offline_only:
+            notes.append(f"Сеть отключена ({OFFLINE_ENV}): использую офлайн-снимок")
+        if snapshot_dir is not None:  # только готовые снимки SEC EDGAR / OpenAlex, без сети
+            from intro_paths.agent.tools import SnapshotEnrichment, ToolError
 
-        try:
-            target = SnapshotEnrichment(snapshot_dir).enrich(name, kind, ticker or None)
-            notes.append(f"Офлайн-снимок цели: инсайдеров SEC — {len(target.insiders)}, работ — {len(target.works)}")
-        except ToolError as exc:
-            notes.append(f"Снимка для цели нет, ищу только по месту работы и вузу: {exc}")
-        use_edgar = use_openalex = use_crossref = False
-    external = use_edgar or use_openalex or use_crossref
-    services = build_services(
-        use_edgar=use_edgar and kind == "company",
-        use_openalex=use_openalex and kind == "person",
-        use_crossref=use_crossref and kind == "person",
-    ) if external else None
-    if services and kind == "company" and services.edgar:
-        report = enrich_company(target, services.edgar, query=ticker or name, progress=progress)
-        notes.append(f"EDGAR: инсайдеров найдено — {report['insiders']}")
-    elif services and kind == "person" and services.publications:
-        report = enrich_person(target, services.publications, progress=progress)
-        notes.append(f"Публикации: найдено работ — {report['works']}")
-    if services and deep and services.publications:
-        n = confirm_candidates(network, target, services.publications, top=top, progress=progress)
-        notes.append(f"Проверено контактов во внешних источниках: {n}")
+            try:
+                target = SnapshotEnrichment(snapshot_dir).enrich(name, kind, ticker or None)
+                notes.append(f"Офлайн-снимок цели: инсайдеров SEC — {len(target.insiders)}, работ — {len(target.works)}")
+            except ToolError as exc:
+                notes.append(f"Снимка для цели нет, ищу только по месту работы и вузу: {exc}")
+    else:
+        target, online_notes = enrich_online(target, ticker or None, services=services,
+                                             snapshot_dir=snapshot_dir, progress=progress)
+        notes += online_notes
+        if deep:
+            try:
+                pubs = (services or build_services(use_edgar=False)).publications
+                n = confirm_candidates(network, target, pubs, top=top, progress=progress)
+                notes.append(f"Проверено контактов во внешних источниках: {n}")
+            except LIVE_ERRORS as exc:
+                notes.append(f"Глубокий режим недоступен: {exc}")
     return Result(network, target, find_intro_paths(network, target, today=today, limit=limit), notes)
+
+
+DEMO_TICKERS = {"apple": "AAPL"}
+
+
+@st.cache_data(ttl=3600, show_spinner="Онлайн: запрашиваю SEC EDGAR / OpenAlex / Crossref…")
+def load_target_online(key: str, offline: bool):
+    """Цель демо-набора: онлайн по умолчанию, при сбое или пустом ответе — снимок. Кэш на час."""
+    snapshot = load_target(DEMO / "targets" / f"{key}.json")
+    if offline:
+        return snapshot, [f"Сеть отключена ({OFFLINE_ENV}): офлайн-снимок цели"]
+    fresh = Target(name=snapshot.name, affiliations=list(snapshot.affiliations), kind=snapshot.kind)
+    target, notes = enrich_online(fresh, DEMO_TICKERS.get(key), snapshot_dir=DEMO_TARGETS)
+    if target is fresh:  # онлайн ничего не дал и снимка нет — остаёмся на снимке демо-набора
+        target = snapshot
+    return target, notes
 
 
 def paths_to_rows(paths: list[IntroPath]) -> list[dict]:
@@ -408,23 +424,33 @@ def tab_paths(network, target, paths, chains, today, has_data, key):
         st.caption("Таких цепочек нет.")
 
 
-# Первым идёт офлайн-сценарий: он выбран по умолчанию и не обращается ни к сети, ни к платной модели.
+# Онлайн-режим всегда первый и выбран по умолчанию; офлайн-сценарии — запасные и для воспроизводимой демонстрации.
 AGENT_MODES = {
+    "Онлайн: живая модель (config/agent.toml)": (
+        "agent.toml", "Кто из моих контактов может представить меня Contoso Labs? Подготовь запрос лучшему кандидату.",
+        "Настоящая модель и онлайн-данные (SEC EDGAR / OpenAlex / Crossref; при сбое — офлайн-снимок). Платно; "
+        "результаты инструментов (имена контактов, сигналы) уходят провайдеру. Нужны `API_KEY` и `API_LINK` в `.env`."),
+    "Онлайн: живая модель + имитация сбоя SEC": (
+        "agent.demo-live.toml", "Кто из моих контактов может представить меня Contoso Labs? Подготовь запрос лучшему кандидату.",
+        "Настоящая модель (платно); первый вызов SEC падает по таймауту — смотрите, как агент выходит из ошибки."),
     "Офлайн: ошибки схемы и id → исправление": (
         "agent.demo-errors.toml", "Найди пути к Contoso Labs, покажи 50 лучших и подготовь запрос лучшему кандидату.",
         "Без ключа и сети. Две ошибки подряд (limit=50 и имя вместо id) и их исправление. Цель: Contoso Labs."),
     "Офлайн: сбой SEC → повтор (без ключа)": (
         "agent.demo.toml", "Найди, кто из моих контактов может представить меня Apple Inc, и подготовь запрос лучшему кандидату.",
         "Без ключа и сети. Запись разговора с моделью, инструменты настоящие. Цель: Apple Inc."),
-    "Живая модель + имитация сбоя SEC": (
-        "agent.demo-live.toml", "Кто из моих контактов может представить меня Contoso Labs? Подготовь запрос лучшему кандидату.",
-        "⚠ Обращается к настоящей модели (платно, нужны `API_KEY` и `API_LINK` в `.env`); первый вызов SEC падает "
-        "по таймауту — смотрите, как агент выходит из ошибки."),
-    "Живая модель (config/agent.toml)": (
-        "agent.toml", "Кто из моих контактов может представить меня Contoso Labs? Подготовь запрос лучшему кандидату.",
-        "⚠ Обращается к настоящей модели (платно); результаты инструментов (имена контактов, сигналы) уходят "
-        "провайдеру. Ключ и адрес API — переменные `API_KEY` и `API_LINK` в `.env`."),
 }
+
+
+def online_ready() -> tuple[bool, str]:
+    """Заданы ли ключ и адрес модели (значения не показываем)."""
+    cfg = AgentConfig()
+    has_key = bool((os.environ.get(cfg.api_key_env) or "").strip())
+    has_link = bool((os.environ.get(cfg.base_url_env) or "").strip())
+    if has_key and has_link:
+        return True, "Онлайн-режим готов: ключ и адрес API модели заданы."
+    missing = " и ".join(n for n, ok in ((cfg.api_key_env, has_key), (cfg.base_url_env, has_link)) if not ok)
+    return False, f"Онлайн-режим не настроен: задайте {missing} в `.env` (проверка — вкладка «Источники и приватность»)."
 
 
 def agent_cfg(file: str) -> AgentConfig:
@@ -503,6 +529,8 @@ def tab_agent(network, today, dataset) -> None:
     st.markdown("Агент — это модель с тремя инструментами (`enrich_target`, `find_intro_paths`, "
                 "`request_introduction`). Здесь видно каждый шаг: вызовы, **ошибки инструментов** и то, как агент их "
                 "исправляет. Действие `request_introduction` выполняется только после вашего подтверждения.")
+    ready, ready_text = online_ready()
+    (st.success if ready else st.warning)(ready_text)
     mode = st.selectbox("Режим", list(AGENT_MODES), key="agent_mode")
     file, default_request, note = AGENT_MODES[mode]
     st.caption(note)
@@ -546,29 +574,20 @@ def tab_sources(demo_key, network, target):
         "**Не используется:** API LinkedIn и скрейпинг; Google Scholar (нет API, закрыт в robots.txt).\n\n"
         "**Хранение.** Данные локальные; внешние ответы кэшируются в `data/.cache/` на 24 часа. "
         "Для реальных пользователей нужны шифрование и политика хранения (152-ФЗ/GDPR).")
-    if demo_key is None:
-        return
-    st.subheader("Обновить цель из живых источников")
-    st.caption("Требуется `SEC_USER_AGENT` в `.env` для EDGAR. Результат заменит снимок цели в этой сессии.")
-    if st.button("Обновить из SEC EDGAR / OpenAlex", key="live_refresh"):
-        load_env()
-        try:
-            fresh = Target(name=target.name, affiliations=list(target.affiliations), kind=target.kind)
-            if target.kind == "company":
-                services = build_services(use_openalex=False, use_crossref=False)
-                report = enrich_company(fresh, services.edgar, query="AAPL" if "Apple" in target.name else target.name)
-                st.success(f"EDGAR: инсайдеров {report['insiders']}")
-            else:
-                services = build_services(use_edgar=False)
-                report = enrich_person(fresh, services.publications)
-                st.success(f"Работ: {report['works']}")
-            st.session_state[f"target_{demo_key}"] = fresh
+    st.subheader("Статус онлайн-режима")
+    st.caption("Онлайн-режим включён всегда. Проверка обращается к сервисам и показывает только «работает / нет» — "
+               "значения ключей не выводятся.")
+    if forced_offline():
+        st.warning(f"Сеть принудительно отключена переменной {OFFLINE_ENV}.")
+    if st.button("Проверить соединение", key="check_online"):
+        with st.spinner("Проверяю сервисы…"):
+            for item in check_online():
+                (st.success if item["ok"] else st.error)(f"{item['name']}: {item['detail']}")
+    if demo_key is not None:
+        st.caption("Цель демо-набора запрашивается онлайн и кэшируется на час; при сбое подставляется снимок.")
+        if st.button("Обновить цель онлайн сейчас", key="live_refresh"):
+            load_target_online.clear()
             st.rerun()
-        except Exception as exc:
-            st.error(f"Не удалось обновить: {exc}")
-    if f"target_{demo_key}" in st.session_state and st.button("Вернуть снимок", key="live_reset"):
-        del st.session_state[f"target_{demo_key}"]
-        st.rerun()
 
 
 # ------------------------------------------------------------------------------- main
@@ -597,18 +616,22 @@ def sidebar():
                              help="Для демо: Apple Inc, Northwind Capital, Contoso Labs, Globex Corporation (компании); "
                                   "Geoffrey Hinton, Elena Smirnova (люди)")
         ticker = st.text_input("Тикер (необязательно)") if kind == "company" else ""
-        st.header("3. Источники")
-        offline = st.checkbox("Офлайн-снимки целей (демо: Apple, Hinton, Northwind, Contoso, Smirnova, Globex)",
-                              disabled=not DEMO_TARGETS.exists())
-        st.caption("Имя цели уходит во внешние сервисы. Контакты — только в глубоком режиме.")
-        use_edgar = st.checkbox("SEC EDGAR", disabled=kind != "company" or offline)
-        use_openalex = st.checkbox("OpenAlex", disabled=kind != "person" or offline)
-        use_crossref = st.checkbox("Crossref", disabled=kind != "person" or offline)
+        st.header("3. Данные о цели")
+        offline = st.checkbox("Только офлайн-снимки (без сети)", value=forced_offline(),
+                              help="По умолчанию работает ОНЛАЙН: цель ищется в SEC EDGAR (компании), "
+                                   "OpenAlex и Crossref (люди). Офлайн-снимки (демо: Apple, Hinton, Northwind, "
+                                   "Contoso, Smirnova, Globex) подставляются сами, если сервис недоступен или цели "
+                                   "в нём нет.")
+        if offline:
+            st.caption("Офлайн: используются только готовые снимки целей.")
+        else:
+            st.success("Онлайн-режим включён: SEC EDGAR · OpenAlex · Crossref. Если сервис недоступен или цели в нём "
+                       "нет, подставится офлайн-снимок — это будет написано.")
+            st.caption("Имя цели уходит во внешние сервисы. Контакты — только в глубоком режиме.")
         deep = st.checkbox("Глубокий режим: проверить топ-N контактов", disabled=offline)
         top = st.number_input("N", 1, 100, 20, disabled=not deep)
         go = st.button("Найти пути", type="primary", disabled=not (name.strip() and (upload or use_demo)))
         mine = dict(upload=upload, enrichment=enrichment, kind=kind, name=name.strip(), ticker=ticker.strip(),
-                    use_edgar=use_edgar, use_openalex=use_openalex, use_crossref=use_crossref,
                     deep=deep, top=int(top), go=go, use_demo=use_demo, offline=offline)
     return dataset, int(limit), mine
 
@@ -625,8 +648,10 @@ def main() -> None:
     demo_key = DEMO_FILES.get(dataset)
     scenarios: dict = {}
     if demo_key:
-        network, target, scenarios = load_demo(demo_key)
-        target = st.session_state.get(f"target_{demo_key}", target)
+        network, _snapshot_target, scenarios = load_demo(demo_key)
+        target, online_notes = load_target_online(demo_key, forced_offline())
+        for note in online_notes:
+            st.caption(note)
         today = DEMO_TODAY
         st.warning("ДЕМО-ДАННЫЕ: связи, должности и переписка контактов вымышлены. "
                    "Имена публичных людей взяты из SEC/OpenAlex только для сопоставления. "
@@ -646,10 +671,9 @@ def main() -> None:
                 status = st.status("Ищу пути…", expanded=False)
                 today_mine = DEMO_TODAY if mine["use_demo"] else date.today()
                 res = run_search(net, kind=mine["kind"], name=mine["name"], ticker=mine["ticker"],
-                                 use_edgar=mine["use_edgar"], use_openalex=mine["use_openalex"],
-                                 use_crossref=mine["use_crossref"], deep=mine["deep"], top=mine["top"],
-                                 limit=limit, progress=status.write, today=today_mine,
-                                 snapshot_dir=DEMO_TARGETS if mine["offline"] else None)
+                                 online=not mine["offline"], offline_only=mine["offline"],
+                                 deep=mine["deep"], top=mine["top"], limit=limit, progress=status.write,
+                                 today=today_mine, snapshot_dir=DEMO_TARGETS if DEMO_TARGETS.exists() else None)
                 status.update(label="Готово", state="complete")
                 st.session_state["mine"] = (res.network, res.target, res.notes, today_mine, mine["use_demo"])
             except (ValueError, FileNotFoundError, zipfile.BadZipFile) as exc:

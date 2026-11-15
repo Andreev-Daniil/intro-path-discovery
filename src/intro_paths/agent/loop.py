@@ -95,7 +95,11 @@ def make_session_from_network(cfg: AgentConfig, network, confirm: Callable[[str]
                               root: Path | None = None, today: date | None = None) -> Session:
     """Сессия по уже загруженной сети (интерфейс): пути из конфига — относительно root."""
     base = root or Path.cwd()
-    inner = SnapshotEnrichment(base / cfg.targets_dir) if cfg.enrichment == "snapshot" else LiveEnrichment()
+    snapshots = SnapshotEnrichment(base / cfg.targets_dir)
+    if cfg.enrichment == "snapshot":
+        inner = snapshots
+    else:  # онлайн, а при сбое или пустом ответе — запасной офлайн-снимок
+        inner = LiveEnrichment(fallback=snapshots if cfg.fallback_to_snapshot else None)
     enrichment = FlakyEnrichment(inner, cfg.simulate_enrichment_failures) if cfg.simulate_enrichment_failures else inner
     return Session(network=network, cfg=cfg, enrichment=enrichment, confirm=confirm,
                    today=today or date.today())

@@ -63,24 +63,43 @@ class SnapshotEnrichment:
 
 
 class LiveEnrichment:
-    """SEC EDGAR для компаний и OpenAlex/Crossref для людей; ключи — из окружения."""
+    """Онлайн: SEC EDGAR для компаний и OpenAlex/Crossref для людей; ключи — из окружения.
+
+    Если сервис недоступен или цели в нём нет, берётся запасной офлайн-снимок (если задан).
+    Без запасного варианта сбой возвращается модели как ошибка инструмента.
+    """
+
+    def __init__(self, fallback: "SnapshotEnrichment | None" = None) -> None:
+        self.fallback = fallback
 
     def enrich(self, name: str, kind: str, ticker: str | None) -> Target:
-        from ..config import build_services, load_env
-        from ..target_enrich import enrich_company, enrich_person
+        from ..online import LIVE_ERRORS, live_enrich, merge_affiliations
 
-        load_env()
         target = Target(name=name, kind=kind)
+        problem: Exception | None = None
+        snap: Target | None = None
+        if self.fallback is not None:
+            try:
+                snap = self.fallback.enrich(name, kind, ticker)
+            except ToolError:
+                snap = None
+        if snap is not None and snap.fictional:  # вымышленная демо-цель: онлайн не запрашиваем
+            return snap
         try:
-            if kind == "company":
-                services = build_services(use_openalex=False, use_crossref=False)
-                enrich_company(target, services.edgar, query=ticker or name)
-            else:
-                services = build_services(use_edgar=False)
-                enrich_person(target, services.publications)
-        except ValueError as exc:  # например, не задан SEC_USER_AGENT
-            raise ToolError(str(exc)) from exc
-        return target
+            report = live_enrich(target, ticker)
+            if report["found"] and (report["insiders"] or report["works"]):
+                if snap is not None:
+                    merge_affiliations(target, snap)
+                return target
+        except LIVE_ERRORS as exc:
+            problem = exc
+        if snap is not None:  # онлайн не дал данных — запасной офлайн-снимок
+            return snap
+        if isinstance(problem, TimeoutError):
+            raise problem  # покажется модели как «таймаут внешнего сервиса»
+        if problem is not None:
+            raise ToolError(f"онлайн-источник недоступен: {problem}") from problem
+        raise ToolError(f"для «{name}» нет данных обогащения. Продолжайте без обогащения.")
 
 
 class FlakyEnrichment:

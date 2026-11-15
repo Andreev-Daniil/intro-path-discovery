@@ -112,3 +112,4 @@ class Target:
     kind: str = ""  # company | person | "" (не задано)
     works: list[Work] = field(default_factory=list)
     insiders: list[Insider] = field(default_factory=list)
+    fictional: bool = False  # вымышленная демо-цель: в онлайн-источниках её искать нельзя (совпадёт с реальной)

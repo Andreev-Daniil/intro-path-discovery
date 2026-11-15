@@ -354,6 +354,8 @@ def _extra_specs(rnd: random.Random, existing: list[Spec]) -> tuple[list[Spec], 
     ])
     globex = Target("Globex Corporation", [pos("Globex Corporation")], kind="company")
     targets = {"northwind": northwind, "contoso": contoso, "smirnova": smirnova, "globex": globex}
+    for t in targets.values():
+        t.fictional = True  # онлайн-источники не используются: имя совпало бы с реальным человеком или компанией
     return specs, targets
 
 

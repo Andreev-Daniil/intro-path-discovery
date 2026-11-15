@@ -13,4 +13,5 @@ max_intro_requests = 3
 network = "data/demo/network.json"
 targets_dir = "data/demo/targets"
 outbox_dir = "data/outbox"
-enrichment = "snapshot"
+enrichment = "live"
+fallback_to_snapshot = true

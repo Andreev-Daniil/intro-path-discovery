@@ -32,7 +32,8 @@ class AgentConfig:
     network: str = "data/demo/network.json"
     targets_dir: str = "data/demo/targets"
     outbox_dir: str = "data/outbox"
-    enrichment: str = "snapshot"  # snapshot — офлайн-снимки; live — SEC EDGAR/OpenAlex
+    enrichment: str = "live"  # live — онлайн (SEC EDGAR/OpenAlex/Crossref); snapshot — только офлайн-снимки
+    fallback_to_snapshot: bool = True  # при сбое онлайн-источника или пустом ответе взять офлайн-снимок
     simulate_enrichment_failures: int = 0  # для демо: первые N вызовов обогащения падают по таймауту
     script: str = ""  # для provider = "scripted": JSON со сценарием ответов модели
 
