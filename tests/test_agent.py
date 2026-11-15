@@ -274,6 +274,30 @@ def test_changing_model_needs_no_code_change(tmp_path):
     assert cfg.model == "claude-sonnet-5-5" and cfg.fallbacks is False
 
 
+EIGHT_FIELDS = ["Имя", "Описание", "Аргументы", "Что не от модели", "Результат", "Ошибки", "Тип", "Отказ"]
+
+
+@pytest.mark.parametrize("name", list(TOOLS))
+def test_spec_describes_every_tool_with_eight_fields_matching_the_code(name):
+    spec = (ROOT / "docs/SPEC.md").read_text(encoding="utf-8")
+    start = spec.index(f"`{name}`\n\n| Поле")
+    end = spec.find("\n### ", start)
+    card = spec[start: end if end != -1 else spec.index("\n## ", start)]
+    for field in EIGHT_FIELDS:
+        assert f"| **{field}** |" in card, f"{name}: нет поля «{field}»"
+    schema = TOOLS[name].input_schema
+    for arg in schema["properties"]:
+        assert f"`{arg}`" in card, f"{name}: аргумент {arg} не описан в спецификации"
+    for arg in schema["required"]:
+        assert re.search(rf"`{arg}`[^;.]*обязательно", card), f"{name}: {arg} не помечен обязательным"
+
+
+def test_spec_mentions_defaults_that_exist_in_code():
+    spec = (ROOT / "docs/SPEC.md").read_text(encoding="utf-8")
+    assert "по умолчанию 5" in spec and AgentConfig().max_steps == 8 and "по умолчанию 8" in spec
+    assert AgentConfig().max_intro_requests == 3 and "по умолчанию 3" in spec
+
+
 def test_no_secrets_in_repository_files():
     secret = re.compile(r"sk-ant-[A-Za-z0-9_-]{10,}|ANTHROPIC_API_KEY\s*=\s*\S{10,}|li_at\s*=\s*\S{20,}|JSESSIONID\s*=\s*\"?ajax:\d{6,}")
     scanned = 0
