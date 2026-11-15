@@ -35,6 +35,18 @@ def test_import_then_paths_json(tmp_path, capsys):
     assert payload[0]["signals"][0]["code"] == "same_board"
 
 
+def test_ui_command_starts_streamlit_with_the_current_interpreter(monkeypatch):
+    import subprocess
+    import sys
+
+    seen = {}
+    monkeypatch.setattr(subprocess, "call", lambda cmd: seen.setdefault("cmd", cmd) and 0)
+    assert main(["ui", "--port", "8600", "--no-browser"]) == 0
+    cmd = seen["cmd"]
+    assert cmd[0] == sys.executable and cmd[1:4] == ["-m", "streamlit", "run"]
+    assert cmd[4].endswith("app.py") and "8600" in cmd and "--server.headless" in cmd
+
+
 def test_missing_file_returns_error_code(tmp_path, capsys):
     code = main([
         "import",

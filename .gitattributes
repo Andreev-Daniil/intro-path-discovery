@@ -1,3 +1,4 @@
 # Единые переводы строк (LF): тест test_generation_is_deterministic_and_matches_committed
 # сравнивает демо-данные с генератором побайтово, CRLF на Windows его бы сломал.
 * text=auto eol=lf
+*.bat text eol=crlf

@@ -62,6 +62,22 @@ def _cmd_agent(args: argparse.Namespace) -> int:
     return 0 if result.stop_reason in ("end_turn",) else 1
 
 
+def _cmd_ui(args: argparse.Namespace) -> int:
+    """Запуск интерфейса тем же интерпретатором, из которого вызвана команда (нужное окружение)."""
+    import importlib.util
+    import subprocess
+
+    if importlib.util.find_spec("streamlit") is None:
+        print("Ошибка: не установлен streamlit. Установите: python -m pip install -e \".[app]\"", file=sys.stderr)
+        return 2
+    app = Path(__file__).with_name("app.py")
+    cmd = [sys.executable, "-m", "streamlit", "run", str(app), "--server.port", str(args.port)]
+    if args.no_browser:
+        cmd += ["--server.headless", "true"]
+    print(f"Интерфейс: http://localhost:{args.port}  (остановить: Ctrl+C)")
+    return subprocess.call(cmd)
+
+
 def _cmd_synth(args: argparse.Namespace) -> int:
     report = generate(args.out_dir, seed=args.seed, snapshots_dir=args.snapshots_dir)
     print(f"Демо-набор: {args.out_dir} (контактов {report['contacts']}, "
@@ -167,6 +183,11 @@ def main(argv: list[str] | None = None) -> int:
     p_paths.add_argument("--min-strength", type=float, default=0.0)
     p_paths.add_argument("--json", action="store_true", help="вывод в JSON")
     p_paths.set_defaults(func=_cmd_paths)
+
+    p_ui = sub.add_parser("ui", help="запустить веб-интерфейс (граф, картинки, пути, агент)")
+    p_ui.add_argument("--port", type=int, default=8501)
+    p_ui.add_argument("--no-browser", action="store_true", help="не открывать браузер автоматически")
+    p_ui.set_defaults(func=_cmd_ui)
 
     p_agent = sub.add_parser("agent", help="LLM-агент: найти путь знакомства (инструменты, лимит шагов, подтверждение)")
     p_agent.add_argument("--config", type=Path, default=Path("config/agent.toml"),

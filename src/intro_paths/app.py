@@ -9,11 +9,19 @@
 from __future__ import annotations
 
 import json
+import os
+import re
+import sys
 import tempfile
 import zipfile
 from dataclasses import dataclass, replace
 from datetime import date
 from pathlib import Path
+
+# Работает и без установки пакета (`streamlit run src/intro_paths/app.py`), в любом окружении.
+_SRC = str(Path(__file__).resolve().parents[1])
+if _SRC not in sys.path:
+    sys.path.insert(0, _SRC)
 
 import streamlit as st
 import streamlit.components.v1 as components
@@ -33,7 +41,33 @@ from intro_paths.scoring import (
 )
 from intro_paths.store import load_network, load_target
 from intro_paths.target_enrich import confirm_candidates, enrich_company, enrich_person
+from intro_paths.agent.config import AgentConfig, load_config
+from intro_paths.agent.runner import AgentRunner
+from intro_paths.picture import graph_svg, paths_diagram_svg
 from intro_paths.ui_graph import legend, render_graph_html
+
+
+def _st_version() -> tuple[int, int]:
+    parts = (st.__version__.split(".") + ["0", "0"])[:2]
+    return int(parts[0]), int(re.sub(r"\D", "", parts[1]) or 0)
+
+
+# st.dataframe(**STRETCH) есть только в новых Streamlit; в старых — use_container_width
+STRETCH = {"width": "stretch"} if _st_version() >= (1, 50) else {"use_container_width": True}
+
+
+def embed_html(html: str, height: int) -> None:
+    """Показать HTML/SVG во фрейме: st.iframe в новых версиях, components.html в старых."""
+    if hasattr(st, "iframe"):
+        st.iframe(html, height=height)
+    else:
+        components.html(html, height=height, scrolling=True)
+
+
+def show_svg(svg: str) -> None:
+    match = re.search(r"viewBox='0 0 (\d+) (\d+)'", svg)
+    height = int(match.group(2)) if match else 600
+    embed_html(f"<style>body{{margin:0}}svg{{max-width:100%;height:auto}}</style>{svg}", height + 24)
 
 ROOT = Path(__file__).resolve().parents[2]
 SAMPLE = ROOT / "data" / "sample"
@@ -219,7 +253,7 @@ def tab_overview(network, target, graph, has_data, demo):
         {"Цель": "Сигналы: работодатель, вуз, совет, соавторство, взаимодействия", "Статус": "✅", "Как": "вкладка «Как считается»", "Ограничение": "совпадение людей по имени ненадёжно (×0.5 без подтверждения)"},
         {"Цель": "Оценка силы и перечень сигналов", "Статус": "✅", "Как": "вкладка «Пути»: формула с подстановкой", "Ограничение": "веса стартовые, не калибрированы"},
         {"Цель": "Интерфейс загрузки контактов и цели", "Статус": "✅", "Как": "боковая панель", "Ограничение": "хранение данных локальное"},
-    ], hide_index=True, width="stretch")
+    ], hide_index=True, **STRETCH)
     scenarios_file = DEMO / "demo_scenarios.json"
     if scenarios_file.exists():
         st.subheader("Готовые сценарии для проверки")
@@ -232,7 +266,7 @@ def tab_overview(network, target, graph, has_data, demo):
                            f"{s['in_top'][0]} в топ-{s['in_top'][1]} — {', '.join(s['codes'])}" if "in_top" in s
                            else "ничего не найдено")}
             for s in rows
-        ], hide_index=True, width="stretch")
+        ], hide_index=True, **STRETCH)
     if demo:
         st.caption("В демо-режиме внешние сервисы не вызываются: данные берутся из `data/demo/`.")
 
@@ -251,14 +285,14 @@ def tab_data(network, target, scenarios):
         if scenarios:
             row["Сценарий"] = scenarios.get(c.id, {}).get("tag", "")
         rows.append(row)
-    st.dataframe(rows, hide_index=True, width="stretch")
+    st.dataframe(rows, hide_index=True, **STRETCH)
     st.subheader(f"Инсайдеры целевой компании (SEC EDGAR): {len(target.insiders)}")
     if target.insiders:
         st.dataframe([
             {"Имя": i.name, "Роль": ("директор" if i.is_director else "") + (" офицер" if i.is_officer else ""),
              "Должность": i.title, "Впервые": i.first_seen, "Последний раз": i.last_seen, "Документ": i.source_url}
             for i in target.insiders
-        ], hide_index=True, width="stretch",
+        ], hide_index=True, **STRETCH,
             column_config={"Документ": st.column_config.LinkColumn(display_text="SEC")})
     else:
         st.caption("Нет данных: цель — не компания или EDGAR не подключён.")
@@ -267,7 +301,7 @@ def tab_data(network, target, scenarios):
         st.dataframe([
             {"Год": w.year, "Название": w.title, "Соавторов": len(w.coauthors), "Ссылка": w.url}
             for w in target.works
-        ], hide_index=True, width="stretch",
+        ], hide_index=True, **STRETCH,
             column_config={"Ссылка": st.column_config.LinkColumn(display_text="OpenAlex")})
     else:
         st.caption("Нет данных: цель — не человек или источники публикаций не подключены.")
@@ -295,14 +329,22 @@ def tab_graph(network, target, paths, chains, cfg, today):
         show_orgs=show_orgs, show_schools=show_schools, show_works=show_works,
         show_insiders=show_insiders, inferred=inferred, today=today, cfg=cfg,
     )
-    html = render_graph_html(graph, min_weight=min_weight, search=search, only_highlight=only_top)
-    if hasattr(st, "iframe"):  # components.v1.html объявлен устаревшим
-        st.iframe(html, height=700)
-    else:
-        components.html(html, height=700, scrolling=False)
-    st.markdown(" &nbsp; ".join(
-        f"<span style='color:{color}'>●</span> {label}" for label, color, _ in legend()),
-        unsafe_allow_html=True)
+    interactive = None
+    try:
+        interactive = render_graph_html(graph, min_weight=min_weight, search=search, only_highlight=only_top)
+    except ImportError:
+        st.info("Интерактивный граф недоступен: не установлен pyvis (`pip install pyvis`). "
+                "Ниже — статическая карта связей: это та же картина в виде картинки.")
+    if interactive:
+        embed_html(interactive, 700)
+        st.markdown(" &nbsp; ".join(
+            f"<span style='color:{color}'>●</span> {label}" for label, color, _ in legend()),
+            unsafe_allow_html=True)
+    show_map = st.checkbox("Показать статическую карту связей (картинку)", value=interactive is None)
+    if show_map:
+        svg = graph_svg(graph)
+        show_svg(svg)
+        st.download_button("Скачать карту связей (SVG)", svg, "graph.svg", "image/svg+xml", key="dl_graph_svg")
 
     stats = graph_stats(graph)
     a, b, c = st.columns(3)
@@ -324,15 +366,19 @@ def tab_graph(network, target, paths, chains, cfg, today):
         rows = [{"Связь": e.kind, "С кем": graph.nodes[other].label, "Вес": round(e.weight, 2),
                  "Описание": e.label, "Выведено": e.inferred, "Источник": e.evidence_url}
                 for e, other in graph.neighbors(node_id)]
-        st.dataframe(rows, hide_index=True, width="stretch",
+        st.dataframe(rows, hide_index=True, **STRETCH,
                      column_config={"Источник": st.column_config.LinkColumn(display_text="открыть")})
 
 
 def tab_paths(network, target, paths, chains, today, has_data, key):
+    st.subheader("Схема: кто и через кого может представить")
+    diagram = paths_diagram_svg(network.owner.full_name or "Вы", target.name, paths, chains)
+    show_svg(diagram)
+    st.download_button("Скачать схему (SVG)", diagram, "intro_paths.svg", "image/svg+xml", key=f"dl_svg_{key}")
     if not paths:
         st.warning("Путей не найдено. Добавьте источники или enrichment.csv с историей работы контактов.")
     else:
-        st.dataframe(paths_to_rows(paths), hide_index=True, width="stretch", column_config={
+        st.dataframe(paths_to_rows(paths), hide_index=True, **STRETCH, column_config={
             "Сила": st.column_config.ProgressColumn(min_value=0.0, max_value=1.0, format="%.2f"),
             "Профиль": st.column_config.LinkColumn(display_text="LinkedIn"),
         })
@@ -356,10 +402,122 @@ def tab_paths(network, target, paths, chains, today, has_data, key):
             {"Через": c.via.full_name, "Мост": c.bridge_name, "Роль моста": c.bridge_role,
              "Сила": c.strength, "Связь контакт–мост": c.link, "Почему": c.link_detail}
             for c in chains
-        ], hide_index=True, width="stretch",
+        ], hide_index=True, **STRETCH,
             column_config={"Сила": st.column_config.ProgressColumn(min_value=0.0, max_value=1.0, format="%.2f")})
     else:
         st.caption("Таких цепочек нет.")
+
+
+# Первым идёт офлайн-сценарий: он выбран по умолчанию и не обращается ни к сети, ни к платной модели.
+AGENT_MODES = {
+    "Офлайн: ошибки схемы и id → исправление": (
+        "agent.demo-errors.toml", "Найди пути к Contoso Labs, покажи 50 лучших и подготовь запрос лучшему кандидату.",
+        "Без ключа и сети. Две ошибки подряд (limit=50 и имя вместо id) и их исправление. Цель: Contoso Labs."),
+    "Офлайн: сбой SEC → повтор (без ключа)": (
+        "agent.demo.toml", "Найди, кто из моих контактов может представить меня Apple Inc, и подготовь запрос лучшему кандидату.",
+        "Без ключа и сети. Запись разговора с моделью, инструменты настоящие. Цель: Apple Inc."),
+    "Живая модель + имитация сбоя SEC": (
+        "agent.demo-live.toml", "Кто из моих контактов может представить меня Contoso Labs? Подготовь запрос лучшему кандидату.",
+        "⚠ Обращается к настоящей модели (платно, нужны `API_KEY` и `API_LINK` в `.env`); первый вызов SEC падает "
+        "по таймауту — смотрите, как агент выходит из ошибки."),
+    "Живая модель (config/agent.toml)": (
+        "agent.toml", "Кто из моих контактов может представить меня Contoso Labs? Подготовь запрос лучшему кандидату.",
+        "⚠ Обращается к настоящей модели (платно); результаты инструментов (имена контактов, сигналы) уходят "
+        "провайдеру. Ключ и адрес API — переменные `API_KEY` и `API_LINK` в `.env`."),
+}
+
+
+def agent_cfg(file: str) -> AgentConfig:
+    """Конфиг агента с абсолютными путями: интерфейс можно запускать из любой папки."""
+    cfg = load_config(ROOT / "config" / file)
+    outbox = os.environ.get("INTRO_PATHS_OUTBOX") or str(ROOT / "data" / "outbox")
+    return replace(cfg, script=str(ROOT / cfg.script) if cfg.script else "", targets_dir=str(DEMO_TARGETS),
+                   outbox_dir=outbox)
+
+
+def _short(text: str, limit: int = 380) -> str:
+    return text if len(text) <= limit else text[:limit] + "…"
+
+
+def _render_runner(runner: AgentRunner) -> None:
+    state = "работает…" if runner.running else ("ошибка запуска" if runner.error else "завершён")
+    st.caption(f"Статус агента: **{state}**")
+    for e in runner.snapshot():
+        if e.kind == "call":
+            st.code(f"шаг {e.step}: вызов {e.text}", language=None)
+        elif e.kind == "error":
+            st.error(f"Шаг {e.step}: ОШИБКА — {_short(e.text)}" if e.step else f"ОШИБКА — {_short(e.text)}")
+        elif e.kind == "ok":
+            st.success(f"Шаг {e.step}: инструмент выполнен — {_short(e.text, 200)}")
+        elif e.kind == "model" and e.text:
+            st.markdown(f"🤖 **Модель, шаг {e.step}:** {e.text}")
+        elif e.kind in ("stop", "info"):
+            st.warning(e.text)
+    if runner.pending:
+        st.warning("**Нужно ваше подтверждение.** Агент хочет выполнить действие от вашего имени:")
+        st.markdown("> " + runner.pending.replace("\n", "\n> "))
+        yes, no, _ = st.columns([1, 1, 3])
+        yes.button("Да, поставить в очередь", type="primary", key="agent_yes", on_click=runner.answer, args=(True,))
+        no.button("Нет, отклонить", key="agent_no", on_click=runner.answer, args=(False,))
+        st.caption("Сообщение никуда не отправляется: в очередь попадает только черновик.")
+    result = runner.result
+    if result:
+        calls = result.tool_calls
+        errors = [c for c in calls if c.is_error]
+        a, b, c = st.columns(3)
+        a.metric("Шагов", result.steps)
+        b.metric("Вызовов инструментов", len(calls))
+        c.metric("Ошибок инструментов", len(errors))
+        if errors:
+            st.info("Ошибки возвращаются модели, и она сама меняет вызов — так агент «выходит» из ошибки. "
+                    "Ошибочные вызовы ничего не исполняют.")
+        st.markdown("**Итоговый ответ агента**")
+        st.markdown(result.final_text or "_пусто_")
+        queued = [c for c in calls if c.name == "request_introduction" and not c.is_error]
+        if queued:
+            try:
+                path = json.loads(queued[-1].output)["file"]
+                full = path if Path(path).is_absolute() else str(ROOT / path)
+                st.success(f"Черновик поставлен в очередь: `{path}`")
+                st.code(Path(full).read_text(encoding="utf-8"), language="json")
+            except (KeyError, OSError, ValueError):
+                st.success("Черновик поставлен в очередь.")
+
+
+def _agent_panel() -> None:
+    runner = st.session_state.get("agent_runner")
+    if runner is None:
+        st.info("Выберите режим и нажмите «Запустить агента».")
+        return
+    _render_runner(runner)
+    if not runner.running and st.session_state.get("agent_polling"):
+        st.session_state["agent_polling"] = False
+        st.rerun()  # агент закончил: перерисовать страницу целиком и перестать опрашивать
+
+
+_fragment = getattr(st, "fragment", None)
+_agent_panel_live = _fragment(run_every=1.0)(_agent_panel) if _fragment else _agent_panel
+
+
+def tab_agent(network, today, dataset) -> None:
+    st.markdown("Агент — это модель с тремя инструментами (`enrich_target`, `find_intro_paths`, "
+                "`request_introduction`). Здесь видно каждый шаг: вызовы, **ошибки инструментов** и то, как агент их "
+                "исправляет. Действие `request_introduction` выполняется только после вашего подтверждения.")
+    mode = st.selectbox("Режим", list(AGENT_MODES), key="agent_mode")
+    file, default_request, note = AGENT_MODES[mode]
+    st.caption(note)
+    if dataset not in DEMO_FILES and file not in ("agent.toml", "agent.demo-live.toml"):
+        st.warning("Офлайн-сценарии рассчитаны на демо-данные: выберите демо-набор или режим «Живая модель».")
+    request = st.text_area("Запрос агенту", value=default_request, key=f"agent_req_{file}", height=80)
+    c1, c2, _ = st.columns([1, 1, 3])
+    if c1.button("Запустить агента", type="primary", key="agent_start"):
+        st.session_state["agent_runner"] = AgentRunner(agent_cfg(file), request, network, today).start()
+        st.session_state["agent_polling"] = True
+    if c2.button("Сбросить", key="agent_reset"):
+        st.session_state.pop("agent_runner", None)
+        st.session_state["agent_polling"] = False
+    runner = st.session_state.get("agent_runner")
+    (_agent_panel_live if runner is not None and runner.running else _agent_panel)()
 
 
 def tab_how(cfg, network, target, today, limit, paths):
@@ -371,7 +529,7 @@ def tab_how(cfg, network, target, today, limit, paths):
         old = base_rank.get(p.connector.id)
         rows.append({"Контакт": p.connector.full_name, "Сейчас": i, "По умолчанию": old or "—",
                      "Сдвиг": "новый" if old is None else (old - i)})
-    st.dataframe(rows, hide_index=True, width="stretch")
+    st.dataframe(rows, hide_index=True, **STRETCH)
     st.markdown(
         "**Формула.** Сила пути = (1 − Π(1 − wᵢ)) × (0.5 + 0.5 · тепло). "
         "Сигналы независимы и усиливают друг друга, но не складываются линейно. "
@@ -510,9 +668,9 @@ def main() -> None:
         for note in notes:
             st.caption(note)
 
-    names = ["Обзор", "Данные", "Граф", "Пути", "Как считается", "Источники и приватность"]
+    names = ["Обзор", "Данные", "Граф", "Пути", "Агент", "Как считается", "Источники и приватность"]
     tabs = st.tabs(names)
-    with tabs[4]:  # веса читаем первыми: от них зависят остальные вкладки
+    with tabs[5]:  # веса читаем первыми: от них зависят остальные вкладки
         cfg = weights_ui()
     has_data = network_has_interactions(network.contacts.values())
     paths = find_intro_paths(network, target, today=today, limit=limit, cfg=cfg)
@@ -528,8 +686,10 @@ def main() -> None:
     with tabs[3]:
         tab_paths(network, target, paths, chains, today, has_data, dataset)
     with tabs[4]:
-        tab_how(cfg, network, target, today, limit, paths)
+        tab_agent(network, today, dataset)
     with tabs[5]:
+        tab_how(cfg, network, target, today, limit, paths)
+    with tabs[6]:
         tab_sources(demo_key, network, target)
 
 

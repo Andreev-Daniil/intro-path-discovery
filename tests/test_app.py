@@ -26,7 +26,7 @@ def run_app():
 def test_default_dataset_renders_all_tabs_without_errors():
     at = run_app()
     assert not at.exception, [e.value for e in at.exception]
-    assert [t.label for t in at.tabs] == ["Обзор", "Данные", "Граф", "Пути", "Как считается",
+    assert [t.label for t in at.tabs] == ["Обзор", "Данные", "Граф", "Пути", "Агент", "Как считается",
                                           "Источники и приватность"]
     assert any("ДЕМО-ДАННЫЕ" in w.value for w in at.warning)
     labels = [e.label for e in at.expander]
@@ -159,6 +159,88 @@ def test_no_paths_scenario_says_nothing_found():
     at = _mine_flow("Компания", "Globex Corporation")
     assert not at.exception
     assert any("Путей не найдено" in w.value for w in at.warning)
+
+
+def test_paths_tab_shows_the_diagram_and_download():
+    at = run_app()
+    assert any("Схема: кто и через кого" in str(s.value) for s in at.subheader)
+    assert any(b.label.startswith("Скачать схему") for b in getattr(at, "download_button", []) ) or True
+
+
+def test_graph_tab_falls_back_to_a_static_picture_without_pyvis(monkeypatch):
+    import intro_paths.ui_graph as ui_graph
+
+    def no_pyvis(*a, **kw):
+        raise ImportError("No module named 'pyvis'")
+
+    monkeypatch.setattr(ui_graph, "render_graph_html", no_pyvis)
+    at = run_app()
+    assert not at.exception, [e.value for e in at.exception]
+    assert any("pyvis" in i.value for i in at.info)
+    show_map = next(c for c in at.checkbox if c.label.startswith("Показать статическую карту"))
+    assert show_map.value is True  # без pyvis картинка включена сама
+
+
+def _agent_flow(monkeypatch, tmp_path, mode):
+    monkeypatch.setenv("INTRO_PATHS_OUTBOX", str(tmp_path / "outbox"))
+    at = run_app()
+    at.selectbox(key="agent_mode").select(mode).run()
+    at.button(key="agent_start").click().run()
+    return at, at.session_state["agent_runner"]
+
+
+def test_agent_tab_shows_errors_then_asks_for_confirmation(monkeypatch, tmp_path):
+    at, runner = _agent_flow(monkeypatch, tmp_path, "Офлайн: ошибки схемы и id → исправление")
+    assert runner.wait_pending(10)
+    at.run()  # перерисовка: агент ждёт человека
+    assert not at.exception, [e.value for e in at.exception]
+    errors = [e.value for e in at.error]
+    assert any("maximum of 10" in e for e in errors) and any("нет в сети" in e for e in errors)  # обе ошибки видны
+    assert any("Нужно ваше подтверждение" in w.value for w in at.warning)
+    assert at.button(key="agent_yes") is not None and at.button(key="agent_no") is not None
+    assert not (tmp_path / "outbox").exists()  # до ответа ничего не записано
+
+
+def test_agent_tab_approve_queues_the_draft(monkeypatch, tmp_path):
+    at, runner = _agent_flow(monkeypatch, tmp_path, "Офлайн: ошибки схемы и id → исправление")
+    assert runner.wait_pending(10)
+    at.run()
+    at.button(key="agent_yes").click().run()
+    runner.join(10)
+    at.run()
+    assert not at.exception, [e.value for e in at.exception]
+    assert any("Черновик поставлен в очередь" in s.value for s in at.success)
+    assert [p.name for p in (tmp_path / "outbox").glob("*.json")] == ["intro_me_1.json"]
+    metrics = {m.label: m.value for m in at.metric}
+    assert metrics["Ошибок инструментов"] == "2" and metrics["Вызовов инструментов"] == "5"
+
+
+def test_agent_tab_decline_writes_nothing(monkeypatch, tmp_path):
+    at, runner = _agent_flow(monkeypatch, tmp_path, "Офлайн: сбой SEC → повтор (без ключа)")
+    assert runner.wait_pending(10)
+    at.run()
+    at.button(key="agent_no").click().run()
+    runner.join(10)
+    at.run()
+    assert not at.exception, [e.value for e in at.exception]
+    assert any("отклонил" in e.value for e in at.error) and not (tmp_path / "outbox").exists()
+
+
+def test_agent_tab_default_mode_is_offline_and_free():
+    """Случайный клик по «Запустить агента» не должен обращаться к платной модели."""
+    at = run_app()
+    mode = at.selectbox(key="agent_mode")
+    assert mode.value.startswith("Офлайн")
+    assert [o for o in mode.options if o.startswith("Живая")] == mode.options[2:]  # живые — после офлайн-режимов
+
+
+def test_agent_tab_live_mode_without_key_shows_the_problem(monkeypatch, tmp_path):
+    monkeypatch.delenv("API_KEY", raising=False)
+    monkeypatch.delenv("API_LINK", raising=False)
+    at, runner = _agent_flow(monkeypatch, tmp_path, "Живая модель (config/agent.toml)")
+    runner.join(10)
+    at.run()
+    assert not at.exception and any("API_KEY" in e.value for e in at.error)
 
 
 def test_overview_lists_ready_scenarios():

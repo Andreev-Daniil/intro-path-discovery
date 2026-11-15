@@ -27,6 +27,8 @@ class Services:
 
 
 def load_env() -> None:
+    if os.environ.get("INTRO_PATHS_NO_DOTENV"):  # тесты не должны читать настоящий .env и ходить в сеть
+        return
     try:
         from dotenv import load_dotenv
     except ImportError:

@@ -91,15 +91,20 @@ def run_agent(
     return AgentResult(note, "step_limit", cfg.max_steps, records)
 
 
+def make_session_from_network(cfg: AgentConfig, network, confirm: Callable[[str], bool], *,
+                              root: Path | None = None, today: date | None = None) -> Session:
+    """Сессия по уже загруженной сети (интерфейс): пути из конфига — относительно root."""
+    base = root or Path.cwd()
+    inner = SnapshotEnrichment(base / cfg.targets_dir) if cfg.enrichment == "snapshot" else LiveEnrichment()
+    enrichment = FlakyEnrichment(inner, cfg.simulate_enrichment_failures) if cfg.simulate_enrichment_failures else inner
+    return Session(network=network, cfg=cfg, enrichment=enrichment, confirm=confirm,
+                   today=today or date.today())
+
+
 def make_session(cfg: AgentConfig, confirm: Callable[[str], bool], *, root: Path | None = None,
                  today: date | None = None) -> Session:
     base = root or Path.cwd()
-    network = load_network(base / cfg.network)
-    inner = SnapshotEnrichment(base / cfg.targets_dir) if cfg.enrichment == "snapshot" else LiveEnrichment()
-    enrichment = FlakyEnrichment(inner, cfg.simulate_enrichment_failures) if cfg.simulate_enrichment_failures else inner
-    session = Session(network=network, cfg=cfg, enrichment=enrichment, confirm=confirm,
-                      today=today or date.today())
-    return session
+    return make_session_from_network(cfg, load_network(base / cfg.network), confirm, root=base, today=today)
 
 
 def run_from_config(cfg: AgentConfig, request: str, confirm: Callable[[str], bool],
