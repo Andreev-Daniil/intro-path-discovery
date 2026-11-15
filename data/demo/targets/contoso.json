@@ -1,0 +1,24 @@
+{
+  "name": "Contoso Labs",
+  "kind": "company",
+  "affiliations": [
+    {
+      "kind": "position",
+      "name": "Contoso Labs",
+      "norm": "contoso labs",
+      "start": "2011-01-01",
+      "end": null,
+      "role": ""
+    },
+    {
+      "kind": "board",
+      "name": "Contoso Labs",
+      "norm": "contoso labs",
+      "start": "2011-01-01",
+      "end": null,
+      "role": ""
+    }
+  ],
+  "works": [],
+  "insiders": []
+}

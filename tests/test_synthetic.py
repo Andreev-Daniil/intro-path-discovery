@@ -1,3 +1,4 @@
+import json
 from datetime import date
 from pathlib import Path
 
@@ -11,6 +12,8 @@ from intro_paths.synthetic import generate
 
 DEMO = Path(__file__).resolve().parents[1] / "data" / "demo"
 TODAY = date(2026, 11, 15)
+SCENARIOS = json.loads((DEMO / "scenarios.json").read_text(encoding="utf-8"))
+DEMO_CONTACTS = len(SCENARIOS)  # по записи на контакт
 
 
 @pytest.fixture(scope="module")
@@ -57,7 +60,7 @@ def test_different_seed_changes_filler_only(tmp_path):
 
 def test_export_goes_through_regular_import(tmp_path):
     network = build_network(DEMO / "export", DEMO / "enrichment.csv")
-    assert len(network.contacts) == 68
+    assert len(network.contacts) == DEMO_CONTACTS >= 100
     assert network.owner.full_name == "Alex Demo"
     assert any(c.interactions for c in network.contacts.values())
     assert all(c.profile_url.startswith("https://www.linkedin.com/in/demo-") for c in network.contacts.values())
@@ -114,6 +117,67 @@ def test_hinton_same_employer_signals_from_public_affiliations(net, hinton):
     assert any("Google" in d for d in employers) and any("University of Toronto" in d for d in employers)
 
 
+def _target(key):
+    return load_target(DEMO / "targets" / f"{key}.json")
+
+
+@pytest.mark.parametrize("scenario", json.loads((DEMO / "demo_scenarios.json").read_text(encoding="utf-8")),
+                         ids=lambda s: s["id"])
+def test_scenario_table_matches_what_the_engine_returns(net, scenario):
+    """Таблица «очевидных сценариев» в интерфейсе и README не может врать: сверяем с движком."""
+    paths = list(ranked(net, _target(scenario["id"])).values())
+    paths.sort(key=lambda p: (-p.strength, p.connector.full_name))
+    if "found" in scenario:
+        assert len(paths) == scenario["found"]
+        return
+    if "top" in scenario:
+        best = paths[0]
+        assert best.connector.full_name == scenario["top"], [p.connector.full_name for p in paths[:3]]
+    else:
+        name, rank = scenario["in_top"]
+        best = next(p for p in paths[:rank] if p.connector.full_name == name)
+    codes = {s.code for s in best.signals}
+    assert set(scenario["codes"]) <= codes, (best.connector.full_name, codes)
+
+
+def test_demo_volume_and_obvious_tags():
+    tags = {v["tag"] for v in SCENARIOS.values()}
+    assert DEMO_CONTACTS >= 100
+    assert {"obvious_insider_current", "obvious_current_colleague", "obvious_former_colleague",
+            "obvious_cold_colleague", "obvious_board_member", "obvious_former_board",
+            "obvious_classmate_coauthor", "obvious_colleague_coauthor", "obvious_classmate",
+            "obvious_name_only", "obvious_coauthor_name_only"} <= tags
+    assert {p.stem for p in (DEMO / "targets").glob("*.json")} >= {
+        "apple", "hinton", "northwind", "contoso", "smirnova", "globex"}
+
+
+def test_obvious_scenarios_in_detail(net):
+    nw = ranked(net, _target("northwind"))
+    assert signal(nw["demo-marina-kovalenko"], "insider_officer").weight == 0.7  # руководитель в контактах
+    assert nw["demo-dmitri-sokolov"].strength > nw["demo-sven-aldrich"].strength  # тёплый коллега > холодного
+    assert signal(nw["demo-olga-volkova"], "same_employer").weight == 0.6  # бывший коллега
+    assert "только имя" in signal(nw["demo-irina-belova"], "insider_director").detail  # тёзка директора
+
+    co = ranked(net, _target("contoso"))
+    assert signal(co["demo-ravi-menon"], "same_board").weight == 0.9 and co["demo-ravi-menon"].strength == 0.9
+    assert signal(co["demo-hannah-brooks"], "same_board").weight == 0.9  # бывший член совета
+
+    sm = ranked(net, _target("smirnova"))
+    assert {s.code for s in sm["demo-anna-orlova"].signals} >= {"same_school", "coauthor"}
+    assert "подтверждено" in signal(sm["demo-anna-orlova"], "coauthor").detail
+    assert "только имя" in signal(sm["demo-leo-brandt"], "coauthor").detail
+    assert signal(sm["demo-victor-hale"], "coauthor").weight == 0.6  # подтверждено общими работами
+
+    assert ranked(net, _target("globex")) == {}  # путей нет — честный пустой результат
+
+
+def test_chain_through_acquaintance_for_new_targets(net):
+    nw = find_chain_paths(net, _target("northwind"), today=TODAY, limit=3)
+    assert nw and nw[0].bridge_name == "Peter Lindqvist" and nw[0].via.full_name == "Dmitri Sokolov"
+    sm = find_chain_paths(net, _target("smirnova"), today=TODAY, limit=3)
+    assert any(c.bridge_name == "Samuel Okoye" for c in sm)  # соавтор цели, которого нет в контактах
+
+
 @pytest.mark.parametrize("name", ["apple", "hinton"])
 def test_graph_for_demo_is_connected_and_has_chains(net, apple, hinton, name):
     target = apple if name == "apple" else hinton
@@ -121,7 +185,7 @@ def test_graph_for_demo_is_connected_and_has_chains(net, apple, hinton, name):
     chains = find_chain_paths(net, target, today=TODAY, limit=5)
     g = build_graph(net, target, paths, chains, today=TODAY)
     stats = graph_stats(g)
-    assert stats["nodes_by_type"]["contact"] == 68
+    assert stats["nodes_by_type"]["contact"] == DEMO_CONTACTS
     assert stats["isolated"] == 0 and stats["components"] == 1
     assert chains and chains[0].strength > 0 and stats["nodes_by_type"].get("bridge", 0) >= 1
     assert g.highlight

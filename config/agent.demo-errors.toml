@@ -1,0 +1,15 @@
+# Офлайн-демо «ошибка → исправление» (без ключа и сети): две ошибки модели подряд.
+#   1) limit=50 нарушает схему (максимум 10)      -> модель исправляет аргумент;
+#   2) connector_id = имя вместо идентификатора   -> модель берёт id из результата поиска.
+provider = "scripted"
+script = "data/demo/agent_script_errors.json"
+
+max_steps = 8
+tool_timeout_s = 5
+result_max_chars = 6000
+max_intro_requests = 3
+
+network = "data/demo/network.json"
+targets_dir = "data/demo/targets"
+outbox_dir = "data/outbox"
+enrichment = "snapshot"

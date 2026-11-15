@@ -220,6 +220,19 @@ def tab_overview(network, target, graph, has_data, demo):
         {"Цель": "Оценка силы и перечень сигналов", "Статус": "✅", "Как": "вкладка «Пути»: формула с подстановкой", "Ограничение": "веса стартовые, не калибрированы"},
         {"Цель": "Интерфейс загрузки контактов и цели", "Статус": "✅", "Как": "боковая панель", "Ограничение": "хранение данных локальное"},
     ], hide_index=True, width="stretch")
+    scenarios_file = DEMO / "demo_scenarios.json"
+    if scenarios_file.exists():
+        st.subheader("Готовые сценарии для проверки")
+        st.caption("Режим «Мои данные» → демо-ZIP → цель из таблицы → «Найти пути». Таблица сверяется с движком тестами.")
+        rows = json.loads(scenarios_file.read_text(encoding="utf-8"))
+        st.dataframe([
+            {"Сценарий": s["title"], "Цель": s["target"], "Тип": "компания" if s["kind"] == "company" else "человек",
+             "Что увидите": s["what"],
+             "Ожидается": (f"{s['top']} — {', '.join(s['codes'])}" if "top" in s else
+                           f"{s['in_top'][0]} в топ-{s['in_top'][1]} — {', '.join(s['codes'])}" if "in_top" in s
+                           else "ничего не найдено")}
+            for s in rows
+        ], hide_index=True, width="stretch")
     if demo:
         st.caption("В демо-режиме внешние сервисы не вызываются: данные берутся из `data/demo/`.")
 
@@ -423,10 +436,11 @@ def sidebar():
         kind_label = st.radio("Тип цели", ["Компания", "Человек"], horizontal=True)
         kind = "company" if kind_label == "Компания" else "person"
         name = st.text_input("Название компании" if kind == "company" else "Имя человека",
-                             help="Для демо: Apple Inc (компания) или Geoffrey Hinton (человек)")
+                             help="Для демо: Apple Inc, Northwind Capital, Contoso Labs, Globex Corporation (компании); "
+                                  "Geoffrey Hinton, Elena Smirnova (люди)")
         ticker = st.text_input("Тикер (необязательно)") if kind == "company" else ""
         st.header("3. Источники")
-        offline = st.checkbox("Офлайн-снимки SEC/OpenAlex (демо: Apple Inc, Geoffrey Hinton)",
+        offline = st.checkbox("Офлайн-снимки целей (демо: Apple, Hinton, Northwind, Contoso, Smirnova, Globex)",
                               disabled=not DEMO_TARGETS.exists())
         st.caption("Имя цели уходит во внешние сервисы. Контакты — только в глубоком режиме.")
         use_edgar = st.checkbox("SEC EDGAR", disabled=kind != "company" or offline)

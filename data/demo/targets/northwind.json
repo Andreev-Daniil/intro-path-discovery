@@ -1,0 +1,53 @@
+{
+  "name": "Northwind Capital",
+  "kind": "company",
+  "affiliations": [
+    {
+      "kind": "position",
+      "name": "Northwind Capital",
+      "norm": "northwind capital",
+      "start": "2009-01-01",
+      "end": null,
+      "role": ""
+    }
+  ],
+  "works": [],
+  "insiders": [
+    {
+      "name": "Marina Kovalenko",
+      "is_director": false,
+      "is_officer": true,
+      "title": "CEO",
+      "first_seen": "2019-01-10",
+      "last_seen": "2026-06-02",
+      "source_url": ""
+    },
+    {
+      "name": "Peter Lindqvist",
+      "is_director": false,
+      "is_officer": true,
+      "title": "CFO",
+      "first_seen": "2019-01-10",
+      "last_seen": "2026-06-02",
+      "source_url": ""
+    },
+    {
+      "name": "Irina Belova",
+      "is_director": true,
+      "is_officer": false,
+      "title": "",
+      "first_seen": "2020-03-01",
+      "last_seen": "2026-03-15",
+      "source_url": ""
+    },
+    {
+      "name": "Tomas Reyes",
+      "is_director": true,
+      "is_officer": false,
+      "title": "",
+      "first_seen": "2021-05-01",
+      "last_seen": "2026-03-15",
+      "source_url": ""
+    }
+  ]
+}

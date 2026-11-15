@@ -1,0 +1,73 @@
+[
+  {
+    "id": "apple",
+    "title": "Офицер Apple, с которым вы переписываетесь",
+    "target": "Apple Inc",
+    "kind": "company",
+    "what": "директор или офицер из SEC и общий работодатель; переписка поднимает силу",
+    "top": "John Ternus",
+    "codes": [
+      "insider_director",
+      "same_employer"
+    ]
+  },
+  {
+    "id": "hinton",
+    "title": "Соавтор и общий работодатель",
+    "target": "Geoffrey Hinton",
+    "kind": "person",
+    "what": "совместные работы из OpenAlex плюс общее место работы",
+    "in_top": [
+      "Ilya Sutskever",
+      3
+    ],
+    "codes": [
+      "coauthor",
+      "same_employer"
+    ]
+  },
+  {
+    "id": "northwind",
+    "title": "Нынешние и бывшие коллеги",
+    "target": "Northwind Capital",
+    "kind": "company",
+    "what": "руководитель компании в ваших контактах, коллеги из прошлого и настоящего",
+    "top": "Marina Kovalenko",
+    "codes": [
+      "insider_officer",
+      "same_employer"
+    ]
+  },
+  {
+    "id": "contoso",
+    "title": "Член совета директоров",
+    "target": "Contoso Labs",
+    "kind": "company",
+    "what": "контакт сидит в совете директоров цели — самый весомый сигнал (0.9)",
+    "top": "Ravi Menon",
+    "codes": [
+      "same_board"
+    ]
+  },
+  {
+    "id": "smirnova",
+    "title": "Однокурсница, коллега и соавтор",
+    "target": "Elena Smirnova",
+    "kind": "person",
+    "what": "общий вуз и общие статьи: несколько сигналов складываются",
+    "top": "Anna Orlova",
+    "codes": [
+      "same_school",
+      "coauthor"
+    ]
+  },
+  {
+    "id": "globex",
+    "title": "Путей нет",
+    "target": "Globex Corporation",
+    "kind": "company",
+    "what": "ни у кого из контактов нет связи с целью: система честно говорит «ничего не найдено»",
+    "found": 0,
+    "codes": []
+  }
+]

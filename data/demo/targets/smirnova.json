@@ -1,0 +1,99 @@
+{
+  "name": "Elena Smirnova",
+  "kind": "person",
+  "affiliations": [
+    {
+      "kind": "education",
+      "name": "University of Toronto",
+      "norm": "university of toronto",
+      "start": "2010-09-01",
+      "end": "2014-06-01",
+      "role": "BSc"
+    },
+    {
+      "kind": "position",
+      "name": "Contoso Labs",
+      "norm": "contoso labs",
+      "start": "2018-06-01",
+      "end": null,
+      "role": "CTO"
+    }
+  ],
+  "works": [
+    {
+      "id": "DEMO-W1",
+      "title": "Ranking introduction paths in professional networks",
+      "year": 2023,
+      "doi": "",
+      "url": "",
+      "coauthors": [
+        {
+          "name": "Anna Orlova",
+          "openalex_id": "",
+          "institutions": [
+            "University of Toronto"
+          ]
+        },
+        {
+          "name": "Victor Hale",
+          "openalex_id": "",
+          "institutions": [
+            "Contoso Labs"
+          ]
+        },
+        {
+          "name": "Priya Nair",
+          "openalex_id": "",
+          "institutions": [
+            "University of Toronto"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DEMO-W2",
+      "title": "Noisy-OR for weak social ties",
+      "year": 2024,
+      "doi": "",
+      "url": "",
+      "coauthors": [
+        {
+          "name": "Anna Orlova",
+          "openalex_id": "",
+          "institutions": [
+            "University of Toronto"
+          ]
+        },
+        {
+          "name": "Leo Brandt",
+          "openalex_id": "",
+          "institutions": []
+        }
+      ]
+    },
+    {
+      "id": "DEMO-W3",
+      "title": "Warm introductions at scale",
+      "year": 2022,
+      "doi": "",
+      "url": "",
+      "coauthors": [
+        {
+          "name": "Victor Hale",
+          "openalex_id": "",
+          "institutions": [
+            "Contoso Labs"
+          ]
+        },
+        {
+          "name": "Samuel Okoye",
+          "openalex_id": "",
+          "institutions": [
+            "Contoso Labs"
+          ]
+        }
+      ]
+    }
+  ],
+  "insiders": []
+}

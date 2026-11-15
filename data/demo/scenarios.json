@@ -270,5 +270,213 @@
   "demo-max-jessup": {
     "tag": "filler",
     "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-marina-kovalenko": {
+    "tag": "obvious_insider_current",
+    "note": "руководитель цели и ваш контакт: место работы подтверждает имя"
+  },
+  "demo-dmitri-sokolov": {
+    "tag": "obvious_current_colleague",
+    "note": "работает в цели сейчас, регулярно переписываетесь"
+  },
+  "demo-olga-volkova": {
+    "tag": "obvious_former_colleague",
+    "note": "работала в цели в те же годы, что и вы; сейчас в другой компании"
+  },
+  "demo-sven-aldrich": {
+    "tag": "obvious_cold_colleague",
+    "note": "работает в цели, но вы почти не общались: сила ниже из-за холодной связи"
+  },
+  "demo-irina-belova": {
+    "tag": "obvious_name_only",
+    "note": "тёзка директора цели: совпало только имя, вес ×0.5"
+  },
+  "demo-ravi-menon": {
+    "tag": "obvious_board_member",
+    "note": "сидит в совете директоров цели: самый сильный сигнал (0.9)"
+  },
+  "demo-hannah-brooks": {
+    "tag": "obvious_former_board",
+    "note": "была в совете директоров цели в 2013–2017"
+  },
+  "demo-anna-orlova": {
+    "tag": "obvious_classmate_coauthor",
+    "note": "училась с целью в Торонто и написала с ней две статьи"
+  },
+  "demo-victor-hale": {
+    "tag": "obvious_colleague_coauthor",
+    "note": "коллега цели в Contoso Labs и соавтор; общие работы приложены (как после deep)"
+  },
+  "demo-priya-nair": {
+    "tag": "obvious_classmate_coauthor",
+    "note": "однокурсница цели и соавтор одной статьи"
+  },
+  "demo-leo-brandt": {
+    "tag": "obvious_coauthor_name_only",
+    "note": "соавтор из списка статей, но места работы и вуза не совпадают: только имя, ×0.5"
+  },
+  "demo-katya-morozova": {
+    "tag": "obvious_classmate",
+    "note": "однокурсница цели: общий вуз и годы учёбы"
+  },
+  "demo-timur-haddad": {
+    "tag": "obvious_classmate",
+    "note": "однокурсник цели"
+  },
+  "demo-dina-zielinski": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-vera-rahimi": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-timur-jovanovic": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-timur-kuznetsov": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-polina-fedorov": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-ravil-petrenko": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-karim-jovanovic": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-anton-tanaka": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-sofia-wojcik": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-julia-petrenko": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-gleb-nakamura": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-nina-haddad": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-lara-ek": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-gleb-wojcik": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-polina-lund": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-xenia-fedorov": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-bella-mironov": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-zara-haddad": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-gleb-tanaka": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-oscar-petrenko": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-egor-ek": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-fatima-volkov": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-anton-dragan": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-julia-volkov": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-zara-nakamura": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-timur-fedorov": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-misha-lund": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-sofia-tanaka": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-igor-dragan": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-hana-rahimi": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-zara-tanaka": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-oscar-haddad": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-oscar-castillo": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-vera-ivanchenko": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-igor-abramov": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-igor-kuznetsov": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-vera-jovanovic": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-fatima-dragan": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
+  },
+  "demo-egor-volkov": {
+    "tag": "filler",
+    "note": "вымышленный контакт для плотности графа"
   }
 }

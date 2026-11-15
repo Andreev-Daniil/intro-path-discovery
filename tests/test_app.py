@@ -142,6 +142,31 @@ def test_broken_zip_shows_an_error_instead_of_crashing():
     assert not at.exception and any("Ошибка" in e.value for e in at.error)
 
 
+@pytest.mark.parametrize("kind,name,top,fragment", [
+    ("Компания", "Northwind Capital", "Marina Kovalenko", "директор или офицер|руководитель целевой компании"),
+    ("Компания", "Contoso Labs", "Ravi Menon", "общий совет директоров"),
+    ("Человек", "Elena Smirnova", "Anna Orlova", "общий вуз"),
+])
+def test_obvious_scenarios_work_through_the_upload_flow(kind, name, top, fragment):
+    at = _mine_flow(kind, name)
+    labels = [e.label for e in at.expander]
+    assert labels[0].split(". ", 1)[1].startswith(top), labels[:3]
+    text = " ".join(m.value for m in at.markdown)
+    assert any(f in text for f in fragment.split("|"))
+
+
+def test_no_paths_scenario_says_nothing_found():
+    at = _mine_flow("Компания", "Globex Corporation")
+    assert not at.exception
+    assert any("Путей не найдено" in w.value for w in at.warning)
+
+
+def test_overview_lists_ready_scenarios():
+    at = run_app()
+    assert any("Готовые сценарии" in str(s.value) for s in at.subheader)
+    assert any("Contoso Labs" in str(df.value) for df in at.dataframe)
+
+
 def test_upload_flow_unknown_target_explains_missing_snapshot():
     at = _mine_flow("Компания", "Несуществующая Компания")
     assert any("Снимка для цели нет" in str(c.value) for c in at.caption)
@@ -151,7 +176,9 @@ def test_upload_flow_unknown_target_explains_missing_snapshot():
 def test_demo_zip_goes_through_the_same_loader_as_a_real_upload(tmp_path):
     data = app.DEMO_ZIP.read_bytes()
     net = app.load_network_from_zip(data, app.DEMO_ENRICHMENT.read_bytes(), tmp_path)
-    assert len(net.contacts) == 68 and net.owner.full_name == "Alex Demo"
+    import json
+    expected = len(json.loads((DEMO / "scenarios.json").read_text(encoding="utf-8")))
+    assert len(net.contacts) == expected >= 100 and net.owner.full_name == "Alex Demo"
     assert any(c.interactions for c in net.contacts.values())  # сообщения и приглашения прочитаны
     assert any(c.affiliations for c in net.contacts.values())
 

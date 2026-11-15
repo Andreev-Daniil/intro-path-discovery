@@ -3555,6 +3555,2760 @@
           "count": 1
         }
       ]
+    },
+    {
+      "id": "demo-marina-kovalenko",
+      "first_name": "Marina",
+      "last_name": "Kovalenko",
+      "profile_url": "https://www.linkedin.com/in/demo-marina-kovalenko/",
+      "connected_on": "2019-03-14",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": null,
+          "end": null,
+          "role": "CEO"
+        },
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": "2012-01-01",
+          "end": null,
+          "role": "CEO"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-08",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2019-03-14",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-dmitri-sokolov",
+      "first_name": "Dmitri",
+      "last_name": "Sokolov",
+      "profile_url": "https://www.linkedin.com/in/demo-dmitri-sokolov/",
+      "connected_on": "2020-06-02",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": null,
+          "end": null,
+          "role": "Analyst"
+        },
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": "2019-01-01",
+          "end": null,
+          "role": "Analyst"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-08",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-13",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2020-06-02",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-olga-volkova",
+      "first_name": "Olga",
+      "last_name": "Volkova",
+      "profile_url": "https://www.linkedin.com/in/demo-olga-volkova/",
+      "connected_on": "2021-02-11",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": null,
+          "end": null,
+          "role": "Product Lead"
+        },
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": "2016-01-01",
+          "end": "2020-12-31",
+          "role": "Analyst"
+        },
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": "2021-01-01",
+          "end": null,
+          "role": "Product Lead"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2021-02-11",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-sven-aldrich",
+      "first_name": "Sven",
+      "last_name": "Aldrich",
+      "profile_url": "https://www.linkedin.com/in/demo-sven-aldrich/",
+      "connected_on": "2018-09-05",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": null,
+          "end": null,
+          "role": "Associate"
+        },
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": "2017-01-01",
+          "end": null,
+          "role": "Associate"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2018-09-05",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-irina-belova",
+      "first_name": "Irina",
+      "last_name": "Belova",
+      "profile_url": "https://www.linkedin.com/in/demo-irina-belova/",
+      "connected_on": "2022-04-18",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": null,
+          "end": null,
+          "role": "Consultant"
+        },
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": "2020-01-01",
+          "end": null,
+          "role": "Consultant"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2022-04-18",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-ravi-menon",
+      "first_name": "Ravi",
+      "last_name": "Menon",
+      "profile_url": "https://www.linkedin.com/in/demo-ravi-menon/",
+      "connected_on": "2017-05-09",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Woodgrove Bank",
+          "norm": "woodgrove bank",
+          "start": null,
+          "end": null,
+          "role": "Managing Director"
+        },
+        {
+          "kind": "position",
+          "name": "Woodgrove Bank",
+          "norm": "woodgrove bank",
+          "start": "2014-01-01",
+          "end": null,
+          "role": "Managing Director"
+        },
+        {
+          "kind": "board",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": "2019-01-01",
+          "end": null,
+          "role": "Член совета директоров"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-08",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-14",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2017-05-09",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-hannah-brooks",
+      "first_name": "Hannah",
+      "last_name": "Brooks",
+      "profile_url": "https://www.linkedin.com/in/demo-hannah-brooks/",
+      "connected_on": "2018-07-21",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Lucerne Publishing",
+          "norm": "lucerne publishing",
+          "start": null,
+          "end": null,
+          "role": "Editor"
+        },
+        {
+          "kind": "position",
+          "name": "Lucerne Publishing",
+          "norm": "lucerne publishing",
+          "start": "2017-06-01",
+          "end": null,
+          "role": "Editor"
+        },
+        {
+          "kind": "board",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": "2013-01-01",
+          "end": "2017-12-31",
+          "role": "Член совета директоров"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2018-07-21",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-anna-orlova",
+      "first_name": "Anna",
+      "last_name": "Orlova",
+      "profile_url": "https://www.linkedin.com/in/demo-anna-orlova/",
+      "connected_on": "2015-10-03",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Alpine Ski House",
+          "norm": "alpine ski house",
+          "start": null,
+          "end": null,
+          "role": "Data Scientist"
+        },
+        {
+          "kind": "education",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2010-09-01",
+          "end": "2014-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "Alpine Ski House",
+          "norm": "alpine ski house",
+          "start": "2019-01-01",
+          "end": null,
+          "role": "Data Scientist"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-08",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-14",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2015-10-03",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-victor-hale",
+      "first_name": "Victor",
+      "last_name": "Hale",
+      "profile_url": "https://www.linkedin.com/in/demo-victor-hale/",
+      "connected_on": "2019-11-04",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": null,
+          "end": null,
+          "role": "Researcher"
+        },
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": "2018-06-01",
+          "end": null,
+          "role": "Researcher"
+        }
+      ],
+      "works": [
+        {
+          "id": "DEMO-W1",
+          "title": "Ranking introduction paths in professional networks",
+          "year": 2023,
+          "doi": "",
+          "url": "",
+          "coauthors": []
+        },
+        {
+          "id": "DEMO-W3",
+          "title": "Warm introductions at scale",
+          "year": 2022,
+          "doi": "",
+          "url": "",
+          "coauthors": []
+        }
+      ],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2019-11-04",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-priya-nair",
+      "first_name": "Priya",
+      "last_name": "Nair",
+      "profile_url": "https://www.linkedin.com/in/demo-priya-nair/",
+      "connected_on": "2016-02-08",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Proseware",
+          "norm": "proseware",
+          "start": null,
+          "end": null,
+          "role": "ML Engineer"
+        },
+        {
+          "kind": "education",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2010-09-01",
+          "end": "2014-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "Proseware",
+          "norm": "proseware",
+          "start": "2018-01-01",
+          "end": null,
+          "role": "ML Engineer"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-05-20",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2024-04-19",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2016-02-08",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-leo-brandt",
+      "first_name": "Leo",
+      "last_name": "Brandt",
+      "profile_url": "https://www.linkedin.com/in/demo-leo-brandt/",
+      "connected_on": "2021-08-30",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Wingtip Toys",
+          "norm": "wingtip toys",
+          "start": null,
+          "end": null,
+          "role": "Analyst"
+        },
+        {
+          "kind": "position",
+          "name": "Wingtip Toys",
+          "norm": "wingtip toys",
+          "start": "2020-01-01",
+          "end": null,
+          "role": "Analyst"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-05-20",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2021-08-30",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-katya-morozova",
+      "first_name": "Katya",
+      "last_name": "Morozova",
+      "profile_url": "https://www.linkedin.com/in/demo-katya-morozova/",
+      "connected_on": "2016-09-12",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Woodgrove Bank",
+          "norm": "woodgrove bank",
+          "start": null,
+          "end": null,
+          "role": "Risk Analyst"
+        },
+        {
+          "kind": "education",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2010-09-01",
+          "end": "2014-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "Woodgrove Bank",
+          "norm": "woodgrove bank",
+          "start": "2016-01-01",
+          "end": null,
+          "role": "Risk Analyst"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2016-09-12",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-timur-haddad",
+      "first_name": "Timur",
+      "last_name": "Haddad",
+      "profile_url": "https://www.linkedin.com/in/demo-timur-haddad/",
+      "connected_on": "2017-03-03",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": null,
+          "end": null,
+          "role": "Engineer"
+        },
+        {
+          "kind": "education",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2010-09-01",
+          "end": "2014-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": "2015-01-01",
+          "end": null,
+          "role": "Engineer"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2017-03-03",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-dina-zielinski",
+      "first_name": "Dina",
+      "last_name": "Zielinski",
+      "profile_url": "https://www.linkedin.com/in/demo-dina-zielinski/",
+      "connected_on": "2020-12-04",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": "2015-11-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2020-12-04",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-vera-rahimi",
+      "first_name": "Vera",
+      "last_name": "Rahimi",
+      "profile_url": "https://www.linkedin.com/in/demo-vera-rahimi/",
+      "connected_on": "2018-10-03",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": "2013-11-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "MIT",
+          "norm": "mit",
+          "start": "2007-09-01",
+          "end": "2011-06-30",
+          "role": "BSc"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2018-10-03",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-timur-jovanovic",
+      "first_name": "Timur",
+      "last_name": "Jovanovic",
+      "profile_url": "https://www.linkedin.com/in/demo-timur-jovanovic/",
+      "connected_on": "2015-08-02",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": "2010-01-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Higher School of Economics",
+          "norm": "higher school of economics",
+          "start": "2009-09-01",
+          "end": "2013-06-30",
+          "role": "BSc"
+        }
+      ],
+      "works": [],
+      "interactions": []
+    },
+    {
+      "id": "demo-timur-kuznetsov",
+      "first_name": "Timur",
+      "last_name": "Kuznetsov",
+      "profile_url": "https://www.linkedin.com/in/demo-timur-kuznetsov/",
+      "connected_on": "2018-05-10",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": "2014-09-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-01-17",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2024-01-16",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2018-05-10",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-polina-fedorov",
+      "first_name": "Polina",
+      "last_name": "Fedorov",
+      "profile_url": "https://www.linkedin.com/in/demo-polina-fedorov/",
+      "connected_on": "2018-10-15",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": "2023-10-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-05-05",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2024-04-04",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2018-10-15",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-ravil-petrenko",
+      "first_name": "Ravil",
+      "last_name": "Petrenko",
+      "profile_url": "https://www.linkedin.com/in/demo-ravil-petrenko/",
+      "connected_on": "2016-06-01",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": "2019-02-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-10-06",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2016-06-01",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-karim-jovanovic",
+      "first_name": "Karim",
+      "last_name": "Jovanovic",
+      "profile_url": "https://www.linkedin.com/in/demo-karim-jovanovic/",
+      "connected_on": "2018-11-21",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": "2017-10-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2018-11-21",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-anton-tanaka",
+      "first_name": "Anton",
+      "last_name": "Tanaka",
+      "profile_url": "https://www.linkedin.com/in/demo-anton-tanaka/",
+      "connected_on": "2022-12-08",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Wingtip Toys",
+          "norm": "wingtip toys",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Wingtip Toys",
+          "norm": "wingtip toys",
+          "start": "2021-08-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-sofia-wojcik",
+      "first_name": "Sofia",
+      "last_name": "Wojcik",
+      "profile_url": "https://www.linkedin.com/in/demo-sofia-wojcik/",
+      "connected_on": "2023-09-23",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Wingtip Toys",
+          "norm": "wingtip toys",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Wingtip Toys",
+          "norm": "wingtip toys",
+          "start": "2022-02-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": "2018-01-01",
+          "end": "2021-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-08",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-13",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2023-09-23",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-julia-petrenko",
+      "first_name": "Julia",
+      "last_name": "Petrenko",
+      "profile_url": "https://www.linkedin.com/in/demo-julia-petrenko/",
+      "connected_on": "2024-05-09",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Wingtip Toys",
+          "norm": "wingtip toys",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Wingtip Toys",
+          "norm": "wingtip toys",
+          "start": "2013-05-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2014-09-01",
+          "end": "2018-06-30",
+          "role": "BSc"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2024-05-09",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-gleb-nakamura",
+      "first_name": "Gleb",
+      "last_name": "Nakamura",
+      "profile_url": "https://www.linkedin.com/in/demo-gleb-nakamura/",
+      "connected_on": "2016-02-19",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Wingtip Toys",
+          "norm": "wingtip toys",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Wingtip Toys",
+          "norm": "wingtip toys",
+          "start": "2016-11-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Technical University of Munich",
+          "norm": "technical university of munich",
+          "start": "2006-09-01",
+          "end": "2010-06-30",
+          "role": "BSc"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2016-02-19",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-nina-haddad",
+      "first_name": "Nina",
+      "last_name": "Haddad",
+      "profile_url": "https://www.linkedin.com/in/demo-nina-haddad/",
+      "connected_on": "2017-10-04",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Wingtip Toys",
+          "norm": "wingtip toys",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Wingtip Toys",
+          "norm": "wingtip toys",
+          "start": "2021-11-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Adventure Works",
+          "norm": "adventure works",
+          "start": "2017-01-01",
+          "end": "2020-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2017-10-04",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-lara-ek",
+      "first_name": "Lara",
+      "last_name": "Ek",
+      "profile_url": "https://www.linkedin.com/in/demo-lara-ek/",
+      "connected_on": "2022-06-18",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Alpine Ski House",
+          "norm": "alpine ski house",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Alpine Ski House",
+          "norm": "alpine ski house",
+          "start": "2016-09-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": "2012-01-01",
+          "end": "2015-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-gleb-wojcik",
+      "first_name": "Gleb",
+      "last_name": "Wojcik",
+      "profile_url": "https://www.linkedin.com/in/demo-gleb-wojcik/",
+      "connected_on": "2021-05-11",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Alpine Ski House",
+          "norm": "alpine ski house",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Alpine Ski House",
+          "norm": "alpine ski house",
+          "start": "2013-05-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Proseware",
+          "norm": "proseware",
+          "start": "2009-01-01",
+          "end": "2012-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-polina-lund",
+      "first_name": "Polina",
+      "last_name": "Lund",
+      "profile_url": "https://www.linkedin.com/in/demo-polina-lund/",
+      "connected_on": "2019-06-14",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Alpine Ski House",
+          "norm": "alpine ski house",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Alpine Ski House",
+          "norm": "alpine ski house",
+          "start": "2018-05-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-12-05",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2019-06-14",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-xenia-fedorov",
+      "first_name": "Xenia",
+      "last_name": "Fedorov",
+      "profile_url": "https://www.linkedin.com/in/demo-xenia-fedorov/",
+      "connected_on": "2021-04-08",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Alpine Ski House",
+          "norm": "alpine ski house",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Alpine Ski House",
+          "norm": "alpine ski house",
+          "start": "2020-08-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2021-04-08",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-bella-mironov",
+      "first_name": "Bella",
+      "last_name": "Mironov",
+      "profile_url": "https://www.linkedin.com/in/demo-bella-mironov/",
+      "connected_on": "2016-07-27",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Alpine Ski House",
+          "norm": "alpine ski house",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Alpine Ski House",
+          "norm": "alpine ski house",
+          "start": "2012-06-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2016-07-27",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-zara-haddad",
+      "first_name": "Zara",
+      "last_name": "Haddad",
+      "profile_url": "https://www.linkedin.com/in/demo-zara-haddad/",
+      "connected_on": "2019-10-13",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Proseware",
+          "norm": "proseware",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Proseware",
+          "norm": "proseware",
+          "start": "2019-05-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2019-10-13",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-gleb-tanaka",
+      "first_name": "Gleb",
+      "last_name": "Tanaka",
+      "profile_url": "https://www.linkedin.com/in/demo-gleb-tanaka/",
+      "connected_on": "2016-05-18",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Proseware",
+          "norm": "proseware",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Proseware",
+          "norm": "proseware",
+          "start": "2011-08-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-07-03",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2024-06-02",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-oscar-petrenko",
+      "first_name": "Oscar",
+      "last_name": "Petrenko",
+      "profile_url": "https://www.linkedin.com/in/demo-oscar-petrenko/",
+      "connected_on": "2016-01-19",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Proseware",
+          "norm": "proseware",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Proseware",
+          "norm": "proseware",
+          "start": "2019-08-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2016-01-19",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-egor-ek",
+      "first_name": "Egor",
+      "last_name": "Ek",
+      "profile_url": "https://www.linkedin.com/in/demo-egor-ek/",
+      "connected_on": "2019-07-08",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Proseware",
+          "norm": "proseware",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Proseware",
+          "norm": "proseware",
+          "start": "2022-01-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-11-17",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2024-10-16",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-fatima-volkov",
+      "first_name": "Fatima",
+      "last_name": "Volkov",
+      "profile_url": "https://www.linkedin.com/in/demo-fatima-volkov/",
+      "connected_on": "2015-11-11",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Woodgrove Bank",
+          "norm": "woodgrove bank",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Woodgrove Bank",
+          "norm": "woodgrove bank",
+          "start": "2010-07-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Université de Montréal",
+          "norm": "université de montréal",
+          "start": "2011-09-01",
+          "end": "2015-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "Alpine Ski House",
+          "norm": "alpine ski house",
+          "start": "2006-01-01",
+          "end": "2009-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-anton-dragan",
+      "first_name": "Anton",
+      "last_name": "Dragan",
+      "profile_url": "https://www.linkedin.com/in/demo-anton-dragan/",
+      "connected_on": "2021-10-22",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Woodgrove Bank",
+          "norm": "woodgrove bank",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Woodgrove Bank",
+          "norm": "woodgrove bank",
+          "start": "2011-06-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2021-10-22",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-julia-volkov",
+      "first_name": "Julia",
+      "last_name": "Volkov",
+      "profile_url": "https://www.linkedin.com/in/demo-julia-volkov/",
+      "connected_on": "2024-08-23",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Woodgrove Bank",
+          "norm": "woodgrove bank",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Woodgrove Bank",
+          "norm": "woodgrove bank",
+          "start": "2023-03-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Fabrikam",
+          "norm": "fabrikam",
+          "start": "2019-01-01",
+          "end": "2022-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2024-08-23",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-zara-nakamura",
+      "first_name": "Zara",
+      "last_name": "Nakamura",
+      "profile_url": "https://www.linkedin.com/in/demo-zara-nakamura/",
+      "connected_on": "2022-04-02",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Woodgrove Bank",
+          "norm": "woodgrove bank",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Woodgrove Bank",
+          "norm": "woodgrove bank",
+          "start": "2011-12-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Higher School of Economics",
+          "norm": "higher school of economics",
+          "start": "2014-09-01",
+          "end": "2018-06-30",
+          "role": "BSc"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-06-19",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2024-05-18",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2022-04-02",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-timur-fedorov",
+      "first_name": "Timur",
+      "last_name": "Fedorov",
+      "profile_url": "https://www.linkedin.com/in/demo-timur-fedorov/",
+      "connected_on": "2023-05-20",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Woodgrove Bank",
+          "norm": "woodgrove bank",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Woodgrove Bank",
+          "norm": "woodgrove bank",
+          "start": "2022-12-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Alpine Ski House",
+          "norm": "alpine ski house",
+          "start": "2018-01-01",
+          "end": "2021-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2023-05-20",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-misha-lund",
+      "first_name": "Misha",
+      "last_name": "Lund",
+      "profile_url": "https://www.linkedin.com/in/demo-misha-lund/",
+      "connected_on": "2016-12-21",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Lucerne Publishing",
+          "norm": "lucerne publishing",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Lucerne Publishing",
+          "norm": "lucerne publishing",
+          "start": "2019-04-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Université de Montréal",
+          "norm": "université de montréal",
+          "start": "2011-09-01",
+          "end": "2015-06-30",
+          "role": "BSc"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2016-12-21",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-sofia-tanaka",
+      "first_name": "Sofia",
+      "last_name": "Tanaka",
+      "profile_url": "https://www.linkedin.com/in/demo-sofia-tanaka/",
+      "connected_on": "2016-03-04",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Lucerne Publishing",
+          "norm": "lucerne publishing",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Lucerne Publishing",
+          "norm": "lucerne publishing",
+          "start": "2014-02-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Université de Montréal",
+          "norm": "université de montréal",
+          "start": "2009-09-01",
+          "end": "2013-06-30",
+          "role": "BSc"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-igor-dragan",
+      "first_name": "Igor",
+      "last_name": "Dragan",
+      "profile_url": "https://www.linkedin.com/in/demo-igor-dragan/",
+      "connected_on": "2022-05-22",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Lucerne Publishing",
+          "norm": "lucerne publishing",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Lucerne Publishing",
+          "norm": "lucerne publishing",
+          "start": "2022-09-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Higher School of Economics",
+          "norm": "higher school of economics",
+          "start": "2012-09-01",
+          "end": "2016-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": "2018-01-01",
+          "end": "2021-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-06-13",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2022-05-22",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-hana-rahimi",
+      "first_name": "Hana",
+      "last_name": "Rahimi",
+      "profile_url": "https://www.linkedin.com/in/demo-hana-rahimi/",
+      "connected_on": "2019-03-24",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Lucerne Publishing",
+          "norm": "lucerne publishing",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Lucerne Publishing",
+          "norm": "lucerne publishing",
+          "start": "2010-06-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Lucerne Publishing",
+          "norm": "lucerne publishing",
+          "start": "2006-01-01",
+          "end": "2009-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2024-02-21",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2024-01-20",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2019-03-24",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-zara-tanaka",
+      "first_name": "Zara",
+      "last_name": "Tanaka",
+      "profile_url": "https://www.linkedin.com/in/demo-zara-tanaka/",
+      "connected_on": "2016-09-02",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": "2019-05-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "MIT",
+          "norm": "mit",
+          "start": "2003-09-01",
+          "end": "2007-06-30",
+          "role": "BSc"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2016-09-02",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-oscar-haddad",
+      "first_name": "Oscar",
+      "last_name": "Haddad",
+      "profile_url": "https://www.linkedin.com/in/demo-oscar-haddad/",
+      "connected_on": "2021-04-06",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": "2021-01-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "University of Toronto",
+          "norm": "university of toronto",
+          "start": "2004-09-01",
+          "end": "2008-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": "2017-01-01",
+          "end": "2020-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2021-04-06",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-oscar-castillo",
+      "first_name": "Oscar",
+      "last_name": "Castillo",
+      "profile_url": "https://www.linkedin.com/in/demo-oscar-castillo/",
+      "connected_on": "2019-09-11",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": "2020-05-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Technical University of Munich",
+          "norm": "technical university of munich",
+          "start": "2004-09-01",
+          "end": "2008-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "Northwind Capital",
+          "norm": "northwind capital",
+          "start": "2016-01-01",
+          "end": "2019-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2019-09-11",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-vera-ivanchenko",
+      "first_name": "Vera",
+      "last_name": "Ivanchenko",
+      "profile_url": "https://www.linkedin.com/in/demo-vera-ivanchenko/",
+      "connected_on": "2021-03-13",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": "2010-01-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "MIT",
+          "norm": "mit",
+          "start": "2004-09-01",
+          "end": "2008-06-30",
+          "role": "BSc"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-08",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-13",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2021-03-13",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-igor-abramov",
+      "first_name": "Igor",
+      "last_name": "Abramov",
+      "profile_url": "https://www.linkedin.com/in/demo-igor-abramov/",
+      "connected_on": "2020-05-27",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": "2023-02-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Higher School of Economics",
+          "norm": "higher school of economics",
+          "start": "2014-09-01",
+          "end": "2018-06-30",
+          "role": "BSc"
+        },
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": "2019-01-01",
+          "end": "2022-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2020-05-27",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-igor-kuznetsov",
+      "first_name": "Igor",
+      "last_name": "Kuznetsov",
+      "profile_url": "https://www.linkedin.com/in/demo-igor-kuznetsov/",
+      "connected_on": "2017-02-19",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Contoso Labs",
+          "norm": "contoso labs",
+          "start": "2014-07-01",
+          "end": null,
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": []
+    },
+    {
+      "id": "demo-vera-jovanovic",
+      "first_name": "Vera",
+      "last_name": "Jovanovic",
+      "profile_url": "https://www.linkedin.com/in/demo-vera-jovanovic/",
+      "connected_on": "2023-11-05",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Fabrikam",
+          "norm": "fabrikam",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Fabrikam",
+          "norm": "fabrikam",
+          "start": "2018-02-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Stanford University",
+          "norm": "stanford university",
+          "start": "2003-09-01",
+          "end": "2007-06-30",
+          "role": "BSc"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-10",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-09",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-08",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-13",
+          "count": 1
+        },
+        {
+          "kind": "invite",
+          "when": "2023-11-05",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-fatima-dragan",
+      "first_name": "Fatima",
+      "last_name": "Dragan",
+      "profile_url": "https://www.linkedin.com/in/demo-fatima-dragan/",
+      "connected_on": "2023-11-17",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Fabrikam",
+          "norm": "fabrikam",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Fabrikam",
+          "norm": "fabrikam",
+          "start": "2012-10-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "education",
+          "name": "Stanford University",
+          "norm": "stanford university",
+          "start": "2014-09-01",
+          "end": "2018-06-30",
+          "role": "BSc"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "message",
+          "when": "2026-11-14",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-10-13",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-09-12",
+          "count": 1
+        },
+        {
+          "kind": "message",
+          "when": "2026-11-11",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "demo-egor-volkov",
+      "first_name": "Egor",
+      "last_name": "Volkov",
+      "profile_url": "https://www.linkedin.com/in/demo-egor-volkov/",
+      "connected_on": "2021-05-22",
+      "affiliations": [
+        {
+          "kind": "position",
+          "name": "Fabrikam",
+          "norm": "fabrikam",
+          "start": null,
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Fabrikam",
+          "norm": "fabrikam",
+          "start": "2017-10-01",
+          "end": null,
+          "role": "Staff"
+        },
+        {
+          "kind": "position",
+          "name": "Wingtip Toys",
+          "norm": "wingtip toys",
+          "start": "2013-01-01",
+          "end": "2016-12-31",
+          "role": "Staff"
+        }
+      ],
+      "works": [],
+      "interactions": [
+        {
+          "kind": "invite",
+          "when": "2021-05-22",
+          "count": 1
+        }
+      ]
     }
   ]
 }

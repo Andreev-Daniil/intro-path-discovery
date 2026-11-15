@@ -1,0 +1,16 @@
+{
+  "name": "Globex Corporation",
+  "kind": "company",
+  "affiliations": [
+    {
+      "kind": "position",
+      "name": "Globex Corporation",
+      "norm": "globex corporation",
+      "start": null,
+      "end": null,
+      "role": ""
+    }
+  ],
+  "works": [],
+  "insiders": []
+}

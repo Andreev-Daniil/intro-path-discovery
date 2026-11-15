@@ -1,0 +1,35 @@
+[
+  {
+    "text": "Сначала загружу данные о цели.",
+    "tool_calls": [
+      {"id": "e1", "name": "enrich_target", "input": {"target": "Contoso Labs", "kind": "company"}}
+    ]
+  },
+  {
+    "text": "Вы просили 50 лучших путей — запрашиваю 50.",
+    "tool_calls": [
+      {"id": "e2", "name": "find_intro_paths", "input": {"target": "Contoso Labs", "kind": "company", "limit": 50}}
+    ]
+  },
+  {
+    "text": "Ошибка схемы: limit не может быть больше 10. Исправляю аргумент и запрашиваю максимум — 10.",
+    "tool_calls": [
+      {"id": "e3", "name": "find_intro_paths", "input": {"target": "Contoso Labs", "kind": "company", "limit": 10}}
+    ]
+  },
+  {
+    "text": "Лучший путь — Ravi Menon (член совета директоров, сила 0.9). Готовлю запрос на знакомство.",
+    "tool_calls": [
+      {"id": "e4", "name": "request_introduction", "input": {"connector_id": "Ravi Menon", "target": "Contoso Labs", "message": "Здравствуйте, Ravi! Хотел бы познакомиться с командой Contoso Labs. Не могли бы вы представить меня подходящему человеку?"}}
+    ]
+  },
+  {
+    "text": "Я передал имя вместо идентификатора. Беру connector_id из результата find_intro_paths: demo-ravi-menon.",
+    "tool_calls": [
+      {"id": "e5", "name": "request_introduction", "input": {"connector_id": "demo-ravi-menon", "target": "Contoso Labs", "message": "Здравствуйте, Ravi! Хотел бы познакомиться с командой Contoso Labs. Не могли бы вы представить меня подходящему человеку?"}}
+    ]
+  },
+  {
+    "text": "Итог: по Contoso Labs сильнее всех путь через Ravi Menon (сигнал: общий совет директоров, 0.9), следом Hannah Brooks (бывший член совета). Статус запроса на знакомство — в результате последнего шага: без подтверждения человеком ничего не выполняется."
+  }
+]

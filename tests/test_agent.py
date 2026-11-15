@@ -339,6 +339,28 @@ def test_demo_scenario_shows_tool_error_and_recovery(tmp_path):
     assert top["connector_id"] == "demo-john-ternus" and top["strength"] == 0.96
 
 
+def test_error_demo_fixes_schema_error_and_wrong_connector_id(tmp_path):
+    """Пример «ошибка → исправление»: limit=50 нарушает схему, а connector_id передан именем."""
+    cfg = replace(load_config(ROOT / "config/agent.demo-errors.toml"), outbox_dir=str(tmp_path / "outbox"))
+    events: list[str] = []
+    result = run_from_config(cfg, "Найди пути к Contoso Labs", lambda p: True, events.append, root=ROOT, today=TODAY)
+    assert result.stop_reason == "end_turn" and result.steps == 6
+    assert [(r.name, r.is_error) for r in result.tool_calls] == [
+        ("enrich_target", False), ("find_intro_paths", True), ("find_intro_paths", False),
+        ("request_introduction", True), ("request_introduction", False)]
+    schema_error, id_error = result.tool_calls[1].output, result.tool_calls[3].output
+    assert "limit" in schema_error and "maximum of 10" in schema_error
+    assert "'Ravi Menon' нет в сети" in id_error and "find_intro_paths" in id_error
+    # исправление действительно меняет вызов: 50 -> 10, имя -> идентификатор из результата
+    assert result.tool_calls[1].input["limit"] == 50 and result.tool_calls[2].input["limit"] == 10
+    assert result.tool_calls[3].input["connector_id"] == "Ravi Menon"
+    assert result.tool_calls[4].input["connector_id"] == "demo-ravi-menon"
+    top = json.loads(result.tool_calls[2].output)["paths"][0]
+    assert top["connector_id"] == "demo-ravi-menon" and top["strength"] == 0.9  # id взят из результата поиска
+    # ошибочные вызовы ничего не записали: в очереди ровно одна запись, от исправленного вызова
+    assert [p.name for p in (tmp_path / "outbox").glob("*.json")] == ["intro_me_1.json"]
+
+
 def test_demo_scenario_when_human_declines(tmp_path):
     cfg = replace(load_config(ROOT / "config/agent.demo.toml"), outbox_dir=str(tmp_path / "outbox"))
     result = run_from_config(cfg, "Найди пути к Apple Inc", lambda p: False, lambda e: None, root=ROOT, today=TODAY)

@@ -111,3 +111,91 @@ demo-oliver-thornton,position,Contoso Labs,2018-01,2021-12,Staff
 demo-max-jessup,position,Litware,2020-03,,Staff
 demo-max-jessup,education,Higher School of Economics,2008-09,2012-06,BSc
 demo-max-jessup,position,MIT,2016-01,2019-12,Staff
+demo-marina-kovalenko,position,Northwind Capital,2012-01,,CEO
+demo-dmitri-sokolov,position,Northwind Capital,2019-01,,Analyst
+demo-olga-volkova,position,Northwind Capital,2016-01,2020-12,Analyst
+demo-olga-volkova,position,Adventure Works,2021-01,,Product Lead
+demo-sven-aldrich,position,Northwind Capital,2017-01,,Associate
+demo-irina-belova,position,Adventure Works,2020-01,,Consultant
+demo-ravi-menon,position,Woodgrove Bank,2014-01,,Managing Director
+demo-ravi-menon,board,Contoso Labs,2019-01,,Член совета директоров
+demo-hannah-brooks,position,Lucerne Publishing,2017-06,,Editor
+demo-hannah-brooks,board,Contoso Labs,2013-01,2017-12,Член совета директоров
+demo-anna-orlova,education,University of Toronto,2010-09,2014-06,BSc
+demo-anna-orlova,position,Alpine Ski House,2019-01,,Data Scientist
+demo-victor-hale,position,Contoso Labs,2018-06,,Researcher
+demo-priya-nair,education,University of Toronto,2010-09,2014-06,BSc
+demo-priya-nair,position,Proseware,2018-01,,ML Engineer
+demo-leo-brandt,position,Wingtip Toys,2020-01,,Analyst
+demo-katya-morozova,education,University of Toronto,2010-09,2014-06,BSc
+demo-katya-morozova,position,Woodgrove Bank,2016-01,,Risk Analyst
+demo-timur-haddad,education,University of Toronto,2010-09,2014-06,BSc
+demo-timur-haddad,position,Adventure Works,2015-01,,Engineer
+demo-dina-zielinski,position,Adventure Works,2015-11,,Staff
+demo-vera-rahimi,position,Adventure Works,2013-11,,Staff
+demo-vera-rahimi,education,MIT,2007-09,2011-06,BSc
+demo-timur-jovanovic,position,Adventure Works,2010-01,,Staff
+demo-timur-jovanovic,education,Higher School of Economics,2009-09,2013-06,BSc
+demo-timur-kuznetsov,position,Adventure Works,2014-09,,Staff
+demo-polina-fedorov,position,Adventure Works,2023-10,,Staff
+demo-ravil-petrenko,position,Adventure Works,2019-02,,Staff
+demo-karim-jovanovic,position,Adventure Works,2017-10,,Staff
+demo-anton-tanaka,position,Wingtip Toys,2021-08,,Staff
+demo-sofia-wojcik,position,Wingtip Toys,2022-02,,Staff
+demo-sofia-wojcik,position,Adventure Works,2018-01,2021-12,Staff
+demo-julia-petrenko,position,Wingtip Toys,2013-05,,Staff
+demo-julia-petrenko,education,University of Toronto,2014-09,2018-06,BSc
+demo-gleb-nakamura,position,Wingtip Toys,2016-11,,Staff
+demo-gleb-nakamura,education,Technical University of Munich,2006-09,2010-06,BSc
+demo-nina-haddad,position,Wingtip Toys,2021-11,,Staff
+demo-nina-haddad,position,Adventure Works,2017-01,2020-12,Staff
+demo-lara-ek,position,Alpine Ski House,2016-09,,Staff
+demo-lara-ek,position,Northwind Capital,2012-01,2015-12,Staff
+demo-gleb-wojcik,position,Alpine Ski House,2013-05,,Staff
+demo-gleb-wojcik,position,Proseware,2009-01,2012-12,Staff
+demo-polina-lund,position,Alpine Ski House,2018-05,,Staff
+demo-xenia-fedorov,position,Alpine Ski House,2020-08,,Staff
+demo-bella-mironov,position,Alpine Ski House,2012-06,,Staff
+demo-zara-haddad,position,Proseware,2019-05,,Staff
+demo-gleb-tanaka,position,Proseware,2011-08,,Staff
+demo-oscar-petrenko,position,Proseware,2019-08,,Staff
+demo-egor-ek,position,Proseware,2022-01,,Staff
+demo-fatima-volkov,position,Woodgrove Bank,2010-07,,Staff
+demo-fatima-volkov,education,Université de Montréal,2011-09,2015-06,BSc
+demo-fatima-volkov,position,Alpine Ski House,2006-01,2009-12,Staff
+demo-anton-dragan,position,Woodgrove Bank,2011-06,,Staff
+demo-julia-volkov,position,Woodgrove Bank,2023-03,,Staff
+demo-julia-volkov,position,Fabrikam,2019-01,2022-12,Staff
+demo-zara-nakamura,position,Woodgrove Bank,2011-12,,Staff
+demo-zara-nakamura,education,Higher School of Economics,2014-09,2018-06,BSc
+demo-timur-fedorov,position,Woodgrove Bank,2022-12,,Staff
+demo-timur-fedorov,position,Alpine Ski House,2018-01,2021-12,Staff
+demo-misha-lund,position,Lucerne Publishing,2019-04,,Staff
+demo-misha-lund,education,Université de Montréal,2011-09,2015-06,BSc
+demo-sofia-tanaka,position,Lucerne Publishing,2014-02,,Staff
+demo-sofia-tanaka,education,Université de Montréal,2009-09,2013-06,BSc
+demo-igor-dragan,position,Lucerne Publishing,2022-09,,Staff
+demo-igor-dragan,education,Higher School of Economics,2012-09,2016-06,BSc
+demo-igor-dragan,position,Contoso Labs,2018-01,2021-12,Staff
+demo-hana-rahimi,position,Lucerne Publishing,2010-06,,Staff
+demo-hana-rahimi,position,Lucerne Publishing,2006-01,2009-12,Staff
+demo-zara-tanaka,position,Northwind Capital,2019-05,,Staff
+demo-zara-tanaka,education,MIT,2003-09,2007-06,BSc
+demo-oscar-haddad,position,Northwind Capital,2021-01,,Staff
+demo-oscar-haddad,education,University of Toronto,2004-09,2008-06,BSc
+demo-oscar-haddad,position,Contoso Labs,2017-01,2020-12,Staff
+demo-oscar-castillo,position,Northwind Capital,2020-05,,Staff
+demo-oscar-castillo,education,Technical University of Munich,2004-09,2008-06,BSc
+demo-oscar-castillo,position,Northwind Capital,2016-01,2019-12,Staff
+demo-vera-ivanchenko,position,Contoso Labs,2010-01,,Staff
+demo-vera-ivanchenko,education,MIT,2004-09,2008-06,BSc
+demo-igor-abramov,position,Contoso Labs,2023-02,,Staff
+demo-igor-abramov,education,Higher School of Economics,2014-09,2018-06,BSc
+demo-igor-abramov,position,Contoso Labs,2019-01,2022-12,Staff
+demo-igor-kuznetsov,position,Contoso Labs,2014-07,,Staff
+demo-vera-jovanovic,position,Fabrikam,2018-02,,Staff
+demo-vera-jovanovic,education,Stanford University,2003-09,2007-06,BSc
+demo-fatima-dragan,position,Fabrikam,2012-10,,Staff
+demo-fatima-dragan,education,Stanford University,2014-09,2018-06,BSc
+demo-egor-volkov,position,Fabrikam,2017-10,,Staff
+demo-egor-volkov,position,Wingtip Toys,2013-01,2016-12,Staff
