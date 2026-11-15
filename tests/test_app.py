@@ -28,14 +28,14 @@ def test_default_dataset_renders_all_tabs_without_errors():
     assert not at.exception, [e.value for e in at.exception]
     assert [t.label for t in at.tabs] == ["Обзор", "Данные", "Граф", "Пути", "Как считается",
                                           "Источники и приватность"]
-    assert any("СИНТЕТИЧЕСКИЕ" in w.value for w in at.warning)
+    assert any("ДЕМО-ДАННЫЕ" in w.value for w in at.warning)
     labels = [e.label for e in at.expander]
     assert labels and "John Ternus" in labels[0]  # Apple: первым идёт CEO из SEC
 
 
 def test_switching_to_hinton_dataset():
     at = run_app()
-    at.sidebar.selectbox[0].select("Синтетика: Geoffrey Hinton (OpenAlex)").run()
+    at.sidebar.selectbox[0].select("Демо: Geoffrey Hinton (OpenAlex)").run()
     assert not at.exception, [e.value for e in at.exception]
     labels = [e.label for e in at.expander]
     assert labels and "Max Marlowe" in labels[0]  # Hinton: общие работодатели + тёплая связь
@@ -85,7 +85,7 @@ def test_upload_flow_company_target_ranks_paths_with_signals():
     labels = [e.label for e in at.expander]
     assert labels[0].startswith("1. John Ternus") and "сила 0.96" in labels[0]
     assert [l.split(". ", 1)[1].split(" — ")[0] for l in labels[:3]] == ["John Ternus", "Kevan Parekh", "Deirdre O'Brien"]
-    assert any("СИНТЕТИЧЕСКИЕ" in w.value for w in at.warning)
+    assert any("ДЕМО-ДАННЫЕ" in w.value for w in at.warning)
     text = " ".join(m.value for m in at.markdown)
     assert "директор целевой компании (SEC)" in text and "общий работодатель" in text  # перечень сигналов
     assert "noisy-OR" in text  # разбор формулы
@@ -117,7 +117,7 @@ def test_real_file_upload_through_the_uploader_widgets():
     assert not at.exception, [e.value for e in at.exception]
     labels = [e.label for e in at.expander]
     assert labels[0].startswith("1. John Ternus") and "сила 0.96" in labels[0]
-    assert not any("СИНТЕТИЧЕСКИЕ" in w.value for w in at.warning)  # это «пользовательская» загрузка
+    assert not any("ДЕМО-ДАННЫЕ" in w.value for w in at.warning)  # это «пользовательская» загрузка
 
 
 def test_button_is_disabled_until_contacts_and_target_are_given():

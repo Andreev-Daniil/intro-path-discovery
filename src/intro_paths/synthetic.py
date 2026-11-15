@@ -1,4 +1,4 @@
-"""Синтетический экспорт LinkedIn, согласованный с публичными данными SEC EDGAR и OpenAlex.
+"""Демо-экспорт LinkedIn, согласованный с публичными данными SEC EDGAR и OpenAlex.
 
 ВСЁ, ЧТО СВЯЗАНО С ЛЮДЬМИ В ЭТОМ НАБОРЕ, ВЫМЫШЛЕНО. Имена публичных людей (директоры Apple,
 соавторы Джеффри Хинтона) взяты из открытых снимков только затем, чтобы сопоставление с
@@ -28,7 +28,7 @@ from .store import load_target, save_network, save_target
 TODAY = date(2026, 11, 15)
 OWNER = ("Alex", "Demo")
 
-DISCLAIMER = """# СИНТЕТИЧЕСКИЕ ДАННЫЕ
+DISCLAIMER = """# ДЕМО-ДАННЫЕ
 
 Этот набор создан генератором `intro-paths synth` для демонстрации и тестов.
 
@@ -229,7 +229,7 @@ def generate(out_dir: Path, *, seed: int = 7, snapshots_dir: Path | None = None)
                ["First Name", "Last Name", "Maiden Name", "Address", "Birth Date", "Headline",
                 "Summary", "Industry", "Zip Code", "Geo Location", "Twitter Handles", "Websites",
                 "Instant Messengers"],
-               [[OWNER[0], OWNER[1], "", "", "", "Research Engineer", "СИНТЕТИЧЕСКИЙ профиль для демо",
+               [[OWNER[0], OWNER[1], "", "", "", "Research Engineer", "ДЕМО-профиль (вымышленный)",
                  "Information Technology", "", "Toronto", "", "", ""]])
     _write_csv(export / "Positions.csv",
                ["Company Name", "Title", "Description", "Location", "Started On", "Finished On"],
@@ -242,7 +242,7 @@ def generate(out_dir: Path, *, seed: int = 7, snapshots_dir: Path | None = None)
                ["First Name", "Last Name", "URL", "Email Address", "Company", "Position", "Connected On"],
                [[s.first, s.last, url(s), "", s.company, s.position, _fmt(s.connected, "%d %b %Y")]
                 for s in specs],
-               preamble='Notes:\n"Синтетический экспорт: все данные вымышлены."\n\n')
+               preamble='Notes:\n"Демо-экспорт: все данные вымышлены."\n\n')
 
     messages, invites = [], []
     for s in specs:
@@ -253,7 +253,7 @@ def generate(out_dir: Path, *, seed: int = 7, snapshots_dir: Path | None = None)
             messages.append([f"conv-{s.slug}", "", OWNER[0] if mine else s.first,
                              owner_url if mine else url(s), s.first if mine else OWNER[0],
                              url(s) if mine else owner_url, d.strftime("%Y-%m-%d 10:00:00 UTC"),
-                             "", "(синтетическое сообщение)", "INBOX"])
+                             "", "(демо-сообщение)", "INBOX"])
         if s.invited:
             invites.append([OWNER[0], s.first, s.connected.strftime("%Y-%m-%d"), "", "OUTGOING",
                             owner_url, url(s)])

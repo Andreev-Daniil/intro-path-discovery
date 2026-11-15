@@ -43,8 +43,8 @@ DEMO_ZIP = DEMO / "linkedin_export_demo.zip"
 DEMO_ENRICHMENT = DEMO / "enrichment.csv"
 DEMO_TARGETS = DEMO / "targets"
 
-DS_APPLE = "Синтетика: Apple (SEC EDGAR)"
-DS_HINTON = "Синтетика: Geoffrey Hinton (OpenAlex)"
+DS_APPLE = "Демо: Apple (SEC EDGAR)"
+DS_HINTON = "Демо: Geoffrey Hinton (OpenAlex)"
 DS_MINE = "Мои данные (ZIP экспорта LinkedIn)"
 DEMO_FILES = {DS_APPLE: "apple", DS_HINTON: "hinton"}
 
@@ -408,7 +408,7 @@ def sidebar():
     limit = st.number_input("Сколько путей показать", 1, 100, 10)
     mine = None
     if dataset == DS_MINE:
-        st.caption("Нет своего экспорта? Скачайте синтетические файлы и загрузите их ниже — "
+        st.caption("Нет своего экспорта? Скачайте демо-файлы и загрузите их ниже — "
                    "или поставьте галочку «встроенный демо-ZIP».")
         if DEMO_ZIP.exists():
             c1, c2 = st.columns(2)
@@ -416,7 +416,7 @@ def sidebar():
             if DEMO_ENRICHMENT.exists():
                 c2.download_button("enrichment.csv", DEMO_ENRICHMENT.read_bytes(), "enrichment_demo.csv",
                                    "text/csv", key="dl_enr")
-        use_demo = st.checkbox("Использовать встроенный демо-ZIP (синтетика)", disabled=not DEMO_ZIP.exists())
+        use_demo = st.checkbox("Использовать встроенный демо-ZIP", disabled=not DEMO_ZIP.exists())
         upload = st.file_uploader("ZIP экспорта LinkedIn", type="zip", disabled=use_demo)
         enrichment = st.file_uploader("enrichment.csv (необязательно)", type="csv")
         st.header("2. Цель")
@@ -456,7 +456,7 @@ def main() -> None:
         network, target, scenarios = load_demo(demo_key)
         target = st.session_state.get(f"target_{demo_key}", target)
         today = DEMO_TODAY
-        st.warning("СИНТЕТИЧЕСКИЕ ДАННЫЕ: связи, должности и переписка контактов вымышлены. "
+        st.warning("ДЕМО-ДАННЫЕ: связи, должности и переписка контактов вымышлены. "
                    "Имена публичных людей взяты из SEC/OpenAlex только для сопоставления. "
                    "См. data/demo/DISCLAIMER.md.")
     else:
@@ -488,11 +488,11 @@ def main() -> None:
                 return
         if "mine" not in st.session_state:
             st.info("Загрузите ZIP экспорта LinkedIn, укажите цель и нажмите «Найти пути». "
-                    "Или выберите синтетический набор в боковой панели.")
+                    "Или выберите демо-набор в боковой панели.")
             return
         network, target, notes, today, synthetic = st.session_state["mine"]
         if synthetic:
-            st.warning("СИНТЕТИЧЕСКИЕ ДАННЫЕ: демо-ZIP вымышлен (см. data/demo/DISCLAIMER.md).")
+            st.warning("ДЕМО-ДАННЫЕ: демо-ZIP вымышлен (см. data/demo/DISCLAIMER.md).")
         for note in notes:
             st.caption(note)
 

@@ -64,7 +64,7 @@ def _cmd_agent(args: argparse.Namespace) -> int:
 
 def _cmd_synth(args: argparse.Namespace) -> int:
     report = generate(args.out_dir, seed=args.seed, snapshots_dir=args.snapshots_dir)
-    print(f"Синтетический набор: {args.out_dir} (контактов {report['contacts']}, "
+    print(f"Демо-набор: {args.out_dir} (контактов {report['contacts']}, "
           f"сообщений {report['messages']}, приглашений {report['invitations']})")
     print("ВСЕ связи вымышлены; см. DISCLAIMER.md")
     return 0
@@ -175,7 +175,7 @@ def main(argv: list[str] | None = None) -> int:
     p_agent.set_defaults(func=_cmd_agent)
 
     p_synth = sub.add_parser(
-        "synth", help="сгенерировать синтетический экспорт LinkedIn под данные EDGAR и OpenAlex"
+        "synth", help="сгенерировать демо-экспорт LinkedIn под данные EDGAR и OpenAlex"
     )
     p_synth.add_argument("--out-dir", type=Path, default=Path("data/demo"))
     p_synth.add_argument("--snapshots-dir", type=Path, help="по умолчанию <out-dir>/snapshots")
