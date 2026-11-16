@@ -128,6 +128,7 @@ class Session:
     today: date = field(default_factory=date.today)
     targets: dict[str, Target] = field(default_factory=dict)
     intro_requests: list[dict] = field(default_factory=list)
+    declined: set[str] = field(default_factory=set)  # действия, которые человек уже отклонил в этом запросе
 
     @property
     def owner_id(self) -> str:
@@ -341,8 +342,13 @@ def execute_tool(session: Session, tools: dict[str, Tool], name: str, args: Any)
         return problem, True
     try:
         if tool.needs_confirmation:
+            if tool.name in session.declined:
+                # Запрет повтора держится в коде, а не только в промпте: человека не спрашиваем второй раз.
+                return ("Человек уже отклонил это действие в текущем запросе. Повтор запрещён: "
+                        "дождитесь нового указания пользователя."), True
             question = tool.needs_confirmation(session, args)  # проверки и текст вопроса
             if not session.confirm(question):  # человек, вне таймаута инструмента
+                session.declined.add(tool.name)
                 return ("Человек отклонил действие. Ничего не сделано. "
                         "Не повторяйте без нового указания пользователя."), True
         def guarded() -> dict:

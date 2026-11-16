@@ -221,6 +221,30 @@ def test_declined_action_is_not_executed(tmp_path):
     assert not (tmp_path / "outbox").exists() and session.intro_requests == []
 
 
+def test_declined_action_cannot_be_retried_and_the_human_is_not_asked_again(tmp_path):
+    """Модель, получив отказ, повторила вызов (реальный случай на живой модели): код блокирует повтор."""
+    asked = []
+    session = make_session(tmp_path, confirm=lambda p: asked.append(p) or False)
+    first, first_error = execute_tool(session, TOOLS, "request_introduction", REQUEST)
+    second, second_error = execute_tool(session, TOOLS, "request_introduction", {**REQUEST, "message": "Другой текст запроса."})
+    assert first_error and "отклонил" in first
+    assert second_error and "уже отклонил" in second and "Повтор запрещён" in second
+    assert len(asked) == 1  # человека не беспокоят вторым вопросом
+    assert not (tmp_path / "outbox").exists()
+
+
+def test_a_new_request_starts_with_a_clean_slate(tmp_path):
+    """Отказ действует в рамках одного запроса: в новой сессии (новый запрос пользователя) действие снова доступно."""
+    declined = make_session(tmp_path, confirm=lambda p: False)
+    execute_tool(declined, TOOLS, "request_introduction", REQUEST)
+    fresh = make_session(tmp_path, confirm=lambda p: True)
+    assert not execute_tool(fresh, TOOLS, "request_introduction", REQUEST)[1]
+
+
+def test_system_prompt_separates_contact_target_link_from_user_contact_link():
+    assert "связь КОНТАКТА с ЦЕЛЬЮ" in SYSTEM_PROMPT and "не пиши «мы с вами в одном совете»" in SYSTEM_PROMPT
+
+
 def test_default_confirmation_is_denial(tmp_path):
     session = make_session(tmp_path)  # confirm по умолчанию
     assert execute_tool(session, TOOLS, "request_introduction", REQUEST)[1]
