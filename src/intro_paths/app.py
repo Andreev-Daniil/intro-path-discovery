@@ -31,7 +31,7 @@ from intro_paths.graph import ChainPath, build_graph, find_chain_paths, graph_st
 from intro_paths.models import Affiliation, Network, Period, Target
 from intro_paths.network import build_network
 from intro_paths.normalize import normalize_org
-from intro_paths.paths import IntroPath, find_intro_paths
+from intro_paths.paths import IntroPath, find_intro_paths, with_direct_contacts
 from intro_paths.scoring import (
     DEFAULT,
     ScoringConfig,
@@ -691,6 +691,14 @@ def main() -> None:
             st.warning("ДЕМО-ДАННЫЕ: демо-ZIP вымышлен (см. data/demo/DISCLAIMER.md).")
         for note in notes:
             st.caption(note)
+
+    target, direct = with_direct_contacts(network, target)  # цель уже среди контактов?
+    for c in direct:
+        messages = sum(i.count for i in c.interactions if i.kind == "message")
+        since = f"с {c.connected_on:%d.%m.%Y}" if c.connected_on else "дата неизвестна"
+        st.success(f"**Цель уже в ваших контактах: {c.full_name}** (в контактах {since}, сообщений: {messages}). "
+                   "Представлять не нужно — можно писать напрямую. Ниже — коллеги и однокурсники цели, "
+                   "которые могут помочь.")
 
     names = ["Обзор", "Данные", "Граф", "Пути", "Агент", "Как считается", "Источники и приватность"]
     tabs = st.tabs(names)

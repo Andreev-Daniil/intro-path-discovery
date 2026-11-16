@@ -155,6 +155,14 @@ def test_obvious_scenarios_work_through_the_upload_flow(kind, name, top, fragmen
     assert any(f in text for f in fragment.split("|"))
 
 
+def test_target_who_is_already_a_contact_shows_a_banner_and_colleagues():
+    at = _mine_flow("Человек", "John Ternus")
+    assert not at.exception, [e.value for e in at.exception]
+    assert any("Цель уже в ваших контактах: John Ternus" in s.value and "сообщений: 8" in s.value for s in at.success)
+    labels = [e.label for e in at.expander]
+    assert labels and all("John Ternus" not in l for l in labels)  # сам себя не представляет
+
+
 def test_no_paths_scenario_says_nothing_found():
     at = _mine_flow("Компания", "Globex Corporation")
     assert not at.exception

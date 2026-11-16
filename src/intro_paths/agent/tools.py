@@ -25,7 +25,7 @@ from jsonschema import Draft202012Validator
 from ..graph import find_chain_paths
 from ..models import Affiliation, Network, Period, Target
 from ..normalize import normalize_org
-from ..paths import find_intro_paths
+from ..paths import find_intro_paths, with_direct_contacts
 from ..sources.http import HttpError
 from ..store import load_target
 from .config import AgentConfig
@@ -171,6 +171,7 @@ def _find_intro_paths(session: Session, args: dict) -> dict:
     target = session.targets.get(normalize_org(name))
     enriched = target is not None
     target = target or _base_target(name, kind)
+    target, direct = with_direct_contacts(session.network, target)  # цель уже в контактах?
     paths = find_intro_paths(session.network, target, today=session.today, limit=limit)
     out: dict[str, Any] = {
         "target": target.name, "enriched": enriched, "found": len(paths),
@@ -188,7 +189,19 @@ def _find_intro_paths(session: Session, args: dict) -> dict:
              "bridge_role": c.bridge_role, "strength": c.strength}
             for c in find_chain_paths(session.network, target, today=session.today, limit=limit)
         ]
-    if not enriched:
+    if direct:
+        out["target_is_your_contact"] = [
+            {"connector_id": c.id, "name": c.full_name,
+             "connected_on": c.connected_on.isoformat() if c.connected_on else None,
+             "messages": sum(i.count for i in c.interactions if i.kind == "message"),
+             "known_employers": sorted({a.name for a in c.affiliations if a.kind == "position"}),
+             "known_schools": sorted({a.name for a in c.affiliations if a.kind == "education"})}
+            for c in direct
+        ]
+        out["hint"] = ("Цель уже есть среди ваших контактов: представлять не нужно, можно писать напрямую. "
+                       "В paths — другие контакты с общим местом работы или учёбы, которые могут помочь "
+                       "(сам контакт-цель из посредников исключён).")
+    elif not enriched:
         out["hint"] = "цель не обогащена: вызовите enrich_target, чтобы учесть директоров SEC и соавторов"
     return out
 
